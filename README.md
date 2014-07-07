@@ -1,4 +1,4 @@
-Product-wizard
+Product-wizar
 ==============
 
 A css based product wizard for A.S.Adventure.com
