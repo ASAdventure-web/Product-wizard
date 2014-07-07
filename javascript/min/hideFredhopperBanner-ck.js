@@ -1,0 +1,1 @@
+function hideFredhopperBanner(){for(var e=document.getElementsByClassName("fredhopperBanner"),n=0;n<e.length;n++)e[n].style.display="none"}

@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<!-- No-caching styles -->
+
+<meta http-equiv="cache-control" content="max-age=0" />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="pragma" content="no-cache" />
+
+<!-- Styles -->
+
+<link rel="stylesheet" type="text/css" href="https://static.asadventure.com/includes/visuals/product-wizard/css/styles.css">
+
+<!-- Scripts -->
+
+<script type="text/javascript" src="https://static.asadventure.com/includes/visuals/product-wizard/javascript/hideFredhopperBanner.js"></script>
+
+</head>
+<body>
+
+	<!--
+
+	- - - - - - - - 
+	Instructions - Created by pieter.dewachter@asadventure.com
+	- - - - - - - -  
+
+	id = wizardSolution [One, Two, Three, Four] => triggers .getElementById.style.display.[none/block] show a new item based on the users choice
+
+	.wizardQuestoinFlow = number of question + question
+	.oldQuestion = previous question (line trough text)
+	.wizardPrevious = previous page 
+		!Make sure that the ajaxTrigger + ajaxQuerry is the same as the previous page
+
+	.wizardSeperator = seperator between left and right content	
+	
+	-->		
+
+<div id="product-wizard-activate">
+	<div class="button-wrapper">
+		<a href="#" class="intro-rugzakken" onclick="javascript:(document.getElementById('product-wizard-activate').style.display='none'), (document.getElementById('wizardContent').style.display='inline-block'), hideFredhopperBanner();"> 
+		</a>
+	</div>
+</div>	
+
+	<div id="wizardContent" style="display:none">
+	
+		<h2 class="red"> <!-- Main titel -->
+			<img src="https://static.asadventure.com/includes/visuals/product-wizard/img/rugzakken/icon-rugzakken.png" alt="icon" class="icon"/> Doe de rugzak test?
+		</h2>
+
+<!-- ///////////////////////////////////// -->
+<!-- step 1 - MAIN -->
+<!-- ///////////////////////////////////// -->
+
+		<div id="wizardContentMain" style="display:block">
+			<div class="span4 intro-title">
+				<h3>Iedereen heeft zijn eigen droombestemming en reisattitude. Welke rugzak je het best helpt om jouw reisplannen te verwezenlijken, ontdek je hier. Doe de test en <strong>vind de reiskameraad die bij je past</strong>.</h3>
+			</div>
+			
+			<div class="wizardSeperator"></div>
+			
+			<div class="span4">
+				<a href="#" onclick="javascript:(document.getElementById('wizardContentQuestions').style.display='block'), (document.getElementById('wizardContentMain').style.display='none');">
+					<div class="wizardContentStart"> 
+						<span class="ajaxTrigger" ajaxQuerry="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3737%7D%2Fkies_rugzak%3E%7Bbabydragers%3Bbackpack_dames_a_plus%3Bbackpack_dames_b_plus%3Bbackpack_dames_c_plus%3Bbackpack_heren_a_plus%3Bbackpack_heren_b_plus%3Bbackpack_heren_c_plus%3Bbackpack_junior%3Bdaypack_junior%3Bdaypack_met_airframe_dames%3Bdaypack_met_airframe_heren%3Bdaypack_zonder_airframe_dames%3Bdaypack_zonder_airframe_heren%3Btourpack_heren_a_plus%3Btourpack_heren_a_plusplus%7D&fh_refpath=facet_276&fh_mode=selectlocation_complex&fh_reffacet=kies_rugzak&fh_refview=lister&preview_seo=false"> 
+							<img src="https://static.asadventure.com/includes/visuals/product-wizard/img/rugzakken/icon-start-rugzakken.png" alt="start" />
+						</span>
+					</div>
+				</a>
+			</div>	
+		</div> 
+
+<!-- ///////////////////////////////////// -->
+<!-- step 2 - QUESTIONS -->
+<!-- ///////////////////////////////////// -->
+	
+	<!-- MainQuestion -->				
+		<div id="wizardContentQuestions" style="display:none">
+			<div class="span4">
+				<div class="wizardQuestionFlow">
+					<p><span class="wizardQuestionNumber"><span>1</span></span>Voor welke activiteit zoek je een rugzak?</p>
+				</div>
+
+				<!-- Previous Page -->				
+				<a href="" onclick="javascript:(document.getElementById('wizardContentMain').style.display='block'), (document.getElementById('wizardContentQuestions').style.display='none');" class="wizardPrevious"> vorige stap </a>
+			</div>
+			
+			<div class="wizardSeperator"></div>
+
+	<!-- CategoricalQuestions -->				
+			<div class="span4">
+				<ul>
+			<!-- Q:Korte dagtochten -->
+					<a href="#" onclick="javascript:(document.getElementById('wizardSolutionOne').style.display='block'), (document.getElementById('wizardContentQuestions').style.display='none');">
+						<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3737%7D%2Fkies_rugzak%3E%7Bbabydragers%3Bdaypack_met_airframe_dames%3Bdaypack_met_airframe_heren%3Bdaypack_zonder_airframe_dames%3Bdaypack_zonder_airframe_heren%7D&fh_refpath=facet_276&fh_mode=selectlocation_complex&fh_reffacet=kies_rugzak&fh_refview=lister&preview_seo=false">
+							<li class="question red"> Korte dagtochten</li>
+								<span class="icon-arrow"></span>
+							
+						</span>
+					</a>
+
+				    <!-- Pop-up -->
+
+			        <li class="pop-up">
+			          <a id="activity-guide-link" class="WizardMoreInfo red">i</a>
+			          <ul class="pop-up-content red">
+			            <li>
+			              <h2>Voor korte dagtochten op zondag, school of Woon-WerkVerkeer.</h2>
+			                <p>
+			               Een <strong>daypack</strong> is je beste vriend. Uitstekend voor dagelijks gebruik op werk of school maar voldoende ruim om warme kledij, lunch en je EHBO-kit op te bergen tijdens een korte wandeltocht.
+			            </li>
+			          </ul>
+			        </li> 
+
+			<!-- Q:meerdaagse dagtochten -->
+					<a href="#" onclick="javascript:(document.getElementById('wizardSolutionTwo').style.display='block'), (document.getElementById('wizardContentQuestions').style.display='none');">
+						<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3737%7D%2Fkies_rugzak%3E%7Bbabydragers%3Btourpack_heren_a_plus%3Btourpack_heren_a_plusplus%7D&fh_refpath=facet_276&fh_mode=selectlocation_complex&fh_reffacet=kies_rugzak&fh_refview=lister&preview_seo=false">
+							<li class="question red"> Meerdaagse trektocht</li><span class="icon-arrow"></span>
+						</span>
+					</a>
+
+				    <!-- Pop-up -->
+
+			        <li class="pop-up">
+			          <a id="activity-guide-link" class="WizardMoreInfo red">i</a>
+			          <ul class="pop-up-content red">
+			            <li>
+			              <h2>Een Weekendje in de natuur of een stad Verkennen is mijn manier om tot rust te komen.</h2>
+			                <p>
+			                Een tourpack is vast je ideale match. Het volume is niet te groot en niet te klein. Je hebt plaats voor proviand, regenjas en reservekleren, maar ook een kleine slaapzak kan mee. Je budget is afhankelijk van hoe vaak je eropuit trekt.
+			            </li>
+			          </ul>
+			        </li>
+
+			<!-- Q:Trekking -->
+					<a href="#" onclick="javascript:(document.getElementById('wizardSolutionThree').style.display='block'), (document.getElementById('wizardContentQuestions').style.display='none');">
+						<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3737%7D%2Fkies_rugzak%3E%7Bbabydragers%3Bbackpack_dames_a_plus%3Bbackpack_dames_b_plus%3Bbackpack_dames_c_plus%3Bbackpack_heren_a_plus%3Bbackpack_heren_b_plus%3Bbackpack_heren_c_plus%3Bbackpack_junior%7D&fh_refpath=facet_276&fh_mode=selectlocation_complex&fh_reffacet=kies_rugzak&fh_refview=lister&preview_seo=false">
+							<li class="question red"> Trekking</li>
+							<span class="icon-arrow"></span>
+						</span>
+					</a>
+
+				    <!-- Pop-up -->
+
+			        <li class="pop-up">
+			          <a id="activity-guide-link" class="WizardMoreInfo red">i</a>
+			          <ul class="pop-up-content red">
+			            <li>
+			              <h2>Met de rugzak een lange Vakantie maken is mijn ideale manier van reizen.</h2>
+			                <p>
+			                Je bent een echte backpacker. Het is je mobiele voorraad- en kleerkast in één. Je tent, kook- en slaapgerei, proviand, kledij: je hebt het allemaal bij de hand. Hoeveel je wilt spenderen aan je backpack, is afhankelijk van hoe intensief je reist.
+			            </li>
+			          </ul>
+			        </li>
+				</ul>
+
+			</div>
+
+		</div><!-- END_MAINSOL_ -->
+
+<!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+
+<!-- /////////////////// -->
+<!-- step 3 - CATEG0RICAL SOLUTIONS -->
+<!-- /////////////////// -->
+
+	<!-- ////////////////////////-->
+	<!-- WIZARD SOLUTION 1 - Korte dagtochten -->
+
+		<div class="wizardSolution" id="wizardSolutionOne" style="display:none">
+			<div class="span4">
+				<div class="wizardQuestionFlow oldQuestion">
+					<p><span class="wizardQuestionNumber"><span>1</span></span>Voor welke activiteit zoek je een rugzak?</p>
+				</div>
+
+				<div class="wizardQuestionFlow">
+					<p><span class="wizardQuestionNumber"><span>2</span></span>Zoek je een rugzak met airframe?</p>
+				</div>
+
+				<!-- Previous Page - wizardContentQuestions -->				
+				<a href="#" onclick="javascript:(document.getElementById('wizardContentQuestions').style.display='block'), (document.getElementById('wizardSolutionOne').style.display='none');" class="wizardPrevious">
+					<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3737%7D%2Fkies_rugzak%3E%7Bbabydragers%3Bbackpack_dames_a_plus%3Bbackpack_dames_b_plus%3Bbackpack_dames_c_plus%3Bbackpack_heren_a_plus%3Bbackpack_heren_b_plus%3Bbackpack_heren_c_plus%3Bbackpack_junior%3Bdaypack_junior%3Bdaypack_met_airframe_dames%3Bdaypack_met_airframe_heren%3Bdaypack_zonder_airframe_dames%3Bdaypack_zonder_airframe_heren%3Btourpack_heren_a_plus%3Btourpack_heren_a_plusplus%7D&fh_refpath=facet_276&fh_mode=selectlocation_complex&fh_reffacet=kies_rugzak&fh_refview=lister&preview_seo=false"> vorige stap</span>
+				</a>
+			</div>
+
+			<div class="wizardSeperator"></div>
+
+			<div class="span4">
+				<ul>
+					<a href="#" onclick="javascript:(document.getElementById('wizardSolutionOneSectionTwoPartOne').style.display='block'), (document.getElementById('wizardSolutionOne').style.display='none');">
+						<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3737%7D%2Fkies_rugzak%3E%7Bdaypack_met_airframe_dames%3Bdaypack_met_airframe_heren%7D&fh_refpath=facet_276&fh_mode=selectlocation_complex&fh_reffacet=kies_rugzak&fh_refview=lister&preview_seo=false"> 
+							<li class="question red">Ja, graag</li><span class="icon-arrow"></span>
+						</span>
+					</a>
+
+
+					<a href="#" onclick="javascript:(document.getElementById('wizardSolutionOneSectionTwoPartTwo').style.display='block'), (document.getElementById('wizardSolutionOne').style.display='none');">
+						<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3737%7D%2Fkies_rugzak%3E%7Bdaypack_zonder_airframe_dames%3Bdaypack_zonder_airframe_heren%7D&fh_refpath=facet_276&fh_mode=selectlocation_complex&fh_reffacet=kies_rugzak&fh_refview=lister&preview_seo=false"> 
+							<li class="question red">Neen, dank u</li><span class="icon-arrow"></span>
+						</span>
+					</a>
+				</ul>
+			</div>
+
+		</div> <!-- END_SOL_1 -->
+
+
+	<!-- ////////////////////////-->
+	<!-- WIZARD SOLUTION 2 - MEERDAAGSE TREKTOCHT -->
+
+		<div class="wizardSolution" id="wizardSolutionTwo" style="display:none">
+			<div class="span4">
+				<div class="wizardQuestionFlow oldQuestion">
+					<p><span class="wizardQuestionNumber"><span>1</span></span>Voor welke activiteit zoek je een rugzak?</p>
+				</div>
+
+				<div class="wizardQuestionFlow">
+					<p><span class="wizardQuestionNumber"><span>2</span></span>Hoeveel moet er mee kunnen?</p>
+				</div>
+
+				<!-- Previous Page - wizardContentQuestions -->				
+				<a href="#" onclick="javascript:(document.getElementById('wizardContentQuestions').style.display='block'), (document.getElementById('wizardSolutionTwo').style.display='none');" class="wizardPrevious">
+					<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3737%7D%2Fkies_rugzak%3E%7Bbabydragers%3Bbackpack_dames_a_plus%3Bbackpack_dames_b_plus%3Bbackpack_dames_c_plus%3Bbackpack_heren_a_plus%3Bbackpack_heren_b_plus%3Bbackpack_heren_c_plus%3Bbackpack_junior%3Bdaypack_junior%3Bdaypack_met_airframe_dames%3Bdaypack_met_airframe_heren%3Bdaypack_zonder_airframe_dames%3Bdaypack_zonder_airframe_heren%3Btourpack_heren_a_plus%3Btourpack_heren_a_plusplus%7D&fh_refpath=facet_276&fh_mode=selectlocation_complex&fh_reffacet=kies_rugzak&fh_refview=lister&preview_seo=false"> vorige stap</span>
+				</a>
+			</div>
+
+			<div class="wizardSeperator"></div>
+
+			<div class="span4">
+				<ul>	
+					<a href="#" onclick="javascript:(document.getElementById('wizardSolutionTwoSectionTwoPartOne').style.display='block'), (document.getElementById('wizardSolutionTwo').style.display='none');">
+						<span class="ajaxTrigger" ajaxQuery="h_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3737%7D%2Fkies_rugzak%3E%7Btourpack_heren_a_plus%7D&fh_refpath=facet_276&fh_mode=selectlocation_complex&fh_reffacet=kies_rugzak&fh_refview=lister&preview_seo=false">
+							<li class="question red"> Minder dan 40 liter</li>
+							<span class="icon-arrow"></span>
+						</span>
+					</a>
+
+					<a href="#" onclick="javascript:(document.getElementById('wizardSolutionTwoSectionTwoPartTwo').style.display='block'), (document.getElementById('wizardSolutionTwo').style.display='none');">
+						<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3737%7D%2Fkies_rugzak%3E%7Btourpack_heren_a_plusplus%7D&fh_refpath=facet_276&fh_mode=selectlocation_complex&fh_reffacet=kies_rugzak&fh_refview=lister&preview_seo=false">
+							<li class="question red"> Meer dan 40 liter</li>
+							<span class="icon-arrow"></span>
+						</span>
+					</a>
+				</ul>
+			</div>
+		</div> <!-- END_SOL_2 -->
+
+
+	<!-- ////////////////////////-->
+	<!-- WIZARD SOLUTION 3 - TREKKING -->
+
+		<div class="wizardSolution" id="wizardSolutionThree" style="display:none">
+			<div class="span4">
+				<div class="wizardQuestionFlow oldQuestion">
+					<p><span class="wizardQuestionNumber"><span>1</span></span>Voor welke activiteit zoek je een rugzak?</p>
+				</div>
+
+				<div class="wizardQuestionFlow">
+					<p><span class="wizardQuestionNumber"><span>2</span></span>Hoe intensief zullen jouw toekomstige trekkings zijn?</p>
+				</div>
+
+				<!-- Previous Page - wizardContentQuestions -->				
+				<a href="#" onclick="javascript:(document.getElementById('wizardContentQuestions').style.display='block'), (document.getElementById('wizardSolutionThree').style.display='none');" class="wizardPrevious">
+					<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3737%7D%2Fkies_rugzak%3E%7Bbabydragers%3Bbackpack_dames_a_plus%3Bbackpack_dames_b_plus%3Bbackpack_dames_c_plus%3Bbackpack_heren_a_plus%3Bbackpack_heren_b_plus%3Bbackpack_heren_c_plus%3Bbackpack_junior%3Bdaypack_junior%3Bdaypack_met_airframe_dames%3Bdaypack_met_airframe_heren%3Bdaypack_zonder_airframe_dames%3Bdaypack_zonder_airframe_heren%3Btourpack_heren_a_plus%3Btourpack_heren_a_plusplus%7D&fh_refpath=facet_276&fh_mode=selectlocation_complex&fh_reffacet=kies_rugzak&fh_refview=lister&preview_seo=false"> vorige stap</span>
+				</a>
+			</div>
+
+			<div class="wizardSeperator"></div>
+
+			<div class="span4">
+				<ul>
+
+					<a href="#" onclick="javascript:(document.getElementById('wizardSolutionThreeSectionTwoPartOne').style.display='block'), (document.getElementById('wizardSolutionThree').style.display='none');">
+						<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3737%7D%2Fkies_rugzak%3E%7Bbackpack_dames_a_plus%3Bbackpack_heren_a_plus%7D&fh_refpath=facet_276&fh_mode=selectlocation_complex&fh_reffacet=kies_rugzak&fh_refview=lister&preview_seo=false">
+							<li class="question red"> Weinig intensief</li>
+							<span class="icon-arrow"></span>
+						</span>
+					</a>
+
+
+					<a href="#" onclick="javascript:(document.getElementById('wizardSolutionThreeSectionTwoPartTwo').style.display='block'), (document.getElementById('wizardSolutionThree').style.display='none');">
+						<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3737%7D%2Fkies_rugzak%3E%7Bbackpack_dames_b_plus%3Bbackpack_heren_b_plus%7D&fh_refpath=facet_276&fh_mode=selectlocation_complex&fh_reffacet=kies_rugzak&fh_refview=lister&preview_seo=false">
+							<li class="question red"> Gemiddeld</li>
+							<span class="icon-arrow"></span>
+						</span>
+					</a>
+
+
+					<a href="#" onclick="javascript:(document.getElementById('wizardSolutionThreeSectionTwoPartThree').style.display='block'), (document.getElementById('wizardSolutionThree').style.display='none');">
+						<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3737%7D%2Fkies_rugzak%3E%7Bbackpack_dames_c_plus%3Bbackpack_heren_c_plus%7D&fh_refpath=facet_276&fh_mode=selectlocation_complex&fh_reffacet=kies_rugzak&fh_refview=lister&preview_seo=false">
+							<li class="question red"> Zeer intensief</li>
+							<span class="icon-arrow"></span>
+						</span>
+					</a>
+				</ul>
+			</div>
+		</div> <!-- END_SOL_3 -->
+
+
+<!-- ////////// \\\\\\\\\\\ -->
+<!--  START SUB SOLUTIONS -->
+<!-- ////////// \\\\\\\\\\\ -->
+
+		<!-- ////////////////////////-->
+		<!-- SUB SOLUTION _ KORTE DAGTOCHTEN -->
+
+		<!-- korte dagtochten (1) -->
+
+		<div class="wizardSolution" id="wizardSolutionOneSectionTwoPartOne" style="display:none">
+			<div class="span4">
+
+				<div class="wizardQuestionFlow oldQuestion">
+					<p><span class="wizardQuestionNumber"><span>1</span></span>Voor welke activiteit zoek je een rugzak?</p>
+				</div>
+
+				<div class="wizardQuestionFlow oldQuestion">
+					<p><span class="wizardQuestionNumber"><span>2</span></span>Zoek je een rugzak met airframe?</p>
+				</div>	
+
+				<a href="#" onclick="javascript:(document.getElementById('wizardSolutionOne').style.display='block'), (document.getElementById('wizardSolutionOneSectionTwoPartOne').style.display='none');" class="wizardPrevious">
+					<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3737%7D%2Fkies_rugzak%3E%7Bbabydragers%3Bdaypack_met_airframe_dames%3Bdaypack_met_airframe_heren%3Bdaypack_zonder_airframe_dames%3Bdaypack_zonder_airframe_heren%7D&fh_refpath=facet_276&fh_mode=selectlocation_complex&fh_reffacet=kies_rugzak&fh_refview=lister&preview_seo=false"> vorige stap <span> 
+				</a>
+
+			</div>
+
+				<div class="wizardSeperator"></div>
+
+			<div class="span4">
+
+				<div class="subQuestion">
+					<p class="marker red">Daypacks met airframe</p>
+					<div class="confirmText">Bekijk hieronder je selectie</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- korte dagtochten (2) -->
+
+		<div class="wizardSolution" id="wizardSolutionOneSectionTwoPartTwo" style="display:none">
+			<div class="span4">
+
+				<div class="wizardQuestionFlow oldQuestion">
+					<p><span class="wizardQuestionNumber"><span>1</span></span>Voor welke activiteit zoek je een rugzak?</p>
+				</div>
+
+				<div class="wizardQuestionFlow oldQuestion">
+					<p><span class="wizardQuestionNumber"><span>2</span></span>Zoek je een rugzak met airframe?</p>
+				</div>	
+
+				<a href="#" onclick="javascript:(document.getElementById('wizardSolutionOne').style.display='block'), (document.getElementById('wizardSolutionOneSectionTwoPartTwo').style.display='none');" class="wizardPrevious">
+					<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3737%7D%2Fkies_rugzak%3E%7Bbabydragers%3Bdaypack_met_airframe_dames%3Bdaypack_met_airframe_heren%3Bdaypack_zonder_airframe_dames%3Bdaypack_zonder_airframe_heren%7D&fh_refpath=facet_276&fh_mode=selectlocation_complex&fh_reffacet=kies_rugzak&fh_refview=lister&preview_seo=false"> vorige stap <span> 
+				</a>
+
+			</div>
+
+				<div class="wizardSeperator"></div>
+
+			<div class="span4">
+
+				<div class="subQuestion">
+					<p class="marker red">Daypacks zonder airframe</p>
+					<div class="confirmText">Bekijk hieronder je selectie</div>
+				</div>
+
+			</div>
+		</div> <!-- END_ KORTE DAGTOCHTEN -->
+
+
+		<!-- ////////////////////////-->
+		<!-- SUB SOLUTION _ MEERDAAGSE TREKTOCHTEN -->
+
+			<!-- MEERDAAGSE TREKTOCHTEN -->
+
+			<!-- meerdaagse trektochten - minder dan 40 l -->
+
+				<div class="wizardSolution" id="wizardSolutionTwoSectionTwoPartOne" style="display:none">
+					<div class="span4">
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>1</span></span>Voor welke activiteit zoek je een rugzak?</p>
+						</div>
+
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>2</span></span>Hoeveel moet er mee kunnen?</p>
+						</div>	
+
+						<a href="#" onclick="javascript:(document.getElementById('wizardSolutionTwo').style.display='block'), (document.getElementById('wizardSolutionTwoSectionTwoPartOne').style.display='none');" class="wizardPrevious">
+							<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3737%7D%2Fkies_rugzak%3E%7Bbabydragers%3Btourpack_heren_a_plus%3Btourpack_heren_a_plusplus%7D&fh_refpath=facet_276&fh_mode=selectlocation_complex&fh_reffacet=kies_rugzak&fh_refview=lister&preview_seo=false"> vorige stap <span> 
+						</a>
+					</div>
+
+						<div class="wizardSeperator"></div>
+
+					<div class="span4">
+						<p class="marker red">Tourpacks TYPE A+</p>
+					
+						<p>Ik neem enkel een lakenzak en beperkt aantal materiaal mee voor een citytrip of huttentocht.</p>
+						<div class="confirmText">Bekijk hieronder je selectie</div>
+					</div>
+				</div>
+
+			<!-- meerdaagse trektochten - meer dan 40 l -->
+
+				<div class="wizardSolution" id="wizardSolutionTwoSectionTwoPartTwo" style="display:none">
+					<div class="span4">
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>1</span></span>Voor welke activiteit zoek je een rugzak?</p>
+						</div>
+
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>2</span></span>Hoeveel moet er mee kunnen?</p>
+						</div>	
+
+						<a href="#" onclick="javascript:(document.getElementById('wizardSolutionTwo').style.display='block'), (document.getElementById('wizardSolutionTwoSectionTwoPartTwo').style.display='none');" class="wizardPrevious">
+							<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3737%7D%2Fkies_rugzak%3E%7Bbabydragers%3Btourpack_heren_a_plus%3Btourpack_heren_a_plusplus%7D&fh_refpath=facet_276&fh_mode=selectlocation_complex&fh_reffacet=kies_rugzak&fh_refview=lister&preview_seo=false"> vorige stap <span> 
+						</a>
+					</div>
+
+						<div class="wizardSeperator"></div>
+
+					<div class="span4">
+						<p class="marker red">Tourpacks TYPE A++</p>
+					
+						<p>Voldoende plaats voor een lichtgewicht tentje, slaapzak en -matje voor een langere tocht in het buitenland.</p>
+						<div class="confirmText">Bekijk hieronder je selectie</div>
+
+					</div>
+				</div><!-- END_RUGZAKTREKKING -->
+
+
+		<!-- ////////////////////////-->
+		<!-- SUB SOLUTION _ TREKKING -->
+
+			<!-- TREKKING -->
+
+			<!-- trekking - weinig intensief -->
+
+				<div class="wizardSolution" id="wizardSolutionThreeSectionTwoPartOne" style="display:none">
+					<div class="span4">
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>1</span></span>Voor welke activiteit zoek je een rugzak?</p>
+						</div>
+
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>2</span></span>Hoe intensief zullen jouw toekomstige trekkings zijn?</p>
+						</div>
+
+						<a href="#" onclick="javascript:(document.getElementById('wizardSolutionThree').style.display='block'), (document.getElementById('wizardSolutionThreeSectionTwoPartOne').style.display='none');" class="wizardPrevious">
+							<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3737%7D%2Fkies_rugzak%3E%7Bbabydragers%3Bbackpack_dames_a_plus%3Bbackpack_dames_b_plus%3Bbackpack_dames_c_plus%3Bbackpack_heren_a_plus%3Bbackpack_heren_b_plus%3Bbackpack_heren_c_plus%3Bbackpack_junior%7D&fh_refpath=facet_276&fh_mode=selectlocation_complex&fh_reffacet=kies_rugzak&fh_refview=lister&preview_seo=false"> vorige stap <span> 
+						</a>
+					</div>
+
+						<div class="wizardSeperator"></div>
+
+					<div class="span4">
+						<p class="marker red">Backpacks TYPE A+</p>
+					
+						<p>Jaarlijks op scouts-of chirokamp, of om mijn huishouden te verhuizen tussen kot en hotel mama.</p>
+						<div class="confirmText">Bekijk hieronder je selectie</div>
+
+					</div>
+
+
+				</div> 
+
+			<!-- trekking - Gemiddeld -->
+
+				<div class="wizardSolution" id="wizardSolutionThreeSectionTwoPartTwo" style="display:none">
+					<div class="span4">
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>1</span></span>Voor welke activiteit zoek je een rugzak?</p>
+						</div>
+
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>2</span></span>Hoe intensief zullen jouw toekomstige trekkings zijn?</p>
+						</div>
+
+						<a href="#" onclick="javascript:(document.getElementById('wizardSolutionThree').style.display='block'), (document.getElementById('wizardSolutionThreeSectionTwoPartTwo').style.display='none');" class="wizardPrevious">
+							<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3737%7D%2Fkies_rugzak%3E%7Bbabydragers%3Bbackpack_dames_a_plus%3Bbackpack_dames_b_plus%3Bbackpack_dames_c_plus%3Bbackpack_heren_a_plus%3Bbackpack_heren_b_plus%3Bbackpack_heren_c_plus%3Bbackpack_junior%7D&fh_refpath=facet_276&fh_mode=selectlocation_complex&fh_reffacet=kies_rugzak&fh_refview=lister&preview_seo=false"> vorige stap <span> 
+						</a>
+					</div>
+
+						<div class="wizardSeperator"></div>
+
+						<div class="span4">
+							<p class="marker red">Backpacks TYPE B+</p>
+						
+							<p>Ik trek regelmatig een tijdje de wereld in met mijn rugzak, veraf of dicht bij huis.</p>
+							<div class="confirmText">Bekijk hieronder je selectie</div>
+
+						</div>
+				</div>
+
+			<!-- trekking - Zeer intensief -->
+
+				<div class="wizardSolution" id="wizardSolutionThreeSectionTwoPartThree" style="display:none">
+					<div class="span4">
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>1</span></span>Voor welke activiteit zoek je een rugzak?</p>
+						</div>
+
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>2</span></span>Hoe intensief zullen jouw toekomstige trekkings zijn?</p>
+						</div>
+
+						<a href="#" onclick="javascript:(document.getElementById('wizardSolutionThree').style.display='block'), (document.getElementById('wizardSolutionThreeSectionTwoPartThree').style.display='none');" class="wizardPrevious">
+							<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3737%7D%2Fkies_rugzak%3E%7Bbabydragers%3Bbackpack_dames_a_plus%3Bbackpack_dames_b_plus%3Bbackpack_dames_c_plus%3Bbackpack_heren_a_plus%3Bbackpack_heren_b_plus%3Bbackpack_heren_c_plus%3Bbackpack_junior%7D&fh_refpath=facet_276&fh_mode=selectlocation_complex&fh_reffacet=kies_rugzak&fh_refview=lister&preview_seo=false"> vorige stap <span> 
+						</a>
+					</div>
+
+						<div class="wizardSeperator"></div>
+
+					<div class="span4">
+						<p class="marker red">Backpacks TYPE C+</p>
+
+						<p>Ik wil met mijn rugzak de hoogste bergtoppen trotseren.</p>
+						<div class="confirmText">Bekijk hieronder je selectie</div>
+				</div>
+				</div> <!-- END_ TREKKING -->				
+<!-- end content -->
+	</div> 
+</body>
+</html> 

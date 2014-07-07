@@ -1,0 +1,515 @@
+/*------------------------------------*\
+	Project:		Product Wizard
+    Assigned to: 	Pieter De Wachter - pieterdewachter@asadventure.com
+    Last Change: 	21/06/2014
+    Version: 		1.1
+\*------------------------------------*/
+/* [ _grid.scss ] */
+/*************************
+
+// Instructions //
+
+@ papa-bear: tablet portrait
+@ mama-bear: tablet landscape
+@ baby-bear: mobile
+
+**************************/
+/*------------------------------------*\
+    $GRID
+\*------------------------------------*/
+#wizardContent {
+  max-width: 870px;
+  margin-bottom: 30px; }
+  #wizardContent .wizardSolution .span4 h3,
+  #wizardContent .wizardSolution .span5 h3 {
+    line-height: 25px;
+    margin-bottom: 10px;
+    font-weight: 600; }
+  #wizardContent .wizardSolution .span4 p,
+  #wizardContent .wizardSolution .span5 p {
+    font-size: 14px;
+    line-height: 20px; }
+
+/*------------------------------------*\
+    $Variables
+\*------------------------------------*/
+/*------------------------------------*\
+    $COLOR SCHEME
+\*------------------------------------*/
+#product-wizard-activate .gold,
+#wizardContent .gold {
+  background: #968c7a;
+  color: #fff;
+  text-decoration: none; }
+#product-wizard-activate .red,
+#wizardContent .red {
+  background: #b87558;
+  color: #fff;
+  text-decoration: none; }
+#product-wizard-activate .blue,
+#wizardContent .blue {
+  background: #628399;
+  color: #fff;
+  text-decoration: none; }
+#product-wizard-activate .green,
+#wizardContent .green {
+  background: #7fa392;
+  color: #fff;
+  text-decoration: none; }
+#product-wizard-activate .wizardSolution .marker,
+#wizardContent .wizardSolution .marker {
+  padding: 2px; }
+
+/*------------------------------------*\
+    $intro-banners.scss
+\*------------------------------------*/
+#product-wizard-activate {
+  top: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  /* margin-top: -2px; == because there is a margin-bottom with the level 2 */
+  margin-top: -20px; }
+  @media only screen and (max-width: 767px) {
+    #product-wizard-activate .button-wrapper a {
+      display: block;
+      height: 100px;
+      max-width: 100%;
+      max-height: 100%;
+      background-size: contain; }
+    #product-wizard-activate .button-wrapper .intro-slaapzakken {
+      background: url("https://static.asadventure.com/includes/visuals/product-wizard/img/slaapzakken/intro-product-wizard-mobile.jpg") no-repeat; }
+    #product-wizard-activate .button-wrapper .intro-slaapzakken-fr {
+      background: url("https://static.asadventure.com/includes/visuals/product-wizard/img/slaapzakken/intro-product-wizard-mobile-fr.jpg") no-repeat; }
+    #product-wizard-activate .button-wrapper .intro-slaapzakken-eng {
+      background: url("https://static.asadventure.com/includes/visuals/product-wizard/img/slaapzakken/intro-product-wizard-mobile-eng.jpg") no-repeat; }
+    #product-wizard-activate .button-wrapper .intro-tenten {
+      background: url("https://static.asadventure.com/includes/visuals/product-wizard/img/tenten/intro-product-wizard-mobile.jpg") no-repeat; }
+    #product-wizard-activate .button-wrapper .intro-tenten-fr {
+      background: url("https://static.asadventure.com/includes/visuals/product-wizard/img/tenten/intro-product-wizard-mobile-fr.jpg") no-repeat; }
+    #product-wizard-activate .button-wrapper .intro-tenten-eng {
+      background: url("https://static.asadventure.com/includes/visuals/product-wizard/img/tenten/intro-product-wizard-mobile-eng.jpg") no-repeat; }
+    #product-wizard-activate .button-wrapper .intro-schoenen {
+      background: url("https://static.asadventure.com/includes/visuals/product-wizard/img/schoenen/intro-product-wizard-mobile.jpg") no-repeat; }
+    #product-wizard-activate .button-wrapper .intro-schoenen-fr {
+      background: url("https://static.asadventure.com/includes/visuals/product-wizard/img/schoenen/intro-product-wizard-mobile-fr.jpg") no-repeat; }
+    #product-wizard-activate .button-wrapper .intro-schoenen-eng {
+      background: url("https://static.asadventure.com/includes/visuals/product-wizard/img/schoenen/intro-product-wizard-mobile-eng.jpg") no-repeat; }
+    #product-wizard-activate .button-wrapper .intro-rugzakken {
+      background: url("https://static.asadventure.com/includes/visuals/product-wizard/img/rugzakken/intro-product-wizard-mobile.jpg") no-repeat; }
+    #product-wizard-activate .button-wrapper .intro-rugzakken-fr {
+      background: url("https://static.asadventure.com/includes/visuals/product-wizard/img/rugzakken/intro-product-wizard-mobile-fr.jpg") no-repeat; }
+    #product-wizard-activate .button-wrapper .intro-rugzakken-eng {
+      background: url("https://static.asadventure.com/includes/visuals/product-wizard/img/rugzakken/intro-product-wizard-mobile-eng.jpg") no-repeat; } }
+  @media only screen and (min-width: 768px) {
+    #product-wizard-activate .button-wrapper a {
+      display: block;
+      height: 60px;
+      width: auto; }
+    #product-wizard-activate .button-wrapper .intro-slaapzakken {
+      background: url("https://static.asadventure.com/includes/visuals/product-wizard/img/slaapzakken/intro-product-wizard.jpg") no-repeat;
+      background-size: contain; }
+    #product-wizard-activate .button-wrapper .intro-slaapzakken-fr {
+      background: url("https://static.asadventure.com/includes/visuals/product-wizard/img/slaapzakken/intro-product-wizard-fr.jpg") no-repeat;
+      background-size: contain; }
+    #product-wizard-activate .button-wrapper .intro-slaapzakken-eng {
+      background: url("https://static.asadventure.com/includes/visuals/product-wizard/img/slaapzakken/intro-product-wizard-eng.jpg") no-repeat;
+      background-size: contain; }
+    #product-wizard-activate .button-wrapper .intro-tenten {
+      background: url("https://static.asadventure.com/includes/visuals/product-wizard/img/tenten/intro-product-wizard.jpg") no-repeat;
+      background-size: contain; }
+    #product-wizard-activate .button-wrapper .intro-tenten-fr {
+      background: url("https://static.asadventure.com/includes/visuals/product-wizard/img/tenten/intro-product-wizard-fr.jpg") no-repeat;
+      background-size: contain; }
+    #product-wizard-activate .button-wrapper .intro-tenten-eng {
+      background: url("https://static.asadventure.com/includes/visuals/product-wizard/img/tenten/intro-product-wizard-eng.jpg") no-repeat;
+      background-size: contain; }
+    #product-wizard-activate .button-wrapper .intro-schoenen {
+      background: url("https://static.asadventure.com/includes/visuals/product-wizard/img/schoenen/intro-product-wizard.jpg") no-repeat;
+      background-size: contain; }
+    #product-wizard-activate .button-wrapper .intro-schoenen-fr {
+      background: url("https://static.asadventure.com/includes/visuals/product-wizard/img/schoenen/intro-product-wizard-fr.jpg") no-repeat;
+      background-size: contain; }
+    #product-wizard-activate .button-wrapper .intro-schoenen-eng {
+      background: url("https://static.asadventure.com/includes/visuals/product-wizard/img/schoenen/intro-product-wizard-eng.jpg") no-repeat;
+      background-size: contain; }
+    #product-wizard-activate .button-wrapper .intro-rugzakken {
+      background: url("https://static.asadventure.com/includes/visuals/product-wizard/img/rugzakken/intro-product-wizard.jpg") no-repeat;
+      background-size: contain; }
+    #product-wizard-activate .button-wrapper .intro-rugzakken-fr {
+      background: url("https://static.asadventure.com/includes/visuals/product-wizard/img/rugzakken/intro-product-wizard-fr.jpg") no-repeat;
+      background-size: contain; }
+    #product-wizard-activate .button-wrapper .intro-rugzakken-eng {
+      background: url("https://static.asadventure.com/includes/visuals/product-wizard/img/rugzakken/intro-product-wizard-eng.jpg") no-repeat;
+      background-size: contain; } }
+
+/*------------------------------------*\
+    $MEDIAQUERRIES
+\*------------------------------------*/
+/*------------------------------------*\
+    $LANDSCAPE
+\*------------------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 1200px) and (orientation: landscape) {
+  .thumbContainer .span9 #wizardContent {
+    border-bottom: 1px solid #968c7a;
+    display: inline-block;
+    height: 100%;
+    margin-bottom: 30px;
+    padding: none;
+    position: relative;
+    clear: right; }
+    .thumbContainer .span9 #wizardContent h2 {
+      font-size: 18px; } }
+/*------------------------------------*\
+    $PORTRAIT
+\*------------------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 980px) and (orientation: portrait) {
+  .thumbContainer .span9 #wizardContent {
+    font-size: 12px; }
+    .thumbContainer .span9 #wizardContent h2 {
+      font-size: 16px; }
+    .thumbContainer .span9 #wizardContent h3 {
+      font-size: 13px; }
+    .thumbContainer .span9 #wizardContent .wizardContentStart img {
+      width: 80%;
+      height: auto; }
+    .thumbContainer .span9 #wizardContent .wizardSolution .span4 .square {
+      width: 42%;
+      padding: 5px; }
+      .thumbContainer .span9 #wizardContent .wizardSolution .span4 .square p {
+        font-size: 12px; }
+    .thumbContainer .span9 #wizardContent .people-container a img {
+      width: calc(370px / 2);
+      height: 91px; } }
+/*------------------------------------*\
+    $MOBILE
+\*------------------------------------*/
+@media only screen and (max-width: 767px) {
+  .thumbContainer .span9 #wizardContent {
+    background: url("https://static.asadventure.com/includes/visuals/product-wizard/img/background.jpg") repeat-y white;
+    border-bottom: 1px solid #968c7a;
+    display: inline-block;
+    height: 100%;
+    max-width: 100%;
+    margin-bottom: 30px;
+    padding: none;
+    position: relative;
+    width: auto;
+    clear: right; }
+    .thumbContainer .span9 #wizardContent .ajaxTrigger:before, .thumbContainer .span9 #wizardContent .ajaxTrigger:after {
+      content: "";
+      display: table; }
+    .thumbContainer .span9 #wizardContent .ajaxTrigger:after {
+      clear: both; }
+    .thumbContainer .span9 #wizardContent .span4 a .wizardContentStart img {
+      display: block;
+      height: 80px;
+      width: auto;
+      margin: 0 auto;
+      padding-top: 5%; }
+    .thumbContainer .span9 #wizardContent a {
+      -webkit-tap-highlight-color: transparent; }
+    .thumbContainer .span9 #wizardContent h2 {
+      display: block;
+      font-size: 18px;
+      height: auto;
+      position: relative;
+      width: auto;
+      max-width: 300px;
+      padding-right: 10px;
+      line-height: 30px;
+      margin-bottom: 5px;
+      margin-top: 5px; }
+    .thumbContainer .span9 #wizardContent h3 {
+      font-style: 12px;
+      margin-left: 15px; }
+    .thumbContainer .span9 #wizardContent p {
+      padding-right: 10px;
+      margin-right: 5px;
+      margin-left: 5px;
+      max-width: 300px; }
+    .thumbContainer .span9 #wizardContent #wizardContentQuestions,
+    .thumbContainer .span9 #wizardContent .wizardSolution {
+      float: left; }
+      .thumbContainer .span9 #wizardContent #wizardContentQuestions a,
+      .thumbContainer .span9 #wizardContent .wizardSolution a {
+        float: left; }
+      .thumbContainer .span9 #wizardContent #wizardContentQuestions li,
+      .thumbContainer .span9 #wizardContent .wizardSolution li {
+        margin-left: 5px; }
+    .thumbContainer .span9 #wizardContent .span3,
+    .thumbContainer .span9 #wizardContent .span4,
+    .thumbContainer .span9 #wizardContent .span5 {
+      display: inline-block;
+      margin: 0 auto; }
+    .thumbContainer .span9 #wizardContent .wizardQuestionFlow {
+      margin: 5px;
+      width: 320px; }
+      .thumbContainer .span9 #wizardContent .wizardQuestionFlow p {
+        padding-right: 10px;
+        margin-right: 5px;
+        margin-left: 5px; }
+    .thumbContainer .span9 #wizardContent .wizardPrevious {
+      bottom: 0 !important;
+      left: 0;
+      height: 30px;
+      width: 95%;
+      padding: 5px 0 5px 10px;
+      color: #505050;
+      border-top: 1px dotted #505050;
+      background: none; }
+    .thumbContainer .span9 #wizardContent .people-container {
+      width: auto;
+      margin: 0 auto; }
+    .thumbContainer .span9 #wizardContent .people-container a img,
+    .thumbContainer .span9 #wizardContent .span4 a img {
+      display: inline-block;
+      height: 80px;
+      width: auto;
+      margin: 10px 25px; }
+    .thumbContainer .span9 #wizardContent .WizardMoreInfo,
+    .thumbContainer .span9 #wizardContent .wizardSeperator,
+    .thumbContainer .span9 #wizardContent .icon {
+      display: none; } }
+/*------------------------------------*\
+    $MAIN
+\*------------------------------------*/
+#wizardContent {
+  position: relative;
+  display: block;
+  height: 250px;
+  width: 100%;
+  max-width: 870px;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  border: 1px solid #968c7a;
+  background: url("https://static.asadventure.com/includes/visuals/product-wizard/img/background.jpg") repeat-y white; }
+  #wizardContent *,
+  #wizardContent *:before,
+  #wizardContent *:after {
+    -webkit-box-sizing: border-box;
+    /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;
+    /* Firefox, other Gecko */
+    box-sizing: border-box;
+    /* Opera/IE 8+ */ }
+  @media only screen and (max-width: 767px) {
+    #wizardContent {
+      box-sizing: border-box; } }
+  #wizardContent h2 {
+    height: auto;
+    width: auto;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+    padding-top: 1px;
+    padding-bottom: 2px;
+    color: #fff;
+    text-align: center;
+    font-family: "Open Sans", helvetica, arial, Sans-serif;
+    font-weight: 100;
+    font-size: 25px; }
+    #wizardContent h2 .icon {
+      height: 30px;
+      width: 30px;
+      margin-bottom: 5px;
+      margin-right: 10px; }
+  #wizardContent .wizardPrevious {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 24px;
+    width: auto;
+    margin: 5px;
+    padding: 1px 10px;
+    background: none repeat scroll 0 0 #505050;
+    color: #fff; }
+    #wizardContent .wizardPrevious:hover {
+      background: #808080; }
+    #wizardContent .wizardPrevious:before {
+      left: 0;
+      float: left;
+      height: 8px;
+      content: "";
+      margin: 7px 0;
+      width: 25px;
+      background: url("https://static.asadventure.com/includes/visuals/product-wizard/img/arrow-previous.png") no-repeat scroll 0 0; }
+      @media only screen and (max-width: 767px) {
+        #wizardContent .wizardPrevious:before {
+          display: none; } }
+  #wizardContent .wizardSeperator {
+    float: left;
+    height: 180px;
+    width: 1px;
+    border-right: 1px dotted #555555; }
+  #wizardContent .confirmText {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #555555;
+    text-align: center; }
+
+#wizardContentMain .intro-title {
+  height: 100%;
+  padding-top: 2%;
+  padding-right: 30px;
+  text-align: left; }
+  #wizardContentMain .intro-title h3 {
+    font-size: 110%;
+    font-family: "Open Sans", helvetica;
+    font-weight: 500;
+    line-height: 150%; }
+#wizardContentMain .wizardContentStart {
+  position: relative;
+  width: 100%; }
+  #wizardContentMain .wizardContentStart img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5%; }
+
+@media only screen and (max-width: 767px) {
+  #wizardContentQuestions {
+    width: 100%; }
+    #wizardContentQuestions li {
+      width: 100%;
+      margin-right: 5px; }
+    #wizardContentQuestions a {
+      float: none; } }
+
+@media only screen and (max-width: 767px) {
+  .thumbContainer .span9 #wizardContent #wizardContentQuestions a,
+  .thumbContainer .span9 #wizardContent .wizardSolution a {
+    clear: left;
+    float: none; } }
+
+#wizardContentQuestions .wizardQuestionFlow p,
+.wizardSolution .wizardQuestionFlow p {
+  font-size: 15px;
+  font-weight: normal;
+  color: #505050; }
+  #wizardContentQuestions .wizardQuestionFlow p .wizardQuestionNumber,
+  .wizardSolution .wizardQuestionFlow p .wizardQuestionNumber {
+    float: left;
+    width: 15px;
+    height: 15px;
+    padding-bottom: 10px;
+    margin-right: 5px;
+    margin-top: 4px;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #505050;
+    color: #fff; }
+    #wizardContentQuestions .wizardQuestionFlow p .wizardQuestionNumber span,
+    .wizardSolution .wizardQuestionFlow p .wizardQuestionNumber span {
+      position: relative;
+      top: -21px;
+      margin-left: -4px; }
+#wizardContentQuestions .oldQuestion p,
+.wizardSolution .oldQuestion p {
+  opacity: 0.6;
+  text-decoration: line-through;
+  font-size: 15px;
+  font-weight: normal; }
+#wizardContentQuestions ul,
+.wizardSolution ul {
+  margin: 0;
+  padding: 0;
+  width: none;
+  height: auto;
+  list-style-type: none; }
+  #wizardContentQuestions ul a,
+  .wizardSolution ul a {
+    float: none; }
+    #wizardContentQuestions ul a:hover,
+    .wizardSolution ul a:hover {
+      text-decoration: none; }
+  #wizardContentQuestions ul .question,
+  .wizardSolution ul .question {
+    float: left;
+    width: 85%;
+    padding: 5px 10px 5px 10px;
+    margin-bottom: 10px;
+    color: #fff;
+    list-style: none; }
+    @media only screen and (max-width: 767px) {
+      #wizardContentQuestions ul .question,
+      .wizardSolution ul .question {
+        padding: 5px 10px 5px 5px;
+        margin-right: 5px;
+        font-size: 12px; }
+        #wizardContentQuestions ul .question:before, #wizardContentQuestions ul .question:after,
+        .wizardSolution ul .question:before,
+        .wizardSolution ul .question:after {
+          content: "";
+          display: table; }
+        #wizardContentQuestions ul .question:after,
+        .wizardSolution ul .question:after {
+          clear: both; } }
+  #wizardContentQuestions ul .icon-arrow,
+  .wizardSolution ul .icon-arrow {
+    display: block;
+    float: left;
+    height: 13px;
+    width: 13px;
+    margin: 12px -25px;
+    background: url("https://static.asadventure.com/includes/visuals/product-wizard/img/arrow.png") no-repeat scroll 0 0; }
+    @media only screen and (max-width: 767px) {
+      #wizardContentQuestions ul .icon-arrow:before, #wizardContentQuestions ul .icon-arrow:after,
+      .wizardSolution ul .icon-arrow:before,
+      .wizardSolution ul .icon-arrow:after {
+        content: "";
+        display: table; }
+      #wizardContentQuestions ul .icon-arrow:after,
+      .wizardSolution ul .icon-arrow:after {
+        clear: both; } }
+  #wizardContentQuestions ul .WizardMoreInfo,
+  .wizardSolution ul .WizardMoreInfo {
+    float: right;
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    margin-top: 5px;
+    padding: 1px 12px;
+    background: url("https://static.asadventure.com/includes/visuals/product-wizard/img/icon-more-info.png") no-repeat scroll 0 0;
+    background-position: 0px 0px; }
+    #wizardContentQuestions ul .WizardMoreInfo:hover, #wizardContentQuestions ul .WizardMoreInfo:focus,
+    .wizardSolution ul .WizardMoreInfo:hover,
+    .wizardSolution ul .WizardMoreInfo:focus {
+      cursor: pointer;
+      background-position: 0px -24px; }
+
+#wizardContent .pop-up {
+  display: block; }
+
+#wizardContent .pop-up:hover .pop-up-content {
+  display: block; }
+
+#wizardContent .pop-up-content {
+  position: absolute;
+  display: none;
+  top: 20%;
+  width: 37%;
+  z-index: 1;
+  height: auto;
+  padding: 15px;
+  box-shadow: 2px 2px 5px 1px #333333;
+  border: 1px solid #505050; }
+  #wizardContent .pop-up-content h2 {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    background: none; }
+  #wizardContent .pop-up-content p {
+    font: 13px/20px "Myriad Pro",Arial,sans-serif; }
+
+.product-wizard-people-icon {
+  display: block;
+  height: auto;
+  margin-top: 5px; }
+
+.product-wizard-people-icon-large {
+  height: 115px;
+  width: auto; }

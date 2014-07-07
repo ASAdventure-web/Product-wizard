@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<!-- No-caching styles -->
+
+<meta http-equiv="cache-control" content="max-age=0" />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="pragma" content="no-cache" />
+
+<!-- Styles -->
+
+<link rel="stylesheet" type="text/css" href="https://static.asadventure.com/includes/visuals/product-wizard/css/styles.css">
+
+<!-- Scripts -->
+
+<script type="text/javascript" src="https://static.asadventure.com/includes/visuals/product-wizard/javascript/hideFredhopperBanner.js"></script>
+
+</head>
+<body>
+	
+	<!--
+
+	- - - - - - - - 
+	Instructions - Created by pieter.dewachter@asadventure.com
+	- - - - - - - -  
+
+	id = wizardSolution [One, Two, Three, Four] => triggers .getElementById.style.display.[none/block] show a new item based on the users choice
+
+	.wizardQuestoinFlow = number of question + question
+	.oldQuestion = previous question (line trough text)
+	.wizardPrevious = previous page 
+		!Make sure that the ajaxTrigger + ajaxQuerry is the same as the previous page
+
+	.wizardSeperator = seperator between left and right content	
+	
+-->	
+
+<div id="product-wizard-activate">
+	<div class="button-wrapper">
+		<a href="#" class="intro-schoenen" onclick="javascript:(document.getElementById('product-wizard-activate').style.display='none'), (document.getElementById('wizardContent').style.display='inline-block'), hideFredhopperBanner();"> 
+		</a>
+	</div>
+</div>	
+
+
+<div id="wizardContent" style="display:none">
+	
+	<h2 class="green"> <!-- Main titel -->
+		<img src="https://static.asadventure.com/includes/visuals/product-wizard/img/schoenen/icon-schoenen.png" alt="icon" class="icon"/> De dappere stapper-test
+	</h2>
+
+	<!-- ///////////////////////////////////// -->
+	<!-- step 1 - MAIN -->
+	<!-- ///////////////////////////////////// -->
+
+	<div id="wizardContentMain" style="display:block">
+		<div class="span4 intro-title">
+			<h3>Ben je een stoere berggeit die dwars door berg, beek en dal gaat om je einddoel te bereiken, volg je liever de begane paden of ben je een citytripper die trendbewust de boulevards afstapt? Kies hier een <strong>paar gloednieuwe stappers</strong>, op maat van je voeten én je bescherming.</h3>
+		</div>
+
+		<div class="wizardSeperator"></div>
+
+		<div class="span4">
+			<a href="#" onclick="javascript:(document.getElementById('wizardContentQuestions').style.display='block'), (document.getElementById('wizardContentMain').style.display='none');"> 
+				<div class="wizardContentStart">
+					<span class="ajaxTrigger" ajaxQuery="fh_location=//catalog01/nl_NL/categories<{catalog01_c3697}/categories<{catalog01_c3697_c6957}&fh_refview=lister&fh_refpath=facet_5&fh_reffacet=categories&preview_seo=false">
+						<img src="https://static.asadventure.com/includes/visuals/product-wizard/img/schoenen/icon-start-schoenen.png">
+					</span>
+				</div>
+			</a>
+		</div>	
+	</div> 
+
+	<!-- ///////////////////////////////////// -->
+	<!-- step 2 - QUESTIONS -->
+	<!-- ///////////////////////////////////// -->
+	
+	<!-- MainQuestion -->				
+	<div id="wizardContentQuestions" style="display:none">
+		<div class="span4">
+			<div class="wizardQuestionFlow">
+				<p>
+					<span class="wizardQuestionNumber"><span>1</span></span>Welk parcours staat jezelf en je schoenen te wachten?
+				</p>
+			</div>
+
+			<!-- Previous Page -->				
+			<a href="" onclick="javascript:(document.getElementById('wizardContentMain').style.display='block'), (document.getElementById('wizardContentQuestions').style.display='none');" class="wizardPrevious">vorige stap</a>
+		</div>
+
+		<div class="wizardSeperator"></div>
+
+		<!-- CategoricalQuestions -->				
+		<div class="span4">
+			<ul>
+				<!-- Q:Ultra Light -->
+				<a href="#" onclick="javascript:(document.getElementById('wizardSolutionOne').style.display='block'), (document.getElementById('wizardContentQuestions').style.display='none');">
+					<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3697%7D%2Fcategories%3C%7Bcatalog01_c3697_c6957%7D%2Fkies_schoenen%3E%7Btype_a_dames_niet_waterdicht%3Btype_a_dames_waterdicht%3Btype_a_heren_niet_waterdicht%3Btype_a_heren_waterdicht%3Btype_a_kinderen_niet_waterdicht%7D&fh_refpath=facet_278&fh_mode=selectlocation_complex&fh_reffacet=kies_schoenen&fh_refview=lister&preview_seo=false"><li class="question green">Een vlakke ondergrond</li><span class="icon-arrow"></span>
+				</a> 
+
+				<!-- Pop-up -->
+
+				<li class="pop-up">
+					<a id="activity-guide-link" class="WizardMoreInfo green">i</a>
+					<ul class="pop-up-content green">
+						<li>
+							<h2>Je bent een A-TYPE</h2>
+								<p>
+								Toch zeker wat schoenen betreft. A-schoenen zijn laag, hebben een soepele zool en zijn erg betaalbaar. Ideaal voor een wandelaar als jij!
+								</p>
+						</li>
+					</ul>
+				</li>
+
+				<!-- Q:Laaggebergte Ardennen -->
+				<a href="#" onclick="javascript:(document.getElementById('wizardSolutionTwo').style.display='block'), (document.getElementById('wizardContentQuestions').style.display='none');">
+					<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3697%7D%2Fcategories%3C%7Bcatalog01_c3697_c6957%7D%2Fkies_schoenen%3E%7Btype_a_b_dames_niet_waterdicht%3Btype_a_b_dames_waterdicht%3Btype_a_b_heren_niet_waterdicht%3Btype_a_b_heren_waterdicht%3Btype_a_b_kinderen_waterdicht%7D&fh_refpath=facet_278&fh_mode=selectlocation_complex&fh_reffacet=kies_schoenen&fh_refview=lister&preview_seo=false">
+						<li class="question green">Laaggebergte Ardennen</li><span class="icon-arrow">
+					</span>
+				</span>
+			</a>
+
+			<!-- Pop-up -->
+
+				<li class="pop-up">
+					<a id="activity-guide-link" class="WizardMoreInfo green">i</a>
+					<ul class="pop-up-content green">
+						<li>
+							<h2>Je bent een A/B-TYPE</h2>
+								<p>
+								Deze stappers zijn halfhoog tot hoog, hebben een soepele zool en doen uitstekend werk op vlak en lichtglooiend terrein. ook qua prijs scoren ze goed.
+								</p>
+						</li>
+					</ul>
+				</li>
+
+			<!-- Q:Meerdaagse trekking -->
+			<a href="#" onclick="javascript:(document.getElementById('wizardSolutionThree').style.display='block'), (document.getElementById('wizardContentQuestions').style.display='none');">
+				<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3697%7D%2Fcategories%3C%7Bcatalog01_c3697_c6957%7D%2Fkies_schoenen%3E%7Btype_b_dames_niet_waterdicht%3Btype_b_dames_waterdicht%3Btype_b_heren_niet_waterdicht%3Btype_b_heren_waterdicht%7D&fh_refpath=facet_278&fh_mode=selectlocation_complex&fh_reffacet=kies_schoenen&fh_refview=lister&preview_seo=false">
+					<li class="question green">Meerdaagse trekking</li><span class="icon-arrow">
+				</span>
+			</a>
+
+			<!-- Pop-up -->
+
+				<li class="pop-up">
+					<a id="activity-guide-link" class="WizardMoreInfo green">i</a>
+					<ul class="pop-up-content green">
+						<li>
+							<h2>Je bent een B-TYPE</h2>
+								<p>
+								Deze bieden volledige enkelbescherming voor een stevige ondersteuning en een stijvere zool voor vaste tred op moeilijke ondergronden.
+								</p>
+						</li>
+					</ul>
+				</li>
+
+			<!-- Q: Hooggebergte  -->
+			<a href="#" onclick="javascript:(document.getElementById('wizardSolutionFour').style.display='block'), (document.getElementById('wizardContentQuestions').style.display='none');">
+				<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3697%7D%2Fcategories%3C%7Bcatalog01_c3697_c6957%7D%2Fkies_schoenen%3E%7Btype_c_heren_niet_waterdicht%3Btype_c_heren_waterdicht%7D&fh_refpath=facet_278&fh_mode=selectlocation_complex&fh_reffacet=kies_schoenen&fh_refview=lister&preview_seo=false">
+					<li class="question green">Hooggebergte</li><span class="icon-arrow">
+				</span>
+			</a>
+
+			<!-- Pop-up -->
+
+				<li class="pop-up">
+					<a id="activity-guide-link" class="WizardMoreInfo green">i</a>
+					<ul class="pop-up-content green">
+						<li>
+							<h2>Je bent een C-TYPE</h2>
+								<p>
+								Ze geven een uitstekende ondersteuning aan je voeten en enkels dankzij de zeer stijve zolen en volledige enkelbescherming. Deze categorie is wat prijziger, maar je avontuur wordt sowieso ontbetaalbaar.
+								</p>
+						</li>
+					</ul>
+				</li>
+		</ul>
+
+	</div>
+
+</div><!-- END_MAINSOL_ -->
+
+<!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+
+<!-- /////////////////// -->
+<!-- step 3 - CATEG0RICAL SOLUTIONS -->
+<!-- /////////////////// -->
+
+<!-- ////////////////////////-->
+<!-- WIZARD SOLUTION 1 - Een vlakke ondergrond -->
+
+<div class="wizardSolution" id="wizardSolutionOne" style="display:none">
+	<div class="span4">
+		<div class="wizardQuestionFlow oldQuestion">
+			<p>
+				<span class="wizardQuestionNumber"><span>1</span></span>Welk parcours staat jezelf en je schoenen te wachten?
+			</p>
+		</div>
+
+		<div class="wizardQuestionFlow">
+			<p>
+				<span class="wizardQuestionNumber"><span>2</span></span>Moeten je schoenen waterdicht zijn of niet?
+			</p>
+		</div>
+
+		<!-- Previous Page - wizardContentQuestions -->				
+		<a href="#" onclick="javascript:(document.getElementById('wizardContentQuestions').style.display='block'), (document.getElementById('wizardSolutionOne').style.display='none');" class="wizardPrevious">
+			<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3697%7D%2Fcategories%3C%7Bcatalog01_c3697_c6957%7D%2Fkies_schoenen%3E%7Btype_a_b_dames_niet_waterdicht%3Btype_a_b_dames_waterdicht%3Btype_a_b_heren_niet_waterdicht%3Btype_a_b_heren_waterdicht%3Btype_a_b_kinderen_waterdicht%3Btype_a_dames_niet_waterdicht%3Btype_a_dames_waterdicht%3Btype_a_heren_niet_waterdicht%3Btype_a_heren_waterdicht%3Btype_a_kinderen_niet_waterdicht%3Btype_b_dames_niet_waterdicht%3Btype_b_dames_waterdicht%3Btype_b_heren_niet_waterdicht%3Btype_b_heren_waterdicht%3Btype_c_heren_niet_waterdicht%3Btype_c_heren_waterdicht%7D&fh_refpath=facet_278&fh_mode=selectlocation_complex&fh_reffacet=kies_schoenen&fh_refview=lister&preview_seo=false">vorige stap</span>
+		</a>
+	</div>
+
+	<div class="wizardSeperator"></div>
+
+	<div class="span4">
+		<ul>
+			<a href="#" onclick="javascript:(document.getElementById('wizardSolutionOneSectionOne').style.display='block'), (document.getElementById('wizardSolutionOne').style.display='none');">
+				<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3697%7D%2Fcategories%3C%7Bcatalog01_c3697_c6957%7D%2Fkies_schoenen%3E%7Btype_a_dames_niet_waterdicht%3Btype_a_heren_niet_waterdicht%3Btype_a_kinderen_niet_waterdicht%7D&fh_refpath=facet_278&fh_mode=selectlocation_complex&fh_reffacet=kies_schoenen&fh_refview=lister&preview_seo=false">
+					<li class="question green">Niet echt</li><span class="icon-arrow"></span>
+				</span>
+			</a>
+
+
+			<a href="#" onclick="javascript:(document.getElementById('wizardSolutionOneSectionTwo').style.display='block'), (document.getElementById('wizardSolutionOne').style.display='none');">
+				<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3697%7D%2Fcategories%3C%7Bcatalog01_c3697_c6957%7D%2Fkies_schoenen%3E%7Btype_a_dames_waterdicht%3Btype_a_heren_waterdicht%7D&fh_refpath=facet_278&fh_mode=selectlocation_complex&fh_reffacet=kies_schoenen&fh_refview=lister&preview_seo=false">
+					<li class="question green">Absoluut!</li><span class="icon-arrow"></span>
+				</span>
+			</a>
+		</ul>
+	</div>
+</div> <!-- END_SOL_1 -->
+
+
+<!-- ////////////////////////-->
+<!-- WIZARD SOLUTION 2 - Laaggebergte Ardennen -->
+
+<div class="wizardSolution" id="wizardSolutionTwo" style="display:none">
+	<div class="span4">
+		<div class="wizardQuestionFlow oldQuestion">
+			<p>
+				<span class="wizardQuestionNumber"><span>1</span></span>Welk parcours staat jezelf en je schoenen te wachten?
+			</p>
+		</div>
+
+		<div class="wizardQuestionFlow">
+			<p>
+				<span class="wizardQuestionNumber"><span>2</span></span>Moeten je schoenen waterdicht zijn of niet?
+			</p>
+		</div>
+
+		<!-- Previous Page - wizardContentQuestions -->				
+		<a href="#" onclick="javascript:(document.getElementById('wizardContentQuestions').style.display='block'), (document.getElementById('wizardSolutionTwo').style.display='none');" class="wizardPrevious">
+			<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3697%7D%2Fcategories%3C%7Bcatalog01_c3697_c6957%7D%2Fkies_schoenen%3E%7Btype_a_b_dames_niet_waterdicht%3Btype_a_b_dames_waterdicht%3Btype_a_b_heren_niet_waterdicht%3Btype_a_b_heren_waterdicht%3Btype_a_b_kinderen_waterdicht%3Btype_a_dames_niet_waterdicht%3Btype_a_dames_waterdicht%3Btype_a_heren_niet_waterdicht%3Btype_a_heren_waterdicht%3Btype_a_kinderen_niet_waterdicht%3Btype_b_dames_niet_waterdicht%3Btype_b_dames_waterdicht%3Btype_b_heren_niet_waterdicht%3Btype_b_heren_waterdicht%3Btype_c_heren_niet_waterdicht%3Btype_c_heren_waterdicht%7D&fh_refpath=facet_278&fh_mode=selectlocation_complex&fh_reffacet=kies_schoenen&fh_refview=lister&preview_seo=false">vorige stap</span>
+		</a>
+	</div>
+
+	<div class="wizardSeperator"></div>
+
+	<div class="span4">
+		<ul>
+			<a href="#" onclick="javascript:(document.getElementById('wizardSolutionTwoSectionOne').style.display='block'), (document.getElementById('wizardSolutionTwo').style.display='none');">
+				<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3697%7D%2Fcategories%3C%7Bcatalog01_c3697_c6957%7D%2Fkies_schoenen%3E%7Btype_a_b_dames_niet_waterdicht%3Btype_a_b_heren_niet_waterdicht%7D&fh_refpath=facet_278&fh_mode=selectlocation_complex&fh_reffacet=kies_schoenen&fh_refview=lister&preview_seo=false">
+					<li class="question green">Niet echt</li><span class="icon-arrow"></span>
+				</span>
+			</a>
+
+
+			<a href="#" onclick="javascript:(document.getElementById('wizardSolutionTwoSectionTwo').style.display='block'), (document.getElementById('wizardSolutionTwo').style.display='none');">
+				<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3697%7D%2Fcategories%3C%7Bcatalog01_c3697_c6957%7D%2Fkies_schoenen%3E%7Btype_a_b_dames_waterdicht%3Btype_a_b_heren_waterdicht%3Btype_a_b_kinderen_waterdicht%7D&fh_refpath=facet_278&fh_mode=selectlocation_complex&fh_reffacet=kies_schoenen&fh_refview=lister&preview_seo=false">
+					<li class="question green">Absoluut!</li><span class="icon-arrow"></span>
+				</span>
+			</a>
+		</ul>
+	</div>
+</div> <!-- END_SOL_2 -->
+
+
+<!-- ////////////////////////-->
+<!-- WIZARD SOLUTION 3 - meerdaagse trekking -->
+
+<div class="wizardSolution" id="wizardSolutionThree" style="display:none">
+	<div class="span4">
+		<div class="wizardQuestionFlow oldQuestion">
+			<p>
+				<span class="wizardQuestionNumber"><span>1</span></span>Welk parcours staat jezelf en je schoenen te wachten?
+			</p>
+		</div>
+
+		<div class="wizardQuestionFlow">
+			<p>
+				<span class="wizardQuestionNumber"><span>2</span></span>Moeten je schoenen waterdicht zijn of niet?
+			</p>
+		</div>
+
+		<!-- Previous Page - wizardContentQuestions -->				
+		<a href="#" onclick="javascript:(document.getElementById('wizardContentQuestions').style.display='block'), (document.getElementById('wizardSolutionThree').style.display='none');" class="wizardPrevious">
+			<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3697%7D%2Fcategories%3C%7Bcatalog01_c3697_c6957%7D%2Fkies_schoenen%3E%7Btype_a_b_dames_niet_waterdicht%3Btype_a_b_dames_waterdicht%3Btype_a_b_heren_niet_waterdicht%3Btype_a_b_heren_waterdicht%3Btype_a_b_kinderen_waterdicht%3Btype_a_dames_niet_waterdicht%3Btype_a_dames_waterdicht%3Btype_a_heren_niet_waterdicht%3Btype_a_heren_waterdicht%3Btype_a_kinderen_niet_waterdicht%3Btype_b_dames_niet_waterdicht%3Btype_b_dames_waterdicht%3Btype_b_heren_niet_waterdicht%3Btype_b_heren_waterdicht%3Btype_c_heren_niet_waterdicht%3Btype_c_heren_waterdicht%7D&fh_refpath=facet_278&fh_mode=selectlocation_complex&fh_reffacet=kies_schoenen&fh_refview=lister&preview_seo=false">vorige stap</span>
+		</a>
+	</div>
+
+	<div class="wizardSeperator"></div>
+
+	<div class="span4">
+		<ul>
+			<a href="#" onclick="javascript:(document.getElementById('wizardSolutionThreeSectionOne').style.display='block'), (document.getElementById('wizardSolutionThree').style.display='none');">
+				<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3697%7D%2Fcategories%3C%7Bcatalog01_c3697_c6957%7D%2Fkies_schoenen%3E%7Btype_b_dames_niet_waterdicht%3Btype_b_heren_niet_waterdicht%7D&fh_refpath=facet_278&fh_mode=selectlocation_complex&fh_reffacet=kies_schoenen&fh_refview=lister&preview_seo=false">
+					<li class="question green">Niet echt</li><span class="icon-arrow"></span>
+				</span>
+			</a>
+
+
+			<a href="#" onclick="javascript:(document.getElementById('wizardSolutionThreeSectionTwo').style.display='block'), (document.getElementById('wizardSolutionThree').style.display='none');">
+				<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3697%7D%2Fcategories%3C%7Bcatalog01_c3697_c6957%7D%2Fkies_schoenen%3E%7Btype_b_dames_waterdicht%3Btype_b_heren_waterdicht%7D&fh_refpath=facet_278&fh_mode=selectlocation_complex&fh_reffacet=kies_schoenen&fh_refview=lister&preview_seo=false">
+					<li class="question green">Absoluut!</li><span class="icon-arrow"></span>
+			</span>
+			</a>
+		</ul>
+	</div>
+</div> <!-- END_SOL_3 -->
+
+<!-- ////////////////////////-->
+<!-- WIZARD SOLUTION 4 -  Hooggebergte  -->
+
+<div class="wizardSolution" id="wizardSolutionFour" style="display:none">
+	<div class="span4">
+		<div class="wizardQuestionFlow oldQuestion">
+			<p>
+				<span class="wizardQuestionNumber"><span>1</span></span>Welk parcours staat jezelf en je schoenen te wachten?
+			</p>
+		</div>
+
+		<div class="wizardQuestionFlow">
+			<p>
+				<span class="wizardQuestionNumber"><span>2</span></span>Moeten je schoenen waterdicht zijn of niet?
+			</p>
+		</div>
+
+		<!-- Previous Page - wizardContentQuestions -->				
+		<a href="#" onclick="javascript:(document.getElementById('wizardContentQuestions').style.display='block'), (document.getElementById('wizardSolutionFour').style.display='none');" class="wizardPrevious">
+			<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3697%7D%2Fcategories%3C%7Bcatalog01_c3697_c6957%7D%2Fkies_schoenen%3E%7Btype_a_b_dames_niet_waterdicht%3Btype_a_b_dames_waterdicht%3Btype_a_b_heren_niet_waterdicht%3Btype_a_b_heren_waterdicht%3Btype_a_b_kinderen_waterdicht%3Btype_a_dames_niet_waterdicht%3Btype_a_dames_waterdicht%3Btype_a_heren_niet_waterdicht%3Btype_a_heren_waterdicht%3Btype_a_kinderen_niet_waterdicht%3Btype_b_dames_niet_waterdicht%3Btype_b_dames_waterdicht%3Btype_b_heren_niet_waterdicht%3Btype_b_heren_waterdicht%3Btype_c_heren_niet_waterdicht%3Btype_c_heren_waterdicht%7D&fh_refpath=facet_278&fh_mode=selectlocation_complex&fh_reffacet=kies_schoenen&fh_refview=lister&preview_seo=false">vorige stap</span>
+		</a>
+	</div>
+
+	<div class="wizardSeperator"></div>
+
+	<div class="span4">
+		<ul>
+			<a href="#" onclick="javascript:(document.getElementById('wizardSolutionFourSectionOne').style.display='block'), (document.getElementById('wizardSolutionFour').style.display='none');">
+				<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3697%7D%2Fcategories%3C%7Bcatalog01_c3697_c6957%7D%2Fkies_schoenen%3E%7Btype_c_heren_niet_waterdicht%7D&fh_refpath=facet_278&fh_mode=selectlocation_complex&fh_reffacet=kies_schoenen&fh_refview=lister&preview_seo=false">
+					<li class="question green">Niet echt</li><span class="icon-arrow"></span>
+				</span>
+			</a>
+
+
+			<a href="#" onclick="javascript:(document.getElementById('wizardSolutionFourSectionTwo').style.display='block'), (document.getElementById('wizardSolutionFour').style.display='none');">
+				<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3697%7D%2Fcategories%3C%7Bcatalog01_c3697_c6957%7D%2Fkies_schoenen%3E%7Btype_c_heren_waterdicht%7D&fh_refpath=facet_278&fh_mode=selectlocation_complex&fh_reffacet=kies_schoenen&fh_refview=lister&preview_seo=false">
+					<li class="question green">Absoluut!</li><span class="icon-arrow"></span>
+				</span>
+			</a>
+		</ul>
+	</div>
+</div> <!-- END_SOL_4 -->
+
+
+<!-- ////////// \\\\\\\\\\\ -->
+<!--  START SUB SOLUTIONS -->
+<!-- ////////// \\\\\\\\\\\ -->
+
+<!-- ////////////////////////-->
+<!-- SUB SOLUTION _ Een vlakke ondergrond -->
+
+<!-- Een vlakke ondergrond - NIET WATERDICHT -->
+
+<div class="wizardSolution" id="wizardSolutionOneSectionOne" style="display:none">
+	<div class="span4">
+
+		<div class="wizardQuestionFlow oldQuestion">
+			<p>
+				<span class="wizardQuestionNumber"><span>1</span></span>Welk parcours staat jezelf en je schoenen te wachten?
+			</p>
+		</div>
+
+		<div class="wizardQuestionFlow oldQuestion">
+			<p>
+				<span class="wizardQuestionNumber"><span>2</span></span>Moeten je schoenen waterdicht zijn of niet?
+			</p>
+		</div>	
+
+		<a href="#" onclick="javascript:(document.getElementById('wizardSolutionOne').style.display='block'), (document.getElementById('wizardSolutionOneSectionOne').style.display='none');" class="wizardPrevious">
+			<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3697%7D%2Fcategories%3C%7Bcatalog01_c3697_c6957%7D%2Fkies_schoenen%3E%7Btype_a_dames_niet_waterdicht%3Btype_a_dames_waterdicht%3Btype_a_heren_niet_waterdicht%3Btype_a_heren_waterdicht%3Btype_a_kinderen_niet_waterdicht%7D&fh_refpath=facet_278&fh_mode=selectlocation_complex&fh_reffacet=kies_schoenen&fh_refview=lister&preview_seo=false">vorige stap</span> 
+		</a>
+
+	</div>
+
+	<div class="wizardSeperator"></div>
+
+	<div class="span4">
+		<center>
+			<span class="marker green">niet-waterdichte</span><br><span class="marker green">TYPE A schoenen</span>
+			<div class="confirmText">Bekijk hieronder je selectie</div>
+		</center>
+	</div>
+</div>
+
+<!-- Een vlakke ondergrond - WATERDICHT -->
+
+<div class="wizardSolution" id="wizardSolutionOneSectionTwo" style="display:none">
+	<div class="span4">
+
+		<div class="wizardQuestionFlow oldQuestion">
+			<p>
+				<span class="wizardQuestionNumber"><span>1</span></span>Welk parcours staat jezelf en je schoenen te wachten?
+			</p>
+		</div>
+
+		<div class="wizardQuestionFlow oldQuestion">
+			<p>
+				<span class="wizardQuestionNumber"><span>2</span></span>Moeten je schoenen waterdicht zijn of niet?
+			</p>
+		</div>	
+
+		<a href="#" onclick="javascript:(document.getElementById('wizardSolutionOne').style.display='block'), (document.getElementById('wizardSolutionOneSectionTwo').style.display='none');" class="wizardPrevious">
+			<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3697%7D%2Fcategories%3C%7Bcatalog01_c3697_c6957%7D%2Fkies_schoenen%3E%7Btype_a_dames_niet_waterdicht%3Btype_a_dames_waterdicht%3Btype_a_heren_niet_waterdicht%3Btype_a_heren_waterdicht%3Btype_a_kinderen_niet_waterdicht%7D&fh_refpath=facet_278&fh_mode=selectlocation_complex&fh_reffacet=kies_schoenen&fh_refview=lister&preview_seo=false">vorige stap</span> 
+		</a>
+
+	</div>
+
+	<div class="wizardSeperator"></div>
+
+	<div class="span4">
+		<center>
+			<span class="marker green">waterdichte</span><br><span class="marker green">TYPE A schoenen</span>
+			<div class="confirmText">Bekijk hieronder je selectie</div>
+		</center>
+	</div>
+</div> <!-- END_ ULTRA LIGHT / GEBERGTE -->
+
+
+<!-- ////////////////////////-->
+<!-- SUB SOLUTION _ Laaggebergte Ardennen -->
+
+<!-- Vlakke ondergrond -->
+
+<!-- Laaggebergte Ardennen - NIET WATERDICHT -->
+
+<div class="wizardSolution" id="wizardSolutionTwoSectionOne" style="display:none">
+	<div class="span4">
+		<div class="wizardQuestionFlow oldQuestion">
+			<p>
+				<span class="wizardQuestionNumber"><span>1</span></span>Welk parcours staat jezelf en je schoenen te wachten?
+			</p>
+		</div>
+
+		<div class="wizardQuestionFlow oldQuestion">
+			<p>
+				<span class="wizardQuestionNumber"><span>2</span></span>Moeten je schoenen waterdicht zijn of niet?
+			</p>
+		</div>
+
+		<a href="#" onclick="javascript:(document.getElementById('wizardSolutionTwo').style.display='block'), (document.getElementById('wizardSolutionTwoSectionOne').style.display='none');" class="wizardPrevious">
+			<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3697%7D%2Fcategories%3C%7Bcatalog01_c3697_c6957%7D%2Fkies_schoenen%3E%7Btype_a_b_dames_niet_waterdicht%3Btype_a_b_dames_waterdicht%3Btype_a_b_heren_niet_waterdicht%3Btype_a_b_heren_waterdicht%3Btype_a_b_kinderen_waterdicht%7D&fh_refpath=facet_278&fh_mode=selectlocation_complex&fh_reffacet=kies_schoenen&fh_refview=lister&preview_seo=false">vorige stap</span> 
+		</a>
+	</div>
+
+	<div class="wizardSeperator"></div>
+
+	<div class="span4">
+		<center>
+			<span class="marker green">niet-waterdichte</span><br><span class="marker green">TYPE A/B schoenen</span>
+			<div class="confirmText">Bekijk hieronder je selectie</div>
+		</center>
+	</div>
+</div> 
+
+<!-- Laaggebergte Ardennen - WATERDICHT -->
+
+<div class="wizardSolution" id="wizardSolutionTwoSectionTwo" style="display:none">
+	<div class="span4">
+		<div class="wizardQuestionFlow oldQuestion">
+			<p>
+				<span class="wizardQuestionNumber"><span>1</span></span>Welk parcours staat jezelf en je schoenen te wachten?
+			</p>
+		</div>
+
+		<div class="wizardQuestionFlow oldQuestion">
+			<p>
+				<span class="wizardQuestionNumber"><span>2</span></span>Moeten je schoenen waterdicht zijn of niet?
+			</p>
+		</div>
+
+		<a href="#" onclick="javascript:(document.getElementById('wizardSolutionTwo').style.display='block'), (document.getElementById('wizardSolutionTwoSectionTwo').style.display='none');" class="wizardPrevious">
+			<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3697%7D%2Fcategories%3C%7Bcatalog01_c3697_c6957%7D%2Fkies_schoenen%3E%7Btype_a_b_dames_niet_waterdicht%3Btype_a_b_dames_waterdicht%3Btype_a_b_heren_niet_waterdicht%3Btype_a_b_heren_waterdicht%3Btype_a_b_kinderen_waterdicht%7D&fh_refpath=facet_278&fh_mode=selectlocation_complex&fh_reffacet=kies_schoenen&fh_refview=lister&preview_seo=false">vorige stap</span> 
+		</a>
+	</div>
+
+	<div class="wizardSeperator"></div>
+
+	<div class="span4">
+		<center>
+			<span class="marker green">waterdichte</span><br><span class="marker green">TYPE A/B schoenen</span>
+			<div class="confirmText">Bekijk hieronder je selectie</div>
+		</center>
+	</div>
+</div> 
+
+<!-- ////////////////////////-->
+<!-- SUB SOLUTION _ Meerdaagse trekking -->
+
+<!-- Meerdaagse trekking -->
+
+<!-- Meerdaagse trekking - NIET WATERDICHT -->
+
+<div class="wizardSolution" id="wizardSolutionThreeSectionOne" style="display:none">
+	<div class="span4">
+		<div class="wizardQuestionFlow oldQuestion">
+			<p>
+				<span class="wizardQuestionNumber"><span>1</span></span>Welk parcours staat jezelf en je schoenen te wachten?
+			</p>
+		</div>
+
+		<div class="wizardQuestionFlow oldQuestion">
+			<p>
+				<span class="wizardQuestionNumber"><span>2</span></span>Moeten je schoenen waterdicht zijn of niet?
+			</p>
+		</div>
+
+		<a href="#" onclick="javascript:(document.getElementById('wizardSolutionThree').style.display='block'), (document.getElementById('wizardSolutionThreeSectionOne').style.display='none');" class="wizardPrevious">
+			<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3697%7D%2Fcategories%3C%7Bcatalog01_c3697_c6957%7D%2Fkies_schoenen%3E%7Btype_b_dames_niet_waterdicht%3Btype_b_dames_waterdicht%3Btype_b_heren_niet_waterdicht%3Btype_b_heren_waterdicht%7D&fh_refpath=facet_278&fh_mode=selectlocation_complex&fh_reffacet=kies_schoenen&fh_refview=lister&preview_seo=false">vorige stap</span> 
+		</a>
+	</div>
+
+	<div class="wizardSeperator"></div>
+
+	<div class="span4">
+		<center>
+			<span class="marker green">niet-waterdichte</span><br><span class="marker green">TYPE B schoenen</span>
+			<div class="confirmText">Bekijk hieronder je selectie</div>
+		</center>
+	</div>
+</div> 
+
+<!-- Meerdaagse trekking - WATERDICHT -->
+
+<div class="wizardSolution" id="wizardSolutionThreeSectionTwo" style="display:none">
+	<div class="span4">
+		<div class="wizardQuestionFlow oldQuestion">
+			<p>
+				<span class="wizardQuestionNumber"><span>1</span></span>Welk parcours staat jezelf en je schoenen te wachten?
+			</p>
+		</div>
+
+		<div class="wizardQuestionFlow oldQuestion">
+			<p>
+				<span class="wizardQuestionNumber"><span>2</span></span>Moeten je schoenen waterdicht zijn of niet?
+			</p>
+		</div>
+
+		<a href="#" onclick="javascript:(document.getElementById('wizardSolutionThree').style.display='block'), (document.getElementById('wizardSolutionThreeSectionTwo').style.display='none');" class="wizardPrevious">
+			<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3697%7D%2Fcategories%3C%7Bcatalog01_c3697_c6957%7D%2Fkies_schoenen%3E%7Btype_b_dames_niet_waterdicht%3Btype_b_dames_waterdicht%3Btype_b_heren_niet_waterdicht%3Btype_b_heren_waterdicht%7D&fh_refpath=facet_278&fh_mode=selectlocation_complex&fh_reffacet=kies_schoenen&fh_refview=lister&preview_seo=false">vorige stap</span> 
+		</a>
+	</div>
+
+	<div class="wizardSeperator"></div>
+
+	<div class="span4">
+		<center>	
+			<span class="marker green">waterdichte</span><br><span class="marker green">TYPE B schoenen</span>
+			<div class="confirmText">Bekijk hieronder je selectie</div>
+		</center>
+	</div>
+</div> <!-- END_ Meerdaagse trekking -->
+
+
+
+<!-- ////////////////////////-->
+<!-- SUB SOLUTION _  Hooggebergte  -->
+
+<!--  Hooggebergte  - NIET WATERDICHT -->
+
+<div class="wizardSolution" id="wizardSolutionFourSectionOne" style="display:none">
+	<div class="span4">
+		<div class="wizardQuestionFlow oldQuestion">
+			<p>
+				<span class="wizardQuestionNumber"><span>1</span></span>Welk parcours staat jezelf en je schoenen te wachten?
+			</p>
+		</div>
+
+		<div class="wizardQuestionFlow oldQuestion">
+			<p>
+				<span class="wizardQuestionNumber"><span>2</span></span>Moeten je schoenen waterdicht zijn of niet?
+			</p>
+		</div>	
+
+		<a href="#" onclick="javascript:(document.getElementById('wizardSolutionFour').style.display='block'), (document.getElementById('wizardSolutionFourSectionOne').style.display='none');" class="wizardPrevious">
+			<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3697%7D%2Fcategories%3C%7Bcatalog01_c3697_c6957%7D%2Fkies_schoenen%3E%7Btype_c_heren_niet_waterdicht%3Btype_c_heren_waterdicht%7D&fh_refpath=facet_278&fh_mode=selectlocation_complex&fh_reffacet=kies_schoenen&fh_refview=lister&preview_seo=false">vorige stap</span> 
+		</a>
+	</div>
+
+	<div class="wizardSeperator"></div>
+
+	<div class="span4">
+
+		<center>
+			<span class="marker green">niet-waterdichte</span><br><span class="marker green">TYPE C schoenen</span>
+			<div class="confirmText">Bekijk hieronder je selectie</div>
+		</center>
+
+	</div>
+</div>
+
+<!--  Hooggebergte  - WATERDICHT -->
+
+<div class="wizardSolution" id="wizardSolutionFourSectionTwo" style="display:none">
+	<div class="span4">
+		<div class="wizardQuestionFlow oldQuestion">
+			<p>
+				<span class="wizardQuestionNumber"><span>1</span></span>Welk parcours staat jezelf en je schoenen te wachten?
+			</p>
+		</div>
+
+		<div class="wizardQuestionFlow oldQuestion">
+			<p>
+				<span class="wizardQuestionNumber"><span>2</span></span>Moeten je schoenen waterdicht zijn of niet?
+			</p>
+		</div>
+
+		<a href="#" onclick="javascript:(document.getElementById('wizardSolutionFour').style.display='block'), (document.getElementById('wizardSolutionFourSectionTwo').style.display='none');" class="wizardPrevious">
+			<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3697%7D%2Fcategories%3C%7Bcatalog01_c3697_c6957%7D%2Fkies_schoenen%3E%7Btype_c_heren_niet_waterdicht%3Btype_c_heren_waterdicht%7D&fh_refpath=facet_278&fh_mode=selectlocation_complex&fh_reffacet=kies_schoenen&fh_refview=lister&preview_seo=false">vorige stap</span> 
+		</a>
+	</div>
+
+	<div class="wizardSeperator"></div>
+
+	<div class="span4">
+		<center>
+			<span class="marker green">waterdichte</span><br><span class="marker green">TYPE C schoenen</span>
+			<div class="confirmText">Bekijk hieronder je selectie</div>
+		</center>
+	</div>
+</div> 
+
+<!-- end content -->
+</div> 
+</body>
+</html>

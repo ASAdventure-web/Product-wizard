@@ -1,0 +1,329 @@
+/*------------------------------------*\
+	Project:		Product Wizard
+    Assigned to: 	Pieter De Wachter - pieterdewachter@asadventure.com
+    Last Change: 	21/06/2014
+    Version: 		1.1
+\*------------------------------------*/
+
+// \\ Imports \\ //
+
+// Layout
+
+@import "layout/grid";
+
+// Mixins
+
+@import "mixins/variables";
+@import "mixins/colorpicker";
+
+// Partials
+
+@import "partials/intro-banners";
+@import "partials/responsive";
+
+/*------------------------------------*\
+    $MAIN
+\*------------------------------------*/
+
+// Main container
+
+#wizardContent{
+	*,
+	*:before,
+	*:after{
+		-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+		-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+		box-sizing: border-box;         /* Opera/IE 8+ */
+	}
+	
+	@include breakpoint(baby-bear) { box-sizing: border-box; }
+
+	position: relative;
+	display: block;
+	height: 250px;	
+	width: 100%;
+	max-width: 870px;
+	padding-bottom: 30px;
+	margin-bottom: 30px;
+	border: 1px solid #968c7a;
+	background: url('https://static.asadventure.com/includes/visuals/product-wizard/img/background.jpg') repeat-y #fff;
+
+	// Main title mostely in combination with a color [ _colorpicker.scss ] (gold, red, blue, green)
+	h2{
+		
+		height: auto;
+		width: auto;
+		margin-left: 5px;
+		margin-right: 5px;
+		margin-top: 5px;
+		padding-top: 1px;
+		padding-bottom: 2px;
+		color: #fff;
+		text-align: center;
+		font-family: "Open Sans", helvetica, arial, Sans-serif;
+		font-weight: 100;
+		font-size: 25px;
+		// icon: next to main title (pos: left, top)
+		.icon{
+			height: 30px;
+			width: 30px;
+			margin-bottom: 5px;
+			margin-right: 10px;
+		}
+	}
+	// btn: button to go to the previous page (pos: bottom, left)
+	.wizardPrevious{
+		position: absolute;
+	    bottom: 0;
+	    left: 0;
+	    height: 24px;
+	    width: auto;
+	    margin: 5px;
+	    padding: 1px 10px;
+	    background: none repeat scroll 0 0 #505050;
+	    color: #fff;
+	    &:hover { background: #808080; }
+		&:before{
+		    left: 0;
+		    float: left;
+		    height: 8px;
+		    content: "";
+		    margin: 7px 0;
+		    width: 25px;
+		    background: url('https://static.asadventure.com/includes/visuals/product-wizard/img/arrow-previous.png') no-repeat scroll 0 0;
+		    	// exclude for mobile
+				@include breakpoint(baby-bear) { display: none; }
+		}
+	}
+	// Sperator between the questions and solutions 
+	.wizardSeperator{
+		float: left;	
+		height: 180px;
+		width: 1px;
+		border-right: 1px dotted #555555;
+	}
+	// Confirmation text a the end of the wizard
+	.confirmText{
+		margin-top: 5px;
+		margin-bottom: 5px;
+		color: #555555;
+		text-align: center;
+
+	}
+} // end #wizardContent
+
+
+// Main Question - first question to start the wizard
+
+#wizardContentMain{
+	.intro-title{
+		height: 100%;
+		padding-top: 2%;
+		padding-right: 30px;
+		text-align: left;
+		h3{
+			font-size: 110%;
+			font-family: "Open Sans", helvetica;
+			font-weight: 500;
+			line-height: 150%;
+		}
+	}
+	.wizardContentStart{
+		position: relative;
+		width: 100%;
+		img{
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			padding-top: 5%;
+		}
+	}
+} // end_ main-question
+
+// Question Flow - flow with different questions and solutions
+
+// NEW //
+
+#wizardContentQuestions{
+	@include breakpoint(baby-bear) { 
+		width: 100%; 
+		li{ 
+			width: 100%;
+			margin-right: 5px;
+		}
+		a { float: none; }
+	}
+}
+
+.thumbContainer .span9 #wizardContent #wizardContentQuestions a, 
+.thumbContainer .span9 #wizardContent .wizardSolution a{
+	@include breakpoint(baby-bear) { 
+			clear: left;
+			float: none;
+	}
+}
+
+// #wizardContentQuestions,
+// .wizardSolution { 
+// 	@include breakpoint(baby-bear) { 
+// 		ul{
+// 		box-sizing: border-box; 
+// 		display: block; 
+// 		width: 100%;
+// 			li{
+// 				width: 100%;
+// 			}
+// 		}
+// 		a { clear: left; }
+// 	}
+// }
+
+// .wizardSolution{
+// 	@include breakpoint(baby-bear) { li { width: 90%; } }
+// }
+
+#wizardContentQuestions, 
+.wizardSolution{
+	.wizardQuestionFlow{
+		p{
+			font-size: 15px;
+			font-weight: normal;
+			color: #505050;
+			.wizardQuestionNumber{
+				float: left;
+				width: 15px; 
+				height: 15px;
+				padding-bottom: 10px;
+				margin-right: 5px;
+				margin-top: 4px; 
+				border-left: 20px solid transparent;
+				border-right: 20px solid transparent;
+				border-top: 20px solid #505050;
+				color: #fff;
+				span{
+					position: relative;
+					top: -21px;
+					margin-left: -4px;	
+				}
+			}
+		}
+	}
+	// grey color on previous question
+	.oldQuestion p{
+		opacity: 0.6;
+		text-decoration: line-through;
+		font-size: 15px;
+		font-weight: normal;
+	}
+	ul{
+		margin: 0;
+		padding: 0;
+		width: none;
+		height: auto;
+		list-style-type: none;
+
+		// @include breakpoint(baby-bear) {
+		// 	width: 95%;
+		// }
+
+		// li{
+		// 	@include breakpoint(baby-bear) {
+		// 		width: 100%;
+		// 	}
+		// }
+
+		a { float: none; &:hover { text-decoration: none; } }
+		.question{
+			// @include breakpoint(baby-bear) {
+			// 	clear: left;
+			// }
+
+			float: left;
+			width: 85%;		
+			padding: 5px 10px 5px 10px;
+				@include breakpoint(baby-bear) {
+					@include clearfix();
+					padding: 5px 10px 5px 5px;
+					margin-right: 5px;
+					font-size: 12px;
+					// width: 100%;
+					// float: none;
+					// clear: left;
+				}
+			margin-bottom: 10px;
+			color: #fff;
+			list-style: none;
+		}
+		.icon-arrow{
+			display: block;
+			float: left;
+			height: 13px;
+			width: 13px;
+			// margin: 10px 0 0 -20px;
+			margin: 12px -25px;
+			background: url('https://static.asadventure.com/includes/visuals/product-wizard/img/arrow.png') no-repeat scroll 0 0;
+			@include breakpoint(baby-bear) {
+				@include clearfix();
+				// margin: 12px 0 0 -20px;
+			}
+		}
+		.WizardMoreInfo{
+			float: right;
+			display: inline-block;
+
+			height: 24px;
+			width: 24px;
+			margin-top: 5px;
+			padding: 1px 12px;
+
+			background: url('https://static.asadventure.com/includes/visuals/product-wizard/img/icon-more-info.png') no-repeat scroll 0 0;
+			background-position: 0px 0px;
+
+			&:hover,
+			&:focus{
+				cursor: pointer;
+				background-position: 0px -24px;
+			}
+		}
+	}
+} //end_ question-flow
+
+// Pop-up next to questions
+
+#wizardContent .pop-up { display: block; }
+#wizardContent .pop-up:hover .pop-up-content { display: block; } 
+#wizardContent .pop-up-content{
+	position: absolute;
+	display: none;
+	top: 20%;
+	width: 37%;
+	z-index: 1;
+
+	height: auto;
+	padding: 15px;
+
+	box-shadow: 2px 2px 5px 1px #333333;
+	border: 1px solid #505050;
+
+	h2{
+		font-size: 18px;
+		font-weight: 700;
+		line-height: 22px;
+		background: none;
+	}
+
+	p { font: 13px/20px "Myriad Pro",Arial,sans-serif; }
+} //end .pop-up
+
+
+// people icon 
+.product-wizard-people-icon{
+	display: block;
+	height: auto;
+	margin-top: 5px;
+}
+
+.product-wizard-people-icon-large{
+	height: 115px;
+	width: auto;
+}

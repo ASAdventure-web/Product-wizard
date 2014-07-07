@@ -1,0 +1,176 @@
+/*------------------------------------*\
+    $MEDIAQUERRIES
+\*------------------------------------*/
+
+// @import "layout/grid";
+
+// CONTENTS
+	// LANDSCAPE
+	// PORTRAIT
+	// MOBILE
+	// DISPLAY NONE
+
+/*------------------------------------*\
+    $LANDSCAPE
+\*------------------------------------*/
+
+@include breakpoint(papa-bear) {
+	.thumbContainer .span9 #wizardContent{
+	border-bottom: 1px solid #968c7a;
+	display: inline-block;
+	height: 100%;
+	margin-bottom: 30px;
+	padding: none;
+	position: relative;
+	clear: right;
+		h2{ font-size: 18px; }
+	}
+} // end_ landscape 1200px
+
+/*------------------------------------*\
+    $PORTRAIT
+\*------------------------------------*/
+
+@include breakpoint(mama-bear) {
+	.thumbContainer .span9 #wizardContent { font-size: 12px;
+		h2{ font-size: 16px; }
+		h3{ font-size: 13px; }
+		.wizardContentStart img{ width: 80%; height: auto;}
+		.wizardSolution .span4 .square{ width: 42%; padding: 5px;
+			p {
+				font-size: 12px;
+			}
+		}
+		.people-container a img{
+			width: calc(370px / 2);
+			height: 91px;
+		}
+	}
+} // end_ portrait 980px
+
+/*------------------------------------*\
+    $MOBILE
+\*------------------------------------*/
+
+@include breakpoint(baby-bear) {
+	.thumbContainer .span9 #wizardContent{
+		
+		// Clearfix
+
+		.ajaxTrigger{
+			@include clearfix();
+		}
+
+		// First image to start the wizard
+
+		.span4 a .wizardContentStart img{ 
+			display: block;
+			height: 80px;
+			width: auto;
+			margin: 0 auto;
+			padding-top: 5%;
+		}
+	background: url('https://static.asadventure.com/includes/visuals/product-wizard/img/background.jpg') repeat-y #fff;
+	border-bottom: 1px solid #968c7a;
+	display: inline-block;
+	height: 100%;
+	max-width: 100%;
+	margin-bottom: 30px;
+	padding: none;
+	position: relative;
+	width: auto;
+	clear: right;
+
+	a{
+		-webkit-tap-highlight-color: rgba(0,0,0,0);
+	}
+
+	h2{
+		display: block;
+		font-size: 18px;
+		height: auto;
+		position: relative;
+		width: auto;
+		max-width: 300px;
+		padding-right: 10px;
+		line-height: 30px;
+		margin-bottom: 5px;
+		margin-top: 5px;
+	}
+
+	h3{
+		font-style: 12px;
+		margin-left: 15px;
+	}
+
+	p{
+		padding-right: 10px;
+		margin-right: 5px;
+		margin-left: 5px;
+		max-width: 300px;
+	}
+
+	#wizardContentQuestions, 
+	.wizardSolution{
+		float: left;
+		a { float: left; }
+		ul { }
+		li{
+			margin-left: 5px;
+		}
+	}
+
+	.span3, 
+	.span4, 
+	.span5 {
+		// float: left; 
+		display: inline-block;
+		// width: auto;
+		margin: 0 auto;
+	}
+
+	.wizardQuestionFlow{
+		margin: 5px;
+		width: 320px;
+		p{
+			padding-right: 10px;
+			margin-right: 5px;
+			margin-left: 5px;
+		}
+	}
+
+	.wizardPrevious{
+		bottom: 0 !important; // make sure that the previous button stays at the bottom of the page
+		
+		left:0;
+		height: 30px;
+		width: 95%;
+		padding: 5px 0 5px 10px;
+		color: #505050;
+		border-top: 1px dotted #505050;
+		background: none;
+	}
+
+	.people-container{
+		// display: block;
+		width: auto;
+		margin: 0 auto;
+	}
+
+	.people-container a img,
+	.span4 a img{
+		display: inline-block;
+		height: 80px;
+		width: auto;
+		margin: 10px 25px;
+
+	}
+
+	// display none;
+	.WizardMoreInfo, 
+	.wizardSeperator, 
+	.icon{
+			display: none;
+		}
+	}
+} // end_ mobile 320px

@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<!-- No-caching styles -->
+
+<meta http-equiv="cache-control" content="max-age=0" />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="pragma" content="no-cache" />
+
+<!-- Styles -->
+
+<link rel="stylesheet" type="text/css" href="https://static.asadventure.com/includes/visuals/product-wizard/css/styles.css">
+	
+<!-- Scripts -->
+
+<script type="text/javascript" src="https://static.asadventure.com/includes/visuals/product-wizard/javascript/hideFredhopperBanner.js"></script>
+
+</head>
+<body>
+
+	<!--
+
+	- - - - - - - - 
+	Instructions - Created by pieter.dewachter@asadventure.com
+	- - - - - - - -  
+
+	id = wizardSolution [One, Two, Three, Four] => triggers .getElementById.style.display.[none/block] show a new item based on the users choice
+
+	.wizardQuestoinFlow = number of question + question
+	.oldQuestion = previous question (line trough text)
+	.wizardPrevious = previous page 
+		!Make sure that the ajaxTrigger + ajaxQuerry is the same as the previous page
+
+	.wizardSeperator = seperator between left and right content	
+	
+	-->	 
+
+<div id="product-wizard-activate">
+	<div class="button-wrapper">
+		<a href="#" class="intro-slaapzakken" onclick="javascript:(document.getElementById('product-wizard-activate').style.display='none'), (document.getElementById('wizardContent').style.display='inline-block'), hideFredhopperBanner();"> 
+		</a>
+	</div>
+</div>	
+
+	<!-- end_ product-wizard-activate -->
+
+	<div id="wizardContent" style="display:none;">
+	
+		<h2 class="blue"> <!-- Main titel -->
+			<img src="http://static.asadventure.com/includes/visuals/product-wizard/img/slaapzakken/icon-slaapzakken.png" alt="icon" class="icon"/> Met welke slaapzak kruip jij in de tent?
+		</h2>
+
+<!-- ///////////////////////////////////// -->
+<!-- step 1 - MAIN -->
+<!-- ///////////////////////////////////// -->
+
+		<div id="wizardContentMain" style="display:block">
+			<div class="span4 intro-title">
+				<h3>De een zoekt s'nachts <strong>afkoeling</strong>, de ander slaapt enkel bij <strong>35°C</strong>. De ideale slaapzak is afhankelijk van je natuurlijke warmtebeleving én je reisbestemming. <strong>Doe de test</strong> en vind jouw ideale warmtebron.</h3>
+			</div>
+			
+			<div class="wizardSeperator"></div>
+			
+			<div class="span4">
+				<a href="#" name="test" onclick="javascript:(document.getElementById('wizardContentQuestions').style.display='block'), (document.getElementById('wizardContentMain').style.display='none');"> 
+					<div class="wizardContentStart"> 
+						<span class="ajaxTrigger" ajaxQuerry="fh_location=//catalog01/nl_NL/categories<{catalog01_c3736}/categories<{catalog01_c3736_c3739}/categories<{catalog01_c3736_c3739_c8098}&fh_refview=lister&fh_refpath=facet_5&fh_reffacet=categories&preview_seo=false">
+							<img src="https://static.asadventure.com/includes/visuals/product-wizard/img/slaapzakken/icon-start-slaapzakken.png">
+						</span>
+					</div>
+				</a>
+			</div>	
+		</div> 
+
+<!-- ///////////////////////////////////// -->
+<!-- step 2 - QUESTIONS -->
+<!-- ///////////////////////////////////// -->
+	
+	<!-- MainQuestion -->				
+		<div id="wizardContentQuestions" style="display:none">
+			<div class="span4">
+				<div class="wizardQuestionFlow">
+					<p><span class="wizardQuestionNumber"><span>1</span></span>Hoe oud ben je?</p>
+				</div>
+
+				<!-- Previous Page -->				
+				<a href="" onclick="javascript:(document.getElementById('wizardContentMain').style.display='block'), (document.getElementById('wizardContentQuestions').style.display='none');" class="wizardPrevious">vorige stap</a>
+			</div>
+			
+			<div class="wizardSeperator"></div>
+
+	<!-- CategoricalQuestions -->				
+			<div class="span4">
+				<ul>
+			<!-- Q:Tussen 1 & 12 jaar -->
+					<a href="#" onclick="javascript:(document.getElementById('wizardSolutionOne').style.display='block'), (document.getElementById('wizardContentQuestions').style.display='none');">
+						<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3739%7D%2Fkies_slaapzak%3E%7Bjunior_trekkingslaapzak%3Bjunior_vrijetijdsslaapzak%7D&fh_refpath=facet_275&fh_mode=selectlocation_complex&fh_reffacet=kies_slaapzak&fh_refview=lister&preview_seo=false">
+							<li class="question blue"> Ik ben tussen 1 en 12 jaar oud</li><span class="icon-arrow">
+						</span>
+					</a> 
+
+			<!-- Q:Ouder dan 12 -->
+					<a href="#" onclick="javascript:(document.getElementById('wizardSolutionTwo').style.display='block'), (document.getElementById('wizardContentQuestions').style.display='none');">
+						<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3739%7D%2Fkies_slaapzak%3E%7Btrekking_dons_drieseizoensslaapzak%3Btrekking_dons_winterslaapzak%3Btrekking_dons_zomerslaapzak%3Btrekking_synthetisch_drieseizoensslaapzak%3Btrekking_synthetisch_winterslaapzak%3Btrekking_synthetisch_zomerslaapzak%3Bvrijetijdsslaapzak_dekenmodel%7D&fh_refpath=facet_275&fh_mode=selectlocation_complex&fh_reffacet=kies_slaapzak&fh_refview=lister&preview_seo=false">
+							<li class="question blue"> Ik ben ouder dan 12 jaar</li><span class="icon-arrow"></span>
+						</span>
+					</a>
+				</ul>
+
+			</div>
+
+		</div><!-- END_MAIN -->
+
+<!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+
+<!-- /////////////////// -->
+<!-- step 3 - CATEG0RICAL SOLUTIONS -->
+<!-- /////////////////// -->
+
+	<!-- ////////////////////////-->
+	<!-- WIZARD SOLUTION 1 - tussen 1 & 12 -->
+
+		<div class="wizardSolution" id="wizardSolutionOne" style="display:none">
+			<div class="span4">
+				<div class="wizardQuestionFlow oldQuestion">
+					<p><span class="wizardQuestionNumber"><span>1</span></span>Hoe oud ben je?</p>
+				</div>
+
+				<div class="wizardQuestionFlow">
+					<p><span class="wizardQuestionNumber"><span>2</span></span>Waarvoor heb je je juniorslaapzak nodig?</p>
+				</div>
+
+				<!-- Previous Page - wizardContentQuestions -->				
+				<a href="#" onclick="javascript:(document.getElementById('wizardContentQuestions').style.display='block'), (document.getElementById('wizardSolutionOne').style.display='none');" class="wizardPrevious">
+					<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3739%7D%2Fkies_slaapzak%3E%7Bjunior_trekkingslaapzak%3Bjunior_vrijetijdsslaapzak%3Btrekking_dons_drieseizoensslaapzak%3Btrekking_dons_winterslaapzak%3Btrekking_dons_zomerslaapzak%3Btrekking_synthetisch_drieseizoensslaapzak%3Btrekking_synthetisch_winterslaapzak%3Btrekking_synthetisch_zomerslaapzak%3Bvrijetijdsslaapzak_dekenmodel%7D&fh_refpath=facet_275&fh_mode=selectlocation_complex&fh_reffacet=kies_slaapzak&fh_refview=lister&preview_seo=false"> vorige stap</span>
+				</a>
+			</div>
+
+			<div class="wizardSeperator"></div>
+
+			<div class="span4">
+				<ul>
+					<a href="#" onclick="javascript:(document.getElementById('wizardSolutionOneSectionTwoPartOne').style.display='block'), (document.getElementById('wizardSolutionOne').style.display='none');">
+						<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3739%7D%2Fkies_slaapzak%3E%7Bjunior_vrijetijdsslaapzak%7D&fh_refpath=facet_275&fh_mode=selectlocation_complex&fh_reffacet=kies_slaapzak&fh_refview=lister&preview_seo=false">
+							<li class="question blue">Om in de tuin te spelen/kamperen</li><span class="icon-arrow"></span>
+						</span>
+					</a>
+
+
+					<a href="#" onclick="javascript:(document.getElementById('wizardSolutionOneSectionTwoPartTwo').style.display='block'), (document.getElementById('wizardSolutionOne').style.display='none');">
+						<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3739%7D%2Fkies_slaapzak%3E%7Bjunior_trekkingslaapzak%7D&fh_refpath=facet_275&fh_mode=selectlocation_complex&fh_reffacet=kies_slaapzak&fh_refview=lister&preview_seo=false">
+							<li class="question blue">Om op kamp te gaan</li><span class="icon-arrow"></span>
+						</span>
+					</a>
+				</ul>
+			</div>
+
+		</div> <!-- END_SOL_1 -->
+
+
+	<!-- ////////////////////////-->
+	<!-- WIZARD SOLUTION 2 - ouder dan 12 -->
+
+		<div class="wizardSolution" id="wizardSolutionTwo" style="display:none">
+			<div class="span4">
+				<div class="wizardQuestionFlow oldQuestion">
+					<p><span class="wizardQuestionNumber"><span>1</span></span>Hoe oud ben je?</p>
+				</div>
+
+				<div class="wizardQuestionFlow">
+					<p><span class="wizardQuestionNumber"><span>2</span></span>Waarvoor heb je je slaapzak nodig?</p>
+				</div>
+
+				<!-- Previous Page - wizardContentQuestions -->				
+				<a href="#" onclick="javascript:(document.getElementById('wizardContentQuestions').style.display='block'), (document.getElementById('wizardSolutionTwo').style.display='none');" class="wizardPrevious">
+					<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3739%7D%2Fkies_slaapzak%3E%7Bjunior_trekkingslaapzak%3Bjunior_vrijetijdsslaapzak%3Btrekking_dons_drieseizoensslaapzak%3Btrekking_dons_winterslaapzak%3Btrekking_dons_zomerslaapzak%3Btrekking_synthetisch_drieseizoensslaapzak%3Btrekking_synthetisch_winterslaapzak%3Btrekking_synthetisch_zomerslaapzak%3Bvrijetijdsslaapzak_dekenmodel%7D&fh_refpath=facet_275&fh_mode=selectlocation_complex&fh_reffacet=kies_slaapzak&fh_refview=lister&preview_seo=false"> vorige stap</span>
+				</a>
+			</div>
+
+			<div class="wizardSeperator"></div>
+
+			<div class="span4">
+				<ul>
+					<a href="#" onclick="javascript:(document.getElementById('wizardSolutionTwoSectionTwoPartOne').style.display='block'), (document.getElementById('wizardSolutionTwo').style.display='none');">
+						<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3739%7D%2Fkies_slaapzak%3E%7Btrekking_dons_drieseizoensslaapzak%3Btrekking_dons_winterslaapzak%3Btrekking_dons_zomerslaapzak%3Btrekking_synthetisch_drieseizoensslaapzak%3Btrekking_synthetisch_winterslaapzak%3Btrekking_synthetisch_zomerslaapzak%7D&fh_refpath=facet_275&fh_mode=selectlocation_complex&fh_reffacet=kies_slaapzak&fh_refview=lister&preview_seo=false">
+							<li class="question blue">Trekking</li><span class="icon-arrow"></span>
+						</span>
+					</a>
+
+
+					<a href="#" onclick="javascript:(document.getElementById('wizardSolutionTwoSectionTwoPartTwo').style.display='block'), (document.getElementById('wizardSolutionTwo').style.display='none');">
+						<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3739%7D%2Fkies_slaapzak%3E%7Bvrijetijdsslaapzak_dekenmodel%7D&fh_refpath=facet_275&fh_mode=selectlocation_complex&fh_reffacet=kies_slaapzak&fh_refview=lister&preview_seo=false">
+							<li class="question blue">Vrije tijd</li><span class="icon-arrow"></span>
+						</span>
+					</a>
+				</ul>
+			</div>
+		</div> <!-- END_SOL_2 -->
+
+<!-- ////////// \\\\\\\\\\\ -->
+<!--  START SUB SOLUTIONS -->
+<!-- ////////// \\\\\\\\\\\ -->
+
+		<!-- ////////////////////////-->
+		<!-- SUB SOLUTION _ TUSSEN 1 & 12 JAAR -->
+
+		<!-- tussen 1 & 12 jaar (1) -->
+
+		<div class="wizardSolution" id="wizardSolutionOneSectionTwoPartOne" style="display:none">
+			<div class="span4">
+
+				<div class="wizardQuestionFlow oldQuestion">
+					<p><span class="wizardQuestionNumber"><span>1</span></span>Hoe oud ben je?</p>
+				</div>
+
+				<div class="wizardQuestionFlow oldQuestion">
+					<p><span class="wizardQuestionNumber"><span>2</span></span>Waarvoor heb je je juniorslaapzak nodig?</p>
+				</div>	
+
+				<a href="#" onclick="javascript:(document.getElementById('wizardSolutionOne').style.display='block'), (document.getElementById('wizardSolutionOneSectionTwoPartOne').style.display='none');" class="wizardPrevious">
+					<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3739%7D%2Fkies_slaapzak%3E%7Bjunior_trekkingslaapzak%3Bjunior_vrijetijdsslaapzak%7D&fh_refpath=facet_275&fh_mode=selectlocation_complex&fh_reffacet=kies_slaapzak&fh_refview=lister&preview_seo=false"> vorige stap <span> 
+				</a>
+
+			</div>
+
+				<div class="wizardSeperator"></div>
+
+			<div class="span4">
+				<p>Kies, of laat je ouders kiezen, voor een <span class="marker blue">vrijetijdsslaapzak</span>. Dat is een kleine slaapzak, aangepast aan je lengte. Zo'n exemplaar is geschikt voor de zomermaanden, niet duur en vochtbestendig. Hoeveel die slaapzak weegt, is minder van belang.</p>
+			</div>
+		</div>
+
+		<!-- tussen 1 & 12 jaar (2) -->
+
+		<div class="wizardSolution" id="wizardSolutionOneSectionTwoPartTwo" style="display:none">
+			<div class="span4">
+
+				<div class="wizardQuestionFlow oldQuestion">
+					<p><span class="wizardQuestionNumber"><span>1</span></span>Hoe oud ben je?</p>
+				</div>
+
+				<div class="wizardQuestionFlow oldQuestion">
+					<p><span class="wizardQuestionNumber"><span>2</span></span>Waarvoor heb je je juniorslaapzak nodig?</p>
+				</div>	
+
+				<a href="#" onclick="javascript:(document.getElementById('wizardSolutionOne').style.display='block'), (document.getElementById('wizardSolutionOneSectionTwoPartTwo').style.display='none');" class="wizardPrevious">
+					<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3739%7D%2Fkies_slaapzak%3E%7Bjunior_trekkingslaapzak%3Bjunior_vrijetijdsslaapzak%7D&fh_refpath=facet_275&fh_mode=selectlocation_complex&fh_reffacet=kies_slaapzak&fh_refview=lister&preview_seo=false"> vorige stap <span> 
+				</a>
+
+			</div>
+
+				<div class="wizardSeperator"></div>
+
+			<div class="span4">
+				<p>Een <span class="marker blue">trekkingslaapzak</span> voor kinderen is korter dan een volwassenenslaapzak, licht van gewicht en compact in te pakken. Een trekkingslaapzak is perfect voor tijdens de zomermaanden, vochtbestendig en betaalbaar.</p>
+			</div>
+		</div> <!-- END_ TUSSEN 1 & 12 JAAR OUD -->
+
+
+		<!-- ////////////////////////-->
+		<!-- SUB SOLUTION _ OUDER DAN 12 -->
+
+			<!-- OUDER DAN 12 -->
+
+			<!-- TREKKING -->
+
+				<div class="wizardSolution" id="wizardSolutionTwoSectionTwoPartOne" style="display:none">
+					<div class="span4">
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>1</span></span>Hoe oud ben je?</p>
+						</div>
+
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>2</span></span>Waarvoor heb je je slaapzak nodig?</p>
+						</div>	
+
+						<div class="wizardQuestionFlow">
+							<p><span class="wizardQuestionNumber"><span>3</span></span>Welke vulling wil je voor je slaapzak?</p>
+						</div>	
+
+						<a href="#" onclick="javascript:(document.getElementById('wizardSolutionTwo').style.display='block'), (document.getElementById('wizardSolutionTwoSectionTwoPartOne').style.display='none');" class="wizardPrevious">
+							<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3739%7D%2Fkies_slaapzak%3E%7Btrekking_dons_drieseizoensslaapzak%3Btrekking_dons_winterslaapzak%3Btrekking_dons_zomerslaapzak%3Btrekking_synthetisch_drieseizoensslaapzak%3Btrekking_synthetisch_winterslaapzak%3Btrekking_synthetisch_zomerslaapzak%3Bvrijetijdsslaapzak_dekenmodel%7D&fh_refpath=facet_275&fh_mode=selectlocation_complex&fh_reffacet=kies_slaapzak&fh_refview=lister&preview_seo=false"> vorige stap <span> 
+						</a>
+					</div>
+
+						<div class="wizardSeperator"></div>
+
+					<div class="span4">	
+						<ul>
+							<a href="#" onclick="javascript:(document.getElementById('wizardSolutionTwoSectionTwoPartOneSectionOne').style.display='block'), (document.getElementById('wizardSolutionTwoSectionTwoPartOne').style.display='none');">
+							<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3739%7D%2Fkies_slaapzak%3E%7Btrekking_dons_drieseizoensslaapzak%3Btrekking_dons_winterslaapzak%3Btrekking_dons_zomerslaapzak%7D&fh_refpath=facet_275&fh_mode=selectlocation_complex&fh_reffacet=kies_slaapzak&fh_refview=lister&preview_seo=false">
+								<li class="question blue">Dons</li><span class="icon-arrow"></span>
+							</span>
+							</a>
+
+							<a href="#" onclick="javascript:(document.getElementById('wizardSolutionTwoSectionTwoPartOneSectionTwo').style.display='block'), (document.getElementById('wizardSolutionTwoSectionTwoPartOne').style.display='none');">
+							<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3739%7D%2Fkies_slaapzak%3E%7Btrekking_dons_drieseizoensslaapzak%3Btrekking_dons_winterslaapzak%3Btrekking_dons_zomerslaapzak%3Btrekking_synthetisch_drieseizoensslaapzak%3Btrekking_synthetisch_winterslaapzak%3Btrekking_synthetisch_zomerslaapzak%7D&fh_refpath=facet_275&fh_mode=selectlocation_complex&fh_reffacet=kies_slaapzak&fh_refview=lister&preview_seo=false">
+								<li class="question blue">Synthetisch</li><span class="icon-arrow"></span>
+							</span>
+							</a>
+						</ul>
+					</div>
+				</div>
+
+			<!-- VRIJE TIJD -->
+
+				<div class="wizardSolution" id="wizardSolutionTwoSectionTwoPartTwo" style="display:none">
+					<div class="span4">
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>1</span></span>Hoe oud ben je?</p>
+						</div>
+
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>2</span></span>Waarvoor heb je je slaapzak nodig?</p>
+						</div>	
+
+						<a href="#" onclick="javascript:(document.getElementById('wizardSolutionTwo').style.display='block'), (document.getElementById('wizardSolutionTwoSectionTwoPartTwo').style.display='none');" class="wizardPrevious">
+							<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3739%7D%2Fkies_slaapzak%3E%7Btrekking_dons_drieseizoensslaapzak%3Btrekking_dons_winterslaapzak%3Btrekking_dons_zomerslaapzak%3Btrekking_synthetisch_drieseizoensslaapzak%3Btrekking_synthetisch_winterslaapzak%3Btrekking_synthetisch_zomerslaapzak%3Bvrijetijdsslaapzak_dekenmodel%7D&fh_refpath=facet_275&fh_mode=selectlocation_complex&fh_reffacet=kies_slaapzak&fh_refview=lister&preview_seo=false"> vorige stap <span> 
+						</a>
+					</div>
+
+						<div class="wizardSeperator"></div>
+
+					<div class="span4">
+						<p>Ga voor een <span class="marker blue">dekenmodel</span>. Dat is ideaal tijdens korte, warme kampeertripjes of op een festival. Deze lichte slaapzakken zijn voordelig voor de portemonnee en compact op te bergen.</p>
+					</div>
+				</div><!-- END_ waarvoor heb je je slaapzak nodig -->
+
+
+		<!-- ////////////////////////-->
+		<!-- SUB SOLUTION _ TREKKING -->
+
+			<!-- TREKKING -->
+
+			<!-- DONS -->
+
+				<div class="wizardSolution" id="wizardSolutionTwoSectionTwoPartOneSectionOne" style="display:none">
+					<div class="span4">
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>1</span></span>Hoe oud ben je?</p>
+						</div>
+
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>2</span></span>Hoe intensief zullen jouw toekomstige trekkings zijn?</p>
+						</div>
+						
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>3</span></span>Welke vulling wil je voor je slaapzak?</p>
+						</div>	
+
+						<div class="wizardQuestionFlow">
+							<p><span class="wizardQuestionNumber"><span>4</span></span>In welk seizoen duik je in je slaapzak?</p>
+						</div>
+
+						<a href="#" onclick="javascript:(document.getElementById('wizardSolutionTwoSectionTwoPartOne').style.display='block'), (document.getElementById('wizardSolutionTwoSectionTwoPartOneSectionOne').style.display='none');" class="wizardPrevious">
+							<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3739%7D%2Fkies_slaapzak%3E%7Btrekking_dons_drieseizoensslaapzak%3Btrekking_dons_winterslaapzak%3Btrekking_dons_zomerslaapzak%3Btrekking_synthetisch_drieseizoensslaapzak%3Btrekking_synthetisch_winterslaapzak%3Btrekking_synthetisch_zomerslaapzak%7D&fh_refpath=facet_275&fh_mode=selectlocation_complex&fh_reffacet=kies_slaapzak&fh_refview=lister&preview_seo=false"> vorige stap <span> 
+						</a>
+					</div>
+
+						<div class="wizardSeperator"></div>
+
+					<div class="span4">
+						<ul>
+							<a href="#" onclick="javascript:(document.getElementById('wizardSolutionTwoSectionTwoPartOneSectionOneSolutionOne').style.display='block'), (document.getElementById('wizardSolutionTwoSectionTwoPartOneSectionOne').style.display='none');">
+								<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3739%7D%2Fkies_slaapzak%3E%7Btrekking_dons_zomerslaapzak%7D&fh_refpath=facet_275&fh_mode=selectlocation_complex&fh_reffacet=kies_slaapzak&fh_refview=lister&preview_seo=false">
+									<li class="question blue">Enkel bij zomerse temperaturen</li><span class="icon-arrow"></span>
+								</span>
+							</a>
+							
+							<a href="#" onclick="javascript:(document.getElementById('wizardSolutionTwoSectionTwoPartOneSectionOneSolutionTwo').style.display='block'), (document.getElementById('wizardSolutionTwoSectionTwoPartOneSectionOne').style.display='none');">
+								<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3739%7D%2Fkies_slaapzak%3E%7Btrekking_dons_drieseizoensslaapzak%7D&fh_refpath=facet_275&fh_mode=selectlocation_complex&fh_reffacet=kies_slaapzak&fh_refview=lister&preview_seo=false">
+									<li class="question blue">Voor- of najaar</li><span class="icon-arrow"></span>
+								</span>
+							</a>
+							
+							<a href="#" onclick="javascript:(document.getElementById('wizardSolutionTwoSectionTwoPartOneSectionOneSolutionThree').style.display='block'), (document.getElementById('wizardSolutionTwoSectionTwoPartOneSectionOne').style.display='none');">
+								<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3739%7D%2Fkies_slaapzak%3E%7Btrekking_dons_winterslaapzak%7D&fh_refpath=facet_275&fh_mode=selectlocation_complex&fh_reffacet=kies_slaapzak&fh_refview=lister&preview_seo=false">
+									<li class="question blue">Elk seizoen</li><span class="icon-arrow"></span>
+								</span>
+							</a>
+						</ul>
+					</div>
+				</div> 
+
+		<!-- SYNTETISCH -->
+
+				<div class="wizardSolution" id="wizardSolutionTwoSectionTwoPartOneSectionTwo" style="display:none">
+					<div class="span4">
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>1</span></span>Hoe oud ben je?</p>
+						</div>
+
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>2</span></span>Hoe intensief zullen jouw toekomstige trekkings zijn?</p>
+						</div>
+						
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>3</span></span>Welke vulling wil je voor je slaapzak?</p>
+						</div>	
+
+						<div class="wizardQuestionFlow">
+							<p><span class="wizardQuestionNumber"><span>4</span></span>In welk seizoen duik je in je slaapzak?</p>
+						</div>
+
+						<a href="#" onclick="javascript:(document.getElementById('wizardSolutionTwoSectionTwoPartOne').style.display='block'), (document.getElementById('wizardSolutionTwoSectionTwoPartOneSectionTwo').style.display='none');" class="wizardPrevious">
+							<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3739%7D%2Fkies_slaapzak%3E%7Btrekking_dons_drieseizoensslaapzak%3Btrekking_dons_winterslaapzak%3Btrekking_dons_zomerslaapzak%3Btrekking_synthetisch_drieseizoensslaapzak%3Btrekking_synthetisch_winterslaapzak%3Btrekking_synthetisch_zomerslaapzak%7D&fh_refpath=facet_275&fh_mode=selectlocation_complex&fh_reffacet=kies_slaapzak&fh_refview=lister&preview_seo=false"> vorige stap <span> 
+						</a>
+					</div>
+
+						<div class="wizardSeperator"></div>
+
+					<div class="span4">
+						<ul>
+							<a href="#" onclick="javascript:(document.getElementById('wizardSolutionTwoSectionTwoPartOneSectionTwoSolutionOne').style.display='block'), (document.getElementById('wizardSolutionTwoSectionTwoPartOneSectionTwo').style.display='none');">
+								<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3739%7D%2Fkies_slaapzak%3E%7Btrekking_synthetisch_zomerslaapzak%7D&fh_refpath=facet_275&fh_mode=selectlocation_complex&fh_reffacet=kies_slaapzak&fh_refview=lister&preview_seo=false">
+										<li class="question blue">Enkel bij zomerse temperaturen</li><span class="icon-arrow"></span>
+								</span>
+							</a>
+							
+							<a href="#" onclick="javascript:(document.getElementById('wizardSolutionTwoSectionTwoPartOneSectionTwoSolutionTwo').style.display='block'), (document.getElementById('wizardSolutionTwoSectionTwoPartOneSectionTwo').style.display='none');">
+								<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3739%7D%2Fkies_slaapzak%3E%7Btrekking_synthetisch_drieseizoensslaapzak%7D&fh_refpath=facet_275&fh_mode=selectlocation_complex&fh_reffacet=kies_slaapzak&fh_refview=lister&preview_seo=false">
+									<li class="question blue">Voor- of najaar</li><span class="icon-arrow"></span>
+								</span>
+							</a>
+							
+							<a href="#" onclick="javascript:(document.getElementById('wizardSolutionTwoSectionTwoPartOneSectionTwoSolutionThree').style.display='block'), (document.getElementById('wizardSolutionTwoSectionTwoPartOneSectionTwo').style.display='none');">
+								<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3739%7D%2Fkies_slaapzak%3E%7Btrekking_synthetisch_winterslaapzak%7D&fh_refpath=facet_275&fh_mode=selectlocation_complex&fh_reffacet=kies_slaapzak&fh_refview=lister&preview_seo=false">
+									<li class="question blue">Elk seizoen</li><span class="icon-arrow"></span>
+								</span>
+							</a>
+						</ul>
+					</div>
+				</div>  <!-- END_ TREKKING -->
+
+		<!-- ////////////////////////-->
+		<!-- SUB SOLUTION _ OUDER DAN 12 / WAAARVOOR NODIG / TREKKING  -->
+
+		<!-- DONS -->
+
+			<!-- ZOMER -->
+
+				<div class="wizardSolution" id="wizardSolutionTwoSectionTwoPartOneSectionOneSolutionOne" style="display:none">
+
+					<div class="span4">
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>1</span></span>Hoe oud ben je?</p>
+						</div>
+
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>2</span></span>Hoe intensief zullen jouw toekomstige trekkings zijn?</p>
+						</div>
+
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>3</span></span>Welke vulling wil je voor je slaapzak?</p>
+						</div>	
+
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>4</span></span>In welk seizoen duik je in je slaapzak?</p>
+						</div>
+
+						<a href="#" onclick="javascript:(document.getElementById('wizardSolutionTwoSectionTwoPartOneSectionOne').style.display='block'), (document.getElementById('wizardSolutionTwoSectionTwoPartOneSectionOneSolutionOne').style.display='none');" class="wizardPrevious">
+							<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3739%7D%2Fkies_slaapzak%3E%7Btrekking_dons_drieseizoensslaapzak%3Btrekking_dons_winterslaapzak%3Btrekking_dons_zomerslaapzak%7D&fh_refpath=facet_275&fh_mode=selectlocation_complex&fh_reffacet=kies_slaapzak&fh_refview=lister&preview_seo=false"> vorige stap <span> 
+						</a>
+					</div>
+
+						<div class="wizardSeperator"></div>
+
+					<div class="span4">
+						<p>Een <span class="marker blue">trekking dons zomerslaapzak</span> wordt vast je beste slaapkameraad. Licht en compact om in te pakken, niet te duur en comfortabel.</p>
+						<div class="confirmText">Bekijk hieronder je selectie</div>
+					</div>	
+
+				</div>
+
+			<!-- VOOR- EN NAJAAR -->
+
+				<div class="wizardSolution" id="wizardSolutionTwoSectionTwoPartOneSectionOneSolutionTwo" style="display:none">
+
+					<div class="span4">
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>1</span></span>Hoe oud ben je?</p>
+						</div>
+
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>2</span></span>Hoe intensief zullen jouw toekomstige trekkings zijn?</p>
+						</div>
+
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>3</span></span>Welke vulling wil je voor je slaapzak?</p>
+						</div>	
+
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>4</span></span>In welk seizoen duik je in je slaapzak?</p>
+						</div>
+
+						<a href="#" onclick="javascript:(document.getElementById('wizardSolutionTwoSectionTwoPartOneSectionOne').style.display='block'), (document.getElementById('wizardSolutionTwoSectionTwoPartOneSectionOneSolutionTwo').style.display='none');" class="wizardPrevious">
+							<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3739%7D%2Fkies_slaapzak%3E%7Btrekking_dons_drieseizoensslaapzak%3Btrekking_dons_winterslaapzak%3Btrekking_dons_zomerslaapzak%7D&fh_refpath=facet_275&fh_mode=selectlocation_complex&fh_reffacet=kies_slaapzak&fh_refview=lister&preview_seo=false"> vorige stap <span> 
+						</a>
+					</div>
+
+						<div class="wizardSeperator"></div>
+
+					<div class="span4">
+						<p>Een <span class="marker blue">trekking dons 3-seizoens-slaapzak</span> is voor jou de beste keuze. Die houdt je het hele jaar warm, is licht en makkelijk in te pakken.</p>
+						<div class="confirmText">Bekijk hieronder je selectie</div>
+					</div>	
+
+				</div>
+
+			<!-- ELK SEIZOEN -->
+				<div class="wizardSolution" id="wizardSolutionTwoSectionTwoPartOneSectionOneSolutionThree" style="display:none">
+
+					<div class="span4">
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>1</span></span>Hoe oud ben je?</p>
+						</div>
+
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>2</span></span>Hoe intensief zullen jouw toekomstige trekkings zijn?</p>
+						</div>
+
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>3</span></span>Welke vulling wil je voor je slaapzak?</p>
+						</div>	
+
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>4</span></span>In welk seizoen duik je in je slaapzak?</p>
+						</div>
+
+						<a href="#" onclick="javascript:(document.getElementById('wizardSolutionTwoSectionTwoPartOneSectionOne').style.display='block'), (document.getElementById('wizardSolutionTwoSectionTwoPartOneSectionOneSolutionThree').style.display='none');" class="wizardPrevious">
+							<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3739%7D%2Fkies_slaapzak%3E%7Btrekking_dons_drieseizoensslaapzak%3Btrekking_dons_winterslaapzak%3Btrekking_dons_zomerslaapzak%7D&fh_refpath=facet_275&fh_mode=selectlocation_complex&fh_reffacet=kies_slaapzak&fh_refview=lister&preview_seo=false"> vorige stap <span> 
+						</a>
+					</div>
+
+						<div class="wizardSeperator"></div>
+
+					<div class="span4">
+						<p>Bij een <span class="marker blue">trekking dons winterslaapzak</span> ligt het budget wel iets hoger, maar houdt je zelfs in de koudste nachten warm.</p>
+						<div class="confirmText">Bekijk hieronder je selectie</div>
+					</div>	
+
+				</div>							
+
+		<!-- SYNTHETISCH  -->
+
+			<!-- ZOMER -->
+
+				<div class="wizardSolution" id="wizardSolutionTwoSectionTwoPartOneSectionTwoSolutionOne" style="display:none">
+
+					<div class="span4">
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>1</span></span>Hoe oud ben je?</p>
+						</div>
+
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>2</span></span>Hoe intensief zullen jouw toekomstige trekkings zijn?</p>
+						</div>
+
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>3</span></span>Welke vulling wil je voor je slaapzak?</p>
+						</div>	
+
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>4</span></span>In welk seizoen duik je in je slaapzak?</p>
+						</div>
+
+						<a href="#" onclick="javascript:(document.getElementById('wizardSolutionTwoSectionTwoPartOneSectionTwo').style.display='block'), (document.getElementById('wizardSolutionTwoSectionTwoPartOneSectionTwoSolutionOne').style.display='none');" class="wizardPrevious">
+							<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3739%7D%2Fkies_slaapzak%3E%7Btrekking_synthetisch_drieseizoensslaapzak%3Btrekking_synthetisch_winterslaapzak%3Btrekking_synthetisch_zomerslaapzak%7D&fh_refpath=facet_275&fh_mode=selectlocation_complex&fh_reffacet=kies_slaapzak&fh_refview=lister&preview_seo=false"> vorige stap <span> 
+						</a>
+					</div>
+
+						<div class="wizardSeperator"></div>
+
+					<div class="span4">
+						<p>Een <span class="marker blue">trekking synthetische zomerslaapzak</span> wordt vast je beste slaapkameraad. Licht en compact om in te pakken, niet te duur en comfortabel.</p>
+						<div class="confirmText">Bekijk hieronder je selectie</div>
+					</div>	
+
+				</div>
+
+			<!-- VOOR- EN NAJAAR -->
+
+				<div class="wizardSolution" id="wizardSolutionTwoSectionTwoPartOneSectionTwoSolutionTwo" style="display:none">
+
+					<div class="span4">
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>1</span></span>Hoe oud ben je?</p>
+						</div>
+
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>2</span></span>Hoe intensief zullen jouw toekomstige trekkings zijn?</p>
+						</div>
+
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>3</span></span>Welke vulling wil je voor je slaapzak?</p>
+						</div>	
+
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>4</span></span>In welk seizoen duik je in je slaapzak?</p>
+						</div>
+
+						<a href="#" onclick="javascript:(document.getElementById('wizardSolutionTwoSectionTwoPartOneSectionTwo').style.display='block'), (document.getElementById('wizardSolutionTwoSectionTwoPartOneSectionTwoSolutionTwo').style.display='none');" class="wizardPrevious">
+							<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3739%7D%2Fkies_slaapzak%3E%7Btrekking_synthetisch_drieseizoensslaapzak%3Btrekking_synthetisch_winterslaapzak%3Btrekking_synthetisch_zomerslaapzak%7D&fh_refpath=facet_275&fh_mode=selectlocation_complex&fh_reffacet=kies_slaapzak&fh_refview=lister&preview_seo=false"> vorige stap <span> 
+						</a>
+					</div>
+
+						<div class="wizardSeperator"></div>
+
+					<div class="span4">
+						<p>Een <span class="marker blue">trekking synthetische 3-seizoens-slaapzak</span> is voor jou de beste keuze. Die houdt je het hele jaar warm, is licht en makkelijk in te pakken.</p>
+						<div class="confirmText">Bekijk hieronder je selectie</div>
+					</div>	
+
+				</div>
+
+			<!-- ELK SEIZOEN -->
+				<div class="wizardSolution" id="wizardSolutionTwoSectionTwoPartOneSectionTwoSolutionThree" style="display:none">
+
+					<div class="span4">
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>1</span></span>Hoe oud ben je?</p>
+						</div>
+
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>2</span></span>Hoe intensief zullen jouw toekomstige trekkings zijn?</p>
+						</div>
+
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>3</span></span>Welke vulling wil je voor je slaapzak?</p>
+						</div>	
+
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>4</span></span>In welk seizoen duik je in je slaapzak?</p>
+						</div>
+
+						<a href="#" onclick="javascript:(document.getElementById('wizardSolutionTwoSectionTwoPartOneSectionTwo').style.display='block'), (document.getElementById('wizardSolutionTwoSectionTwoPartOneSectionTwoSolutionThree').style.display='none');" class="wizardPrevious">
+							<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3739%7D%2Fkies_slaapzak%3E%7Btrekking_synthetisch_drieseizoensslaapzak%3Btrekking_synthetisch_winterslaapzak%3Btrekking_synthetisch_zomerslaapzak%7D&fh_refpath=facet_275&fh_mode=selectlocation_complex&fh_reffacet=kies_slaapzak&fh_refview=lister&preview_seo=false"> vorige stap <span> 
+						</a>
+					</div>
+
+						<div class="wizardSeperator"></div>
+
+					<div class="span4">
+						<p>Bij een <span class="marker blue">trekking synthetische winterslaapzak</span> ligt het budget wel iets hoger, maar houdt je zelfs in de koudste nachten warm.</p>
+						<div class="confirmText">Bekijk hieronder je selectie</div>
+					</div>	
+
+				</div>	
+	
+<!-- end content -->
+	</div> 
+</body>
+</html> 

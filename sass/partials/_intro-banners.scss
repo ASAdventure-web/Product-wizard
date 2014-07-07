@@ -1,0 +1,126 @@
+/*------------------------------------*\
+    $intro-banners.scss
+\*------------------------------------*/
+#product-wizard-activate{
+	top: 0;
+
+	overflow: hidden;
+    box-sizing: border-box;
+	width: 100%;
+	height: auto;
+	padding-top: 10px;
+	padding-bottom: 10px;
+
+	/* margin-top: -2px; == because there is a margin-bottom with the level 2 */
+	margin-top: -20px;
+
+	.button-wrapper{
+		@include breakpoint(baby-bear) {
+			a{
+				display: block;
+				height: 100px;
+				max-width: 100%;
+				max-height: 100%;
+				background-size: contain;
+			}
+			.intro-slaapzakken{
+				background: url('https://static.asadventure.com/includes/visuals/product-wizard/img/slaapzakken/intro-product-wizard-mobile.jpg') no-repeat;
+			}
+			.intro-slaapzakken-fr{
+				background: url('https://static.asadventure.com/includes/visuals/product-wizard/img/slaapzakken/intro-product-wizard-mobile-fr.jpg') no-repeat;
+			}
+			.intro-slaapzakken-eng{
+				background: url('https://static.asadventure.com/includes/visuals/product-wizard/img/slaapzakken/intro-product-wizard-mobile-eng.jpg') no-repeat;
+			}			
+
+			.intro-tenten{
+				background: url('https://static.asadventure.com/includes/visuals/product-wizard/img/tenten/intro-product-wizard-mobile.jpg') no-repeat;
+			}
+			.intro-tenten-fr{
+				background: url('https://static.asadventure.com/includes/visuals/product-wizard/img/tenten/intro-product-wizard-mobile-fr.jpg') no-repeat;	
+			}
+			.intro-tenten-eng{
+				background: url('https://static.asadventure.com/includes/visuals/product-wizard/img/tenten/intro-product-wizard-mobile-eng.jpg') no-repeat;	
+			}
+
+			.intro-schoenen{
+				background: url('https://static.asadventure.com/includes/visuals/product-wizard/img/schoenen/intro-product-wizard-mobile.jpg') no-repeat;	
+			}
+			.intro-schoenen-fr{
+				background: url('https://static.asadventure.com/includes/visuals/product-wizard/img/schoenen/intro-product-wizard-mobile-fr.jpg') no-repeat;	
+			}	
+			.intro-schoenen-eng{
+				background: url('https://static.asadventure.com/includes/visuals/product-wizard/img/schoenen/intro-product-wizard-mobile-eng.jpg') no-repeat;	
+			}
+
+			.intro-rugzakken{
+				background: url('https://static.asadventure.com/includes/visuals/product-wizard/img/rugzakken/intro-product-wizard-mobile.jpg') no-repeat;	
+			}
+			.intro-rugzakken-fr{
+				background: url('https://static.asadventure.com/includes/visuals/product-wizard/img/rugzakken/intro-product-wizard-mobile-fr.jpg') no-repeat;	
+			}
+			.intro-rugzakken-eng{
+				background: url('https://static.asadventure.com/includes/visuals/product-wizard/img/rugzakken/intro-product-wizard-mobile-eng.jpg') no-repeat;	
+			}						
+		}
+
+	@media only screen and(min-width: 768px){
+			a{
+				display: block;
+				height: 60px;
+				width: auto;
+			}
+			.intro-slaapzakken{
+				background: url('https://static.asadventure.com/includes/visuals/product-wizard/img/slaapzakken/intro-product-wizard.jpg') no-repeat;
+				background-size: contain;
+			}
+			.intro-slaapzakken-fr{
+				background: url('https://static.asadventure.com/includes/visuals/product-wizard/img/slaapzakken/intro-product-wizard-fr.jpg') no-repeat;
+				background-size: contain;
+			}
+			.intro-slaapzakken-eng{
+				background: url('https://static.asadventure.com/includes/visuals/product-wizard/img/slaapzakken/intro-product-wizard-eng.jpg') no-repeat;
+				background-size: contain;
+			}
+
+			.intro-tenten{
+				background: url('https://static.asadventure.com/includes/visuals/product-wizard/img/tenten/intro-product-wizard.jpg') no-repeat;
+				background-size: contain;
+			}
+			.intro-tenten-fr{
+				background: url('https://static.asadventure.com/includes/visuals/product-wizard/img/tenten/intro-product-wizard-fr.jpg') no-repeat;
+				background-size: contain;
+			}
+			.intro-tenten-eng{
+				background: url('https://static.asadventure.com/includes/visuals/product-wizard/img/tenten/intro-product-wizard-eng.jpg') no-repeat;
+				background-size: contain;
+			}
+
+			.intro-schoenen{
+				background: url('https://static.asadventure.com/includes/visuals/product-wizard/img/schoenen/intro-product-wizard.jpg') no-repeat;
+				background-size: contain;
+			}
+			.intro-schoenen-fr{
+				background: url('https://static.asadventure.com/includes/visuals/product-wizard/img/schoenen/intro-product-wizard-fr.jpg') no-repeat;
+				background-size: contain;
+			}
+			.intro-schoenen-eng{
+				background: url('https://static.asadventure.com/includes/visuals/product-wizard/img/schoenen/intro-product-wizard-eng.jpg') no-repeat;
+				background-size: contain;
+			}
+
+			.intro-rugzakken{
+				background: url('https://static.asadventure.com/includes/visuals/product-wizard/img/rugzakken/intro-product-wizard.jpg') no-repeat;
+				background-size: contain;
+			}
+			.intro-rugzakken-fr{
+				background: url('https://static.asadventure.com/includes/visuals/product-wizard/img/rugzakken/intro-product-wizard-fr.jpg') no-repeat;
+				background-size: contain;
+			}
+			.intro-rugzakken-eng{
+				background: url('https://static.asadventure.com/includes/visuals/product-wizard/img/rugzakken/intro-product-wizard-eng.jpg') no-repeat;
+				background-size: contain;
+			}			
+		}
+	}
+}

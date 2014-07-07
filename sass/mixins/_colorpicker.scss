@@ -1,0 +1,36 @@
+/*------------------------------------*\
+    $COLOR SCHEME
+\*------------------------------------*/
+
+// background colors for each item
+
+#product-wizard-activate,
+#wizardContent {
+	.gold{
+		background: #968c7a;
+		color: #fff;
+		text-decoration: none;
+	}
+	.red{
+		background: #b87558;
+		color: #fff;
+		text-decoration: none;
+	}
+	.blue{
+		background: #628399;
+		color: #fff;
+		text-decoration: none;
+	}
+	.green{
+		background: #7fa392;
+		color: #fff;
+		text-decoration: none;
+	}
+
+//  FluoMarker behind text
+
+ 	.wizardSolution .marker{
+		padding: 2px;
+	}
+
+} // end of _colorpicker.scss

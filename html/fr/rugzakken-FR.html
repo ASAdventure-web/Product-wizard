@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<!-- No-caching styles -->
+
+<meta http-equiv="cache-control" content="max-age=0" />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="pragma" content="no-cache" />
+
+<!-- Styles -->
+
+<link rel="stylesheet" type="text/css" href="https://static.asadventure.com/includes/visuals/product-wizard/css/styles.css">
+
+<!-- Scripts -->
+
+<script type="text/javascript" src="https://static.asadventure.com/includes/visuals/product-wizard/javascript/hideFredhopperBanner.js"></script>
+
+</head>
+<body>
+
+	<!--
+
+	- - - - - - - - 
+	Instructions - Created by pieter.dewachter@asadventure.com
+	- - - - - - - -  
+
+	id = wizardSolution [One, Two, Three, Four] => triggers .getElementById.style.display.[none/block] show a new item based on the users choice
+
+	.wizardQuestoinFlow = number of question + question
+	.oldQuestion = previous question (line trough text)
+	.wizardPrevious = previous page 
+		!Make sure that the ajaxTrigger + ajaxQuerry is the same as the previous page
+
+	.wizardSeperator = seperator between left and right content	
+	
+	-->	
+
+<div id="product-wizard-activate">
+	<div class="button-wrapper">
+		<a href="#" class="intro-rugzakken-fr" onclick="javascript:(document.getElementById('product-wizard-activate').style.display='none'), (document.getElementById('wizardContent').style.display='inline-block'), hideFredhopperBanner();"> 
+		</a>
+	</div>
+</div>	
+
+	<div id="wizardContent" style="display:none">
+	
+		<h2 class="red"> <!-- Main titel -->
+			<img src="https://static.asadventure.com/includes/visuals/product-wizard/img/rugzakken/icon-rugzakken.png" alt="icon" class="icon"/> Faites le test du sac à dos
+			</h2>
+
+<!-- ///////////////////////////////////// -->
+<!-- step 1 - MAIN -->
+<!-- ///////////////////////////////////// -->
+
+		<div id="wizardContentMain" style="display:block">
+			<div class="span4 intro-title">
+				<h3>Tout le monde rêve d'une destination et adopte sa propre attitude. Découvrez ici quel sac à dos vous permettra de vivre au mieux tous vos rêves. Faites le test et <strong>trouvez votre fidèle compagnon.</strong></h3>
+			</div>
+			
+			<div class="wizardSeperator"></div>
+			
+			<div class="span4">
+				<a href="#" onclick="javascript:(document.getElementById('wizardContentQuestions').style.display='block'), (document.getElementById('wizardContentMain').style.display='none');"> 
+					<div class="wizardContentStart">
+						<span class="ajaxTrigger" ajaxQuerry="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3737%7D%2Fkies_rugzak%3E%7Bbabydragers%3Bbackpack_dames_a_plus%3Bbackpack_dames_b_plus%3Bbackpack_dames_c_plus%3Bbackpack_heren_a_plus%3Bbackpack_heren_b_plus%3Bbackpack_heren_c_plus%3Bbackpack_junior%3Bdaypack_junior%3Bdaypack_met_airframe_dames%3Bdaypack_met_airframe_heren%3Bdaypack_zonder_airframe_dames%3Bdaypack_zonder_airframe_heren%3Btourpack_heren_a_plus%3Btourpack_heren_a_plusplus%7D&fh_refpath=facet_276&fh_mode=selectlocation_complex&fh_reffacet=kies_rugzak&fh_refview=lister&preview_seo=false"> 
+							<img src="https://static.asadventure.com/includes/visuals/product-wizard/img/rugzakken/icon-start-rugzakken.png" alt="start" />
+						</span>
+					</div>
+				</a>
+			</div>	
+		</div> 
+
+<!-- ///////////////////////////////////// -->
+<!-- step 2 - QUESTIONS -->
+<!-- ///////////////////////////////////// -->
+	
+	<!-- MainQuestion -->				
+		<div id="wizardContentQuestions" style="display:none">
+			<div class="span4">
+				<div class="wizardQuestionFlow">
+					<p><span class="wizardQuestionNumber"><span>1</span></span>Pour quelle activité cherchez-vous un sac à dos?</p>
+				</div>
+
+				<!-- Previous Page -->				
+				<a href="" onclick="javascript:(document.getElementById('wizardContentMain').style.display='block'), (document.getElementById('wizardContentQuestions').style.display='none');" class="wizardPrevious"> retour </a>
+			</div>
+			
+			<div class="wizardSeperator"></div>
+
+	<!-- CategoricalQuestions -->				
+			<div class="span4">
+				<ul>
+			<!-- Q:Courts séjours -->
+					<a href="#" onclick="javascript:(document.getElementById('wizardSolutionOne').style.display='block'), (document.getElementById('wizardContentQuestions').style.display='none');">
+						<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3737%7D%2Fkies_rugzak%3E%7Bbabydragers%3Bdaypack_met_airframe_dames%3Bdaypack_met_airframe_heren%3Bdaypack_zonder_airframe_dames%3Bdaypack_zonder_airframe_heren%7D&fh_refpath=facet_276&fh_mode=selectlocation_complex&fh_reffacet=kies_rugzak&fh_refview=lister&preview_seo=false">
+							<li class="question red"> Courts séjours</li>
+								<span class="icon-arrow"></span>
+						</span>
+					</a>
+
+					<!-- Pop-up -->
+
+			        <li class="pop-up">
+			          <a id="activity-guide-link" class="WizardMoreInfo red">i</a>
+			          <ul class="pop-up-content red">
+			            <li>
+			              <h2>Pour Partir une journée en excursion, aller à l’école ou au travail.</h2>
+			                <p>
+			                Un <strong>sac à dos d’une journée</strong> convient parfaitement. Idéal pour un usage quotidien, au travail ou à l’école. Il offre suffisamment de place pour y ranger des vêtements chauds, repas et trousses de secours lors d’un court séjour
+			            </li>
+			          </ul>
+			        </li>
+
+			<!-- Q:meerdaagse dagtochten -->
+					<a href="#" onclick="javascript:(document.getElementById('wizardSolutionTwo').style.display='block'), (document.getElementById('wizardContentQuestions').style.display='none');">
+						<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3737%7D%2Fkies_rugzak%3E%7Bbabydragers%3Btourpack_heren_a_plus%3Btourpack_heren_a_plusplus%7D&fh_refpath=facet_276&fh_mode=selectlocation_complex&fh_reffacet=kies_rugzak&fh_refview=lister&preview_seo=false">
+							<li class="question red"> Randonnée de plusieurs jours</li>
+							<span class="icon-arrow"></span>
+						</span>
+					</a>
+
+					<!-- Pop-up -->
+
+			        <li class="pop-up">
+			          <a id="activity-guide-link" class="WizardMoreInfo red">i</a>
+			          <ul class="pop-up-content red">
+			            <li>
+			              <h2>S’évader un week- end en pleine nature ou partir à la découverte d’une ville Permet de se ressourcer.</h2>
+			                <p>
+			                Vous avez besoin d’un <strong>sac à dos de randonnée</strong>. Le volume n’est ni trop grand, ni trop petit. Le sac peut accueillir des provisions, un imperméable et des tenues de rechange, mais aussi un petit sac de couchage. Le budget deépend de la fréquence de vos randonnées.
+			            </li>
+			          </ul>
+			        </li>
+
+			<!-- Q:Trekking -->
+					<a href="#" onclick="javascript:(document.getElementById('wizardSolutionThree').style.display='block'), (document.getElementById('wizardContentQuestions').style.display='none');">
+						<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3737%7D%2Fkies_rugzak%3E%7Bbabydragers%3Bbackpack_dames_a_plus%3Bbackpack_dames_b_plus%3Bbackpack_dames_c_plus%3Bbackpack_heren_a_plus%3Bbackpack_heren_b_plus%3Bbackpack_heren_c_plus%3Bbackpack_junior%7D&fh_refpath=facet_276&fh_mode=selectlocation_complex&fh_reffacet=kies_rugzak&fh_refview=lister&preview_seo=false">
+							<li class="question red"> Trekking</li>
+							<span class="icon-arrow"></span>
+						</span>
+					</a>
+
+					<!-- Pop-up -->
+
+			        <li class="pop-up">
+			          <a id="activity-guide-link" class="WizardMoreInfo red">i</a>
+			          <ul class="pop-up-content red">
+			            <li>
+			              <h2>Je voyage de Préférence avec un Sac à dos pendant leS grandes vacances.</h2>
+			                <p>
+			                Vous êtes un authentique <strong>routard</strong>. Le sac est à la fois votre armoire à provisions et votre garde-robe. Votre tente, vos ustensiles pour cuisiner et dormir, vos provisions et vos vêtements sont à portée de main. Le budget que vous allez consacrer à votre sac à dos de voyage dépend de l’intensité de vos randonnées.
+			            </li>
+			          </ul>
+			        </li>
+				</ul>
+
+			</div>
+
+		</div><!-- END_MAINSOL_ -->
+
+<!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+
+<!-- /////////////////// -->
+<!-- step 3 - CATEG0RICAL SOLUTIONS -->
+<!-- /////////////////// -->
+
+	<!-- ////////////////////////-->
+	<!-- WIZARD SOLUTION 1 - Courts séjours -->
+
+		<div class="wizardSolution" id="wizardSolutionOne" style="display:none">
+			<div class="span4">
+				<div class="wizardQuestionFlow oldQuestion">
+					<p><span class="wizardQuestionNumber"><span>1</span></span>Pour quelle activité cherchez-vous un sac à dos?</p>
+				</div>
+
+				<div class="wizardQuestionFlow">
+					<p><span class="wizardQuestionNumber"><span>2</span></span>Vous recherchez un sac à dos avec cadre ventilé?</p>
+				</div>
+
+				<!-- Previous Page - wizardContentQuestions -->				
+				<a href="#" onclick="javascript:(document.getElementById('wizardContentQuestions').style.display='block'), (document.getElementById('wizardSolutionOne').style.display='none');" class="wizardPrevious">
+					<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3737%7D%2Fkies_rugzak%3E%7Bbabydragers%3Bbackpack_dames_a_plus%3Bbackpack_dames_b_plus%3Bbackpack_dames_c_plus%3Bbackpack_heren_a_plus%3Bbackpack_heren_b_plus%3Bbackpack_heren_c_plus%3Bbackpack_junior%3Bdaypack_junior%3Bdaypack_met_airframe_dames%3Bdaypack_met_airframe_heren%3Bdaypack_zonder_airframe_dames%3Bdaypack_zonder_airframe_heren%3Btourpack_heren_a_plus%3Btourpack_heren_a_plusplus%7D&fh_refpath=facet_276&fh_mode=selectlocation_complex&fh_reffacet=kies_rugzak&fh_refview=lister&preview_seo=false"> retour</span>
+				</a>
+			</div>
+
+			<div class="wizardSeperator"></div>
+
+			<div class="span4">
+				<ul>
+					<a href="#" onclick="javascript:(document.getElementById('wizardSolutionOneSectionTwoPartOne').style.display='block'), (document.getElementById('wizardSolutionOne').style.display='none');">
+						<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3737%7D%2Fkies_rugzak%3E%7Bdaypack_met_airframe_dames%3Bdaypack_met_airframe_heren%7D&fh_refpath=facet_276&fh_mode=selectlocation_complex&fh_reffacet=kies_rugzak&fh_refview=lister&preview_seo=false">
+							<li class="question red">Oui, de préférence</li><span class="icon-arrow"></span>
+						</span>
+					</a>
+
+
+					<a href="#" onclick="javascript:(document.getElementById('wizardSolutionOneSectionTwoPartTwo').style.display='block'), (document.getElementById('wizardSolutionOne').style.display='none');">
+						<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3737%7D%2Fkies_rugzak%3E%7Bdaypack_zonder_airframe_dames%3Bdaypack_zonder_airframe_heren%7D&fh_refpath=facet_276&fh_mode=selectlocation_complex&fh_reffacet=kies_rugzak&fh_refview=lister&preview_seo=false"> 
+							<li class="question red">Non, merci</li><span class="icon-arrow"></span>
+						</span>
+					</a>
+				</ul>
+			</div>
+
+		</div> <!-- END_SOL_1 -->
+
+
+	<!-- ////////////////////////-->
+	<!-- WIZARD SOLUTION 2 - Randonnée de plusieurs jours -->
+
+		<div class="wizardSolution" id="wizardSolutionTwo" style="display:none">
+			<div class="span4">
+				<div class="wizardQuestionFlow oldQuestion">
+					<p><span class="wizardQuestionNumber"><span>1</span></span>Pour quelle activité cherchez-vous un sac à dos?</p>
+				</div>
+
+				<div class="wizardQuestionFlow">
+					<p><span class="wizardQuestionNumber"><span>2</span></span>Quelle quantité souhaitez-vous transporter?</p>
+				</div>
+
+				<!-- Previous Page - wizardContentQuestions -->				
+				<a href="#" onclick="javascript:(document.getElementById('wizardContentQuestions').style.display='block'), (document.getElementById('wizardSolutionTwo').style.display='none');" class="wizardPrevious">
+					<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3737%7D%2Fkies_rugzak%3E%7Bbabydragers%3Bbackpack_dames_a_plus%3Bbackpack_dames_b_plus%3Bbackpack_dames_c_plus%3Bbackpack_heren_a_plus%3Bbackpack_heren_b_plus%3Bbackpack_heren_c_plus%3Bbackpack_junior%3Bdaypack_junior%3Bdaypack_met_airframe_dames%3Bdaypack_met_airframe_heren%3Bdaypack_zonder_airframe_dames%3Bdaypack_zonder_airframe_heren%3Btourpack_heren_a_plus%3Btourpack_heren_a_plusplus%7D&fh_refpath=facet_276&fh_mode=selectlocation_complex&fh_reffacet=kies_rugzak&fh_refview=lister&preview_seo=false"> retour</span>
+				</a>
+			</div>
+
+			<div class="wizardSeperator"></div>
+
+			<div class="span4">
+				<ul>
+					<a href="#" onclick="javascript:(document.getElementById('wizardSolutionTwoSectionTwoPartOne').style.display='block'), (document.getElementById('wizardSolutionTwo').style.display='none');">
+						<span class="ajaxTrigger" ajaxQuery="h_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3737%7D%2Fkies_rugzak%3E%7Btourpack_heren_a_plus%7D&fh_refpath=facet_276&fh_mode=selectlocation_complex&fh_reffacet=kies_rugzak&fh_refview=lister&preview_seo=false">
+							<li class="question red"> Moins de 40 litres</li>
+							<span class="icon-arrow"></span>
+						</span>
+					</a>
+
+					<a href="#" onclick="javascript:(document.getElementById('wizardSolutionTwoSectionTwoPartTwo').style.display='block'), (document.getElementById('wizardSolutionTwo').style.display='none');">
+						<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3737%7D%2Fkies_rugzak%3E%7Btourpack_heren_a_plusplus%7D&fh_refpath=facet_276&fh_mode=selectlocation_complex&fh_reffacet=kies_rugzak&fh_refview=lister&preview_seo=false">
+							<li class="question red"> Plus de 40 litres</li>
+							<span class="icon-arrow"></span>
+						</span>
+					</a>
+				</ul>
+			</div>
+		</div> <!-- END_SOL_2 -->
+
+
+	<!-- ////////////////////////-->
+	<!-- WIZARD SOLUTION 3 - TREKKING -->
+
+		<div class="wizardSolution" id="wizardSolutionThree" style="display:none">
+			<div class="span4">
+				<div class="wizardQuestionFlow oldQuestion">
+					<p><span class="wizardQuestionNumber"><span>1</span></span>Pour quelle activité cherchez-vous un sac à dos?</p>
+				</div>
+
+				<div class="wizardQuestionFlow">
+					<p><span class="wizardQuestionNumber"><span>2</span></span>Quelle sera l'intensité de vos futurs trekkings?</p>
+				</div>
+
+				<!-- Previous Page - wizardContentQuestions -->				
+				<a href="#" onclick="javascript:(document.getElementById('wizardContentQuestions').style.display='block'), (document.getElementById('wizardSolutionThree').style.display='none');" class="wizardPrevious">
+					<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3737%7D%2Fkies_rugzak%3E%7Bbabydragers%3Bbackpack_dames_a_plus%3Bbackpack_dames_b_plus%3Bbackpack_dames_c_plus%3Bbackpack_heren_a_plus%3Bbackpack_heren_b_plus%3Bbackpack_heren_c_plus%3Bbackpack_junior%3Bdaypack_junior%3Bdaypack_met_airframe_dames%3Bdaypack_met_airframe_heren%3Bdaypack_zonder_airframe_dames%3Bdaypack_zonder_airframe_heren%3Btourpack_heren_a_plus%3Btourpack_heren_a_plusplus%7D&fh_refpath=facet_276&fh_mode=selectlocation_complex&fh_reffacet=kies_rugzak&fh_refview=lister&preview_seo=false"> retour</span>
+				</a>
+			</div>
+
+			<div class="wizardSeperator"></div>
+
+			<div class="span4">
+				<ul>
+					<a href="#" onclick="javascript:(document.getElementById('wizardSolutionThreeSectionTwoPartOne').style.display='block'), (document.getElementById('wizardSolutionThree').style.display='none');">
+						<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3737%7D%2Fkies_rugzak%3E%7Bbackpack_dames_a_plus%3Bbackpack_heren_a_plus%7D&fh_refpath=facet_276&fh_mode=selectlocation_complex&fh_reffacet=kies_rugzak&fh_refview=lister&preview_seo=false">
+							<li class="question red"> Peu intenses</li>
+							<span class="icon-arrow"></span>
+						</span>
+					</a>
+
+
+					<a href="#" onclick="javascript:(document.getElementById('wizardSolutionThreeSectionTwoPartTwo').style.display='block'), (document.getElementById('wizardSolutionThree').style.display='none');">
+						<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3737%7D%2Fkies_rugzak%3E%7Bbackpack_dames_b_plus%3Bbackpack_heren_b_plus%7D&fh_refpath=facet_276&fh_mode=selectlocation_complex&fh_reffacet=kies_rugzak&fh_refview=lister&preview_seo=false">
+							<li class="question red"> Moyenne</li>
+							<span class="icon-arrow"></span>
+						</span>
+					</a>
+
+
+					<a href="#" onclick="javascript:(document.getElementById('wizardSolutionThreeSectionTwoPartThree').style.display='block'), (document.getElementById('wizardSolutionThree').style.display='none');">
+						<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3737%7D%2Fkies_rugzak%3E%7Bbackpack_dames_c_plus%3Bbackpack_heren_c_plus%7D&fh_refpath=facet_276&fh_mode=selectlocation_complex&fh_reffacet=kies_rugzak&fh_refview=lister&preview_seo=false">
+							<li class="question red"> Très intenses</li>
+							<span class="icon-arrow"></span>
+						</span>
+					</a>
+				</ul>
+			</div>
+		</div> <!-- END_SOL_3 -->
+
+
+<!-- ////////// \\\\\\\\\\\ -->
+<!--  START SUB SOLUTIONS -->
+<!-- ////////// \\\\\\\\\\\ -->
+
+		<!-- ////////////////////////-->
+		<!-- SUB SOLUTION _ Courts séjours -->
+
+		<!-- Courts séjours (1) -->
+
+		<div class="wizardSolution" id="wizardSolutionOneSectionTwoPartOne" style="display:none">
+			<div class="span4">
+
+				<div class="wizardQuestionFlow oldQuestion">
+					<p><span class="wizardQuestionNumber"><span>1</span></span>Pour quelle activité cherchez-vous un sac à dos?</p>
+				</div>
+
+				<div class="wizardQuestionFlow oldQuestion">
+					<p><span class="wizardQuestionNumber"><span>2</span></span>Vous recherchez un sac à dos avec cadre ventilé?</p>
+				</div>	
+
+				<a href="#" onclick="javascript:(document.getElementById('wizardSolutionOne').style.display='block'), (document.getElementById('wizardSolutionOneSectionTwoPartOne').style.display='none');" class="wizardPrevious">
+					<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3737%7D%2Fkies_rugzak%3E%7Bbabydragers%3Bdaypack_met_airframe_dames%3Bdaypack_met_airframe_heren%3Bdaypack_zonder_airframe_dames%3Bdaypack_zonder_airframe_heren%7D&fh_refpath=facet_276&fh_mode=selectlocation_complex&fh_reffacet=kies_rugzak&fh_refview=lister&preview_seo=false"> retour <span> 
+				</a>
+
+			</div>
+
+				<div class="wizardSeperator"></div>
+
+			<div class="span4">
+
+				<div class="subQuestion">
+					<p class="marker red">Sacs à dos d'une journée avec cadre ventilé.</p>
+					<div class="confirmText">Voir votre sélection ci-dessous</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- Courts séjours (2) -->
+
+		<div class="wizardSolution" id="wizardSolutionOneSectionTwoPartTwo" style="display:none">
+			<div class="span4">
+
+				<div class="wizardQuestionFlow oldQuestion">
+					<p><span class="wizardQuestionNumber"><span>1</span></span>Pour quelle activité cherchez-vous un sac à dos?</p>
+				</div>
+
+				<div class="wizardQuestionFlow oldQuestion">
+					<p><span class="wizardQuestionNumber"><span>2</span></span>Vous recherchez un sac à dos avec cadre ventilé?</p>
+				</div>	
+
+				<a href="#" onclick="javascript:(document.getElementById('wizardSolutionOne').style.display='block'), (document.getElementById('wizardSolutionOneSectionTwoPartTwo').style.display='none');" class="wizardPrevious">
+					<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3737%7D%2Fkies_rugzak%3E%7Bbabydragers%3Bdaypack_met_airframe_dames%3Bdaypack_met_airframe_heren%3Bdaypack_zonder_airframe_dames%3Bdaypack_zonder_airframe_heren%7D&fh_refpath=facet_276&fh_mode=selectlocation_complex&fh_reffacet=kies_rugzak&fh_refview=lister&preview_seo=false"> retour <span> 
+				</a>
+
+			</div>
+
+				<div class="wizardSeperator"></div>
+
+			<div class="span4">
+
+				<div class="subQuestion">	
+					<p class="marker red">Sacs à dos d'une journée sans cadre ventilé.</p>
+					<div class="confirmText">Voir votre sélection ci-dessous</div>
+				</div>
+
+			</div>
+		</div> <!-- END_ Courts séjours -->
+
+
+		<!-- ////////////////////////-->
+		<!-- SUB SOLUTION _ Randonnée de plusieurs joursEN -->
+
+			<!-- Randonnée de plusieurs joursEN -->
+
+			<!-- Randonnée de plusieurs joursen - minder dan 40 l -->
+
+				<div class="wizardSolution" id="wizardSolutionTwoSectionTwoPartOne" style="display:none">
+					<div class="span4">
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>1</span></span>Pour quelle activité cherchez-vous un sac à dos?</p>
+						</div>
+
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>2</span></span>Quelle quantité souhaitez-vous transporter?</p>
+						</div>	
+
+						<a href="#" onclick="javascript:(document.getElementById('wizardSolutionTwo').style.display='block'), (document.getElementById('wizardSolutionTwoSectionTwoPartOne').style.display='none');" class="wizardPrevious">
+							<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3737%7D%2Fkies_rugzak%3E%7Bbabydragers%3Btourpack_heren_a_plus%3Btourpack_heren_a_plusplus%7D&fh_refpath=facet_276&fh_mode=selectlocation_complex&fh_reffacet=kies_rugzak&fh_refview=lister&preview_seo=false"> retour <span> 
+						</a>
+					</div>
+
+						<div class="wizardSeperator"></div>
+
+<!-- 					<div class="span4">	
+						<div class="subQuestion square red">
+							<h3>Moins de 40 litres.</h3>
+							<p>J'emporte seulement un drap de sac et une quantité limitée de matériel pour un citytrip ou une randonnée au refuge.</p>
+						</div>
+					</div> -->
+					<div class="span4">
+						<p class="marker red">sac à dos de randonnée TYPE A+</p>
+					
+						<p>J'emporte seulement un drap de sac et une quantité limitée de matériel pour un citytrip ou une randonnée au refuge.</p>
+						<div class="confirmText">Voir votre sélection ci-dessous</div>
+					</div>
+				</div>
+
+			<!-- Randonnée de plusieurs joursen - meer dan 40 l -->
+
+				<div class="wizardSolution" id="wizardSolutionTwoSectionTwoPartTwo" style="display:none">
+					<div class="span4">
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>1</span></span>Pour quelle activité cherchez-vous un sac à dos?</p>
+						</div>
+
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>2</span></span>Quelle quantité souhaitez-vous transporter?</p>
+						</div>	
+
+						<a href="#" onclick="javascript:(document.getElementById('wizardSolutionTwo').style.display='block'), (document.getElementById('wizardSolutionTwoSectionTwoPartTwo').style.display='none');" class="wizardPrevious">
+							<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3737%7D%2Fkies_rugzak%3E%7Bbabydragers%3Btourpack_heren_a_plus%3Btourpack_heren_a_plusplus%7D&fh_refpath=facet_276&fh_mode=selectlocation_complex&fh_reffacet=kies_rugzak&fh_refview=lister&preview_seo=false"> retour <span> 
+						</a>
+					</div>
+
+						<div class="wizardSeperator"></div>
+
+<!-- 					<div class="span4">
+						<div class="subQuestion square red">
+							<h3>Plus de 40 litres.</h3>
+							<p>Il faut assez de place pour pouvoir ranger une tente légère, un sac de couchage et un matelas pour une plus longue randonnée à l'étranger.</p>
+						</div>
+					</div> -->
+
+					<div class="span4">
+						<p class="marker red">sac à dos de randonnée TYPE A++</p>
+					
+						<p>Il faut assez de place pour pouvoir ranger une tente légère, un sac de couchage et un matelas pour une plus longue randonnée à l'étranger.</p>
+						<div class="confirmText">Voir votre sélection ci-dessous</div>
+					</div>
+				</div><!-- END_RUGZAKTREKKING -->
+
+
+		<!-- ////////////////////////-->
+		<!-- SUB SOLUTION _ TREKKING -->
+
+			<!-- TREKKING -->
+
+			<!-- trekking - weinig intensief -->
+
+				<div class="wizardSolution" id="wizardSolutionThreeSectionTwoPartOne" style="display:none">
+					<div class="span4">
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>1</span></span>Pour quelle activité cherchez-vous un sac à dos?</p>
+						</div>
+
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>2</span></span>Quelle sera l'intensité de vos futurs trekkings?</p>
+						</div>
+
+						<a href="#" onclick="javascript:(document.getElementById('wizardSolutionThree').style.display='block'), (document.getElementById('wizardSolutionThreeSectionTwoPartOne').style.display='none');" class="wizardPrevious">
+							<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3737%7D%2Fkies_rugzak%3E%7Bbabydragers%3Bbackpack_dames_a_plus%3Bbackpack_dames_b_plus%3Bbackpack_dames_c_plus%3Bbackpack_heren_a_plus%3Bbackpack_heren_b_plus%3Bbackpack_heren_c_plus%3Bbackpack_junior%7D&fh_refpath=facet_276&fh_mode=selectlocation_complex&fh_reffacet=kies_rugzak&fh_refview=lister&preview_seo=false"> retour <span> 
+						</a>
+					</div>
+
+						<div class="wizardSeperator"></div>
+
+<!-- 					<div class="span4">
+						<div class="subQuestion square red">
+							<h3>Peu intenses.</h3>
+							<p>J'emporte seulement un drap de sac et une quantité limitée de matériel pour un citytrip ou une randonnée au refuge.</p>
+						</div>
+					</div> -->
+
+					<div class="span4">
+						<p class="marker red">sacs à dos de voyage TYPE A+</p>
+					
+						<p>J'emporte seulement un drap de sac et une quantité limitée de matériel pour un citytrip ou une randonnée au refuge.</p>
+						<div class="confirmText">Voir votre sélection ci-dessous</div>
+					</div>
+				</div> 
+
+			<!-- trekking - Gemiddeld -->
+
+				<div class="wizardSolution" id="wizardSolutionThreeSectionTwoPartTwo" style="display:none">
+					<div class="span4">
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>1</span></span>Pour quelle activité cherchez-vous un sac à dos?</p>
+						</div>
+
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>2</span></span>Quelle sera l'intensité de vos futurs trekkings?</p>
+						</div>
+
+						<a href="#" onclick="javascript:(document.getElementById('wizardSolutionThree').style.display='block'), (document.getElementById('wizardSolutionThreeSectionTwoPartTwo').style.display='none');" class="wizardPrevious">
+							<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3737%7D%2Fkies_rugzak%3E%7Bbabydragers%3Bbackpack_dames_a_plus%3Bbackpack_dames_b_plus%3Bbackpack_dames_c_plus%3Bbackpack_heren_a_plus%3Bbackpack_heren_b_plus%3Bbackpack_heren_c_plus%3Bbackpack_junior%7D&fh_refpath=facet_276&fh_mode=selectlocation_complex&fh_reffacet=kies_rugzak&fh_refview=lister&preview_seo=false"> retour <span> 
+						</a>
+					</div>
+
+						<div class="wizardSeperator"></div>
+
+<!-- 						<div class="span4">
+							<div class="subQuestion square red">
+								<h3>Moyenne.</h3>
+								<p>Il faut assez de place pour pouvoir ranger une tente légère, un sac de couchage et un matelas pour une plus longue randonnée à l'étranger.</p>
+							</div>
+						</div> -->
+						<div class="span4">
+							<p class="marker red">sacs à dos de voyage TYPE B+</p>
+						
+							<p>Il faut assez de place pour pouvoir ranger une tente légère, un sac de couchage et un matelas pour une plus longue randonnée à l'étranger.</p>
+							<div class="confirmText">Voir votre sélection ci-dessous</div>
+						</div>
+				</div>
+
+			<!-- trekking - Zeer intensief -->
+
+				<div class="wizardSolution" id="wizardSolutionThreeSectionTwoPartThree" style="display:none">
+					<div class="span4">
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>1</span></span>Pour quelle activité cherchez-vous un sac à dos?</p>
+						</div>
+
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>2</span></span>Quelle sera l'intensité de vos futurs trekkings?</p>
+						</div>
+
+						<a href="#" onclick="javascript:(document.getElementById('wizardSolutionThree').style.display='block'), (document.getElementById('wizardSolutionThreeSectionTwoPartThree').style.display='none');" class="wizardPrevious">
+							<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3737%7D%2Fkies_rugzak%3E%7Bbabydragers%3Bbackpack_dames_a_plus%3Bbackpack_dames_b_plus%3Bbackpack_dames_c_plus%3Bbackpack_heren_a_plus%3Bbackpack_heren_b_plus%3Bbackpack_heren_c_plus%3Bbackpack_junior%7D&fh_refpath=facet_276&fh_mode=selectlocation_complex&fh_reffacet=kies_rugzak&fh_refview=lister&preview_seo=false"> retour <span> 
+						</a>
+					</div>
+
+						<div class="wizardSeperator"></div>
+
+<!-- 					<div class="span4">
+						<div class="subQuestion square red">
+							<h3>Très intenses.</h3>
+							<p>Il faut assez de place pour pouvoir ranger une tente légère, un sac de couchage et un matelas pour une plus longue randonnée à l'étranger.</p>
+						</div>
+					</div> -->
+
+					<div class="span4">
+						<p class="marker red">Backpacks TYPE C+</p>
+						<p>Il faut assez de place pour pouvoir ranger une tente légère, un sac de couchage et un matelas pour une plus longue randonnée à l'étranger.</p>
+						<div class="confirmText">Voir votre sélection ci-dessous</div>
+					</div>
+				</div> <!-- END_ TREKKING -->				
+<!-- end content -->
+	</div> 
+</body>
+</html> 

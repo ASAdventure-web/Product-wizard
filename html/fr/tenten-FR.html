@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<!-- No-caching styles -->
+
+<meta http-equiv="cache-control" content="max-age=0" />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="pragma" content="no-cache" />
+
+<!-- Styles -->
+
+<link rel="stylesheet" type="text/css" href="https://static.asadventure.com/includes/visuals/product-wizard/css/styles.css">
+
+<!-- Scripts -->
+
+<script type="text/javascript" src="https://static.asadventure.com/includes/visuals/product-wizard/javascript/hideFredhopperBanner.js"></script>
+
+</head>
+<body>
+	
+	<!--
+
+	- - - - - - - - 
+	Instructions - Created by pieter.dewachter@asadventure.com
+	- - - - - - - -  
+
+	id = wizardSolution [One, Two, Three, Four] => triggers .getElementById.style.display.[none/block] show a new item based on the users choice
+
+	.wizardQuestoinFlow = number of question + question
+	.oldQuestion = previous question (line trough text)
+	.wizardPrevious = previous page 
+		!Make sure that the ajaxTrigger + ajaxQuerry is the same as the previous page
+
+	.wizardSeperator = seperator between left and right content	
+	
+	-->	
+
+<div id="product-wizard-activate">
+	<div class="button-wrapper">
+		<a href="#" class="intro-tenten-fr" onclick="javascript:(document.getElementById('product-wizard-activate').style.display='none'), (document.getElementById('wizardContent').style.display='inline-block'), hideFredhopperBanner();"> 
+		</a>
+	</div>
+</div>		
+
+	<div id="wizardContent" style="display:none">
+	
+		<h2 class="gold"> <!-- Main titel -->
+			<img src="https://static.asadventure.com/includes/visuals/product-wizard/img/tenten/icon-tenten.png" alt="icon" class="icon"/> Plantez la bonne tente
+		</h2>
+
+<!-- ///////////////////////////////////// -->
+<!-- step 1 - MAIN -->
+<!-- ///////////////////////////////////// -->
+
+		<div id="wizardContentMain" style="display:block">
+			<div class="span4 intro-title">
+				<h3>Vous partez camper avec les enfants ? En expédition au pôle Nord ? Ou à Rock Werchter entre amis? Faites le test et <strong>trouvez la tente</strong> qui répond le mieux à vos besoins.</h3>
+			</div>
+			
+			<div class="wizardSeperator"></div>
+			
+			<div class="span4">
+				<a href="#" onclick="javascript:(document.getElementById('wizardContentQuestions').style.display='block'), (document.getElementById('wizardContentMain').style.display='none');"> 
+					<div class="wizardContentStart"> 
+						<span class="ajaxTrigger" ajaxQuery="fh_location=//catalog01/nl_NL/categories<{catalog01_c3736}/categories<{catalog01_c3736_c3738}&fh_refview=lister&fh_refpath=facet_5&fh_reffacet=categories&preview_seo=false">
+							<img src="https://static.asadventure.com/includes/visuals/product-wizard/img/tenten/tenten-start-hover.png" alt="Product wizard - tents ">
+						</span>
+					</div>
+				</a>
+			</div>	
+		</div> 
+
+<!-- ///////////////////////////////////// -->
+<!-- step 2 - QUESTIONS -->
+<!-- ///////////////////////////////////// -->
+	
+	<!-- MainQuestion -->				
+		<div id="wizardContentQuestions" style="display:none">
+			<div class="span4">
+				<div class="wizardQuestionFlow">
+					<p><span class="wizardQuestionNumber"><span>1</span></span>Où partez-vous à l'aventure?</p>
+				</div>
+
+				<!-- Previous Page -->				
+				<a href="" onclick="javascript:(document.getElementById('wizardContentMain').style.display='block'), (document.getElementById('wizardContentQuestions').style.display='none');" class="wizardPrevious"> retour </a>
+			</div>
+			
+			<div class="wizardSeperator"></div>
+
+	<!-- CategoricalQuestions -->				
+			<div class="span4">
+				<ul>
+			<!-- Q:Ultra Light -->
+					<a href="#" onclick="javascript:(document.getElementById('wizardSolutionOne').style.display='block'), (document.getElementById('wizardContentQuestions').style.display='none');">
+						<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3738%7D%2Fkies_tent%3E%7Bperformance_plus%3Bperformance_plus_plus%7D&fh_mode=selectlocation_complex&fh_refview=lister&fh_reffacet=kies_tent&fh_refpath=facet_272&preview_seo=false">
+							<li class="question gold"> Ultra light/montagne</li><span class="icon-arrow"></span>
+						</span>
+					</a>
+
+					<!-- Pop-up -->
+
+			        <li class="pop-up">
+			          <a id="activity-guide-link" class="WizardMoreInfo gold">i</a>
+			          <ul class="pop-up-content gold">
+			            <li>
+			              <h2>Je pars à l'aventure par monts et par vaux</h2>
+			                <p>
+			                Optez pour un modèle de la <strong>catégorie Performance</strong> : ces tentes conviennent à <strong>presque toutes les saisons</strong>, elles prennet moins de place et sont légères et compactes. L'idéal pour les longues distances à une certaine altitude.</p>
+			            </li>
+			          </ul>
+			        </li> 
+
+
+			<!-- Q:Rugzaktrekking -->
+					<a href="#" onclick="javascript:(document.getElementById('wizardSolutionTwo').style.display='block'), (document.getElementById('wizardContentQuestions').style.display='none');">
+						<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3738%7D%2Fkies_tent%3E%7Bexplorer_a_plus%3Bexplorer_a_plus_plus%3Bexplorer_b_plus%3Bexplorer_b_plus_plus%7D&fh_mode=selectlocation_complex&fh_refview=lister&fh_reffacet=kies_tent&fh_refpath=facet_272&preview_seo=false">
+							<li class="question gold">Trekking avec un sac à dos</li><span class="icon-arrow"></span>
+						</span>
+					</a>
+
+					<!-- Pop-up -->
+
+			        <li class="pop-up">
+			          <a id="activity-guide-link" class="WizardMoreInfo gold">i</a>
+			          <ul class="pop-up-content gold">
+			            <li>
+			              <h2>J'aime partir à pied avec mon sac à dos</h2>
+			                <p>
+			                Vous êtes un <strong>explorateur</strong>. Dans ce cas, la tente idéale est de petite ou moyenne taille et résiste à <strong>tous les types de temps.</strong> Étant donné que vous partez à pied, le poids et la compacité de la tente sont essentiels. Prévoyez un budget moyen à éléve.</p> 
+			            </li>
+			          </ul>
+			        </li>
+
+			<!-- Q:Familie camping -->
+					<a href="#" onclick="javascript:(document.getElementById('wizardSolutionThree').style.display='block'), (document.getElementById('wizardContentQuestions').style.display='none');">
+						<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3738%7D%2Fkies_tent%3E%7Bcomfort_camping_plus%3Bcomfort_camping_plus_plus%7D&fh_mode=selectlocation_complex&fh_refview=lister&fh_reffacet=kies_tent&fh_refpath=facet_272&preview_seo=false">
+							<li class="question gold">Camping en famille</li><span class="icon-arrow"></span>
+						</span>
+					</a>
+
+					<!-- Pop-up -->
+
+			        <li class="pop-up">
+			          <a id="activity-guide-link" class="WizardMoreInfo gold">i</a>
+			          <ul class="pop-up-content gold">
+			            <li>
+			              <h2>Vous partez camper en famille. Chouette !</h2>
+			                <p>
+			                Vous recherchez certainement une tente de la catégorie <strong>Comfort Camping</strong> : elle est très spacieuse et son poids joue un rôle secondaire. Vous misez sur un budget qui va d'abordable à luxueux. Les tentes confortables conviennent surtout pour le camping en <strong>été.</strong> </p>
+			            </li>
+			          </ul>
+			        </li>
+
+			<!-- Q:Fun camping -->
+					<a href="#" onclick="javascript:(document.getElementById('wizardSolutionFour').style.display='block'), (document.getElementById('wizardContentQuestions').style.display='none');">
+						<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3738%7D%2Fkies_tent%3E%7Bfun_camping_a_plus%3Bfun_camping_a_plus_plus%3Bfun_camping_b_plus%7D&fh_mode=selectlocation_complex&fh_refview=lister&fh_reffacet=kies_tent&fh_refpath=facet_272&preview_seo=false">
+							<li class="question gold">Camping fun</li><span class="icon-arrow"></span>
+						</span>
+					</a>
+
+					<!-- Pop-up -->
+
+			        <li class="pop-up">
+			          <a id="activity-guide-link" class="WizardMoreInfo gold">i</a>
+			          <ul class="pop-up-content gold">
+			            <li>
+			              <h2>Une nuit sous tente ? Uniquement pour les festivals, et toujours l'été</h2>
+			                <p>
+			                Vous trouverez sûrement votre bonheur dans la catégorie <strong>Fun Camping</strong>. Ces tentes sont de préférence utilisées pendant <strong>l'été.</strong> Leur poids importe peu. En revanche, leur prix doit être abordable et elles ne doivent pas être trop grandes.</p>
+			            </li>
+			          </ul>
+			        </li>
+				</ul>
+
+			</div>
+
+		</div><!-- END_MAINSOL_ -->
+
+<!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+
+	<!-- /////////////////// -->
+	<!-- step 3 - CATEG0RICAL SOLUTIONS -->
+	<!-- /////////////////// -->
+
+		<!-- ////////////////////////-->
+		<!-- WIZARD SOLUTION 1 - ultra light/gebergte -->
+
+		<div class="wizardSolution" id="wizardSolutionOne" style="display:none">
+			<div class="span4">
+				<div class="wizardQuestionFlow oldQuestion">
+					<p><span class="wizardQuestionNumber"><span>1</span></span>Où partez-vous à l'aventure?</p>
+				</div>
+
+				<div class="wizardQuestionFlow">
+					<p><span class="wizardQuestionNumber"><span>2</span></span>Combien de personnes dormiront dans la tente?</p>
+				</div>
+
+				<!-- Previous Page - wizardContentQuestions -->				
+				<a href="#" onclick="javascript:(document.getElementById('wizardContentQuestions').style.display='block'), (document.getElementById('wizardSolutionOne').style.display='none');" class="wizardPrevious">
+					<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3738%7D&fh_reffacet=kies_tent&fh_refpath=facet_272&fh_refview=lister&fh_mode=selectlocation_complex&preview_seo=false"> retour</span>
+				</a>
+			</div>
+
+			<div class="wizardSeperator"></div>
+
+			<div class="span4">
+
+				<div class="people-container">
+
+					<a href="#" onclick="javascript:(document.getElementById('wizardSolutionOneSectionTwoPartOne').style.display='block'), (document.getElementById('wizardSolutionOne').style.display='none');">
+						<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3738%7D%2Fkies_tent%3E%7Bperformance_plus%7D&fh_mode=selectlocation_complex&fh_refview=lister&fh_reffacet=kies_tent&fh_refpath=facet_272&preview_seo=false">	
+							<img src="https://static.asadventure.com/includes/visuals/product-wizard/img/tenten/person-1.png"></span>
+						</a> 
+
+						ou
+
+						<a href="#" onclick="javascript:(document.getElementById('wizardSolutionOneSectionTwoPartTwo').style.display='block'), (document.getElementById('wizardSolutionOne').style.display='none');">
+							<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3738%7D%2Fkies_tent%3E%7Bperformance_plus_plus%7D&fh_mode=selectlocation_complex&fh_refview=lister&fh_reffacet=kies_tent&fh_refpath=facet_272&preview_seo=false">
+								<img src="https://static.asadventure.com/includes/visuals/product-wizard/img/tenten/person-3.png">	
+							</span>
+						</a>
+				</div>
+			</div>
+		</div> <!-- END_SOL_1 -->
+
+
+		<!-- ////////////////////////-->
+		<!-- WIZARD SOLUTION 2 - rugzaktrekking -->
+
+		<div class="wizardSolution" id="wizardSolutionTwo" style="display:none">
+			<div class="span4">
+				<div class="wizardQuestionFlow oldQuestion">
+					<p><span class="wizardQuestionNumber"><span>1</span></span>Où partez-vous à l'aventure?</p>
+				</div>
+
+				<div class="wizardQuestionFlow">
+					<p><span class="wizardQuestionNumber"><span>2</span></span>L'espace et la robustesse priment-ils sur le poids?</p>
+				</div>
+
+				<!-- Previous Page - wizardContentQuestions -->				
+				<a href="#" onclick="javascript:(document.getElementById('wizardContentQuestions').style.display='block'), (document.getElementById('wizardSolutionTwo').style.display='none');" class="wizardPrevious">
+					<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3738%7D&fh_reffacet=kies_tent&fh_refpath=facet_272&fh_refview=lister&fh_mode=selectlocation_complex&preview_seo=false"> retour</span>
+				</a>
+			</div>
+
+			<div class="wizardSeperator"></div>
+
+			<div class="span4">
+				<ul>
+					<a href="#" onclick="javascript:(document.getElementById('wizardSolutionTwoSectionTwoPartOne').style.display='block'), (document.getElementById('wizardSolutionTwo').style.display='none');">
+						<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3738%7D%2Fkies_tent%3E%7Bexplorer_a_plus%3Bexplorer_a_plus_plus%7D&fh_mode=selectlocation_complex&fh_refview=lister&fh_reffacet=kies_tent&fh_refpath=facet_272&preview_seo=false">
+							<li class="question gold">
+								Oui, je veux un auvent
+							</li><span class="icon-arrow"></span>
+						</span>
+					</a>
+
+
+					<a href="#" onclick="javascript:(document.getElementById('wizardSolutionTwoSectionTwoPartTwo').style.display='block'), (document.getElementById('wizardSolutionTwo').style.display='none');">
+						<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3738%7D%2Fkies_tent%3E%7Bexplorer_b_plus%3Bexplorer_b_plus_plus%7D&fh_mode=selectlocation_complex&fh_refview=lister&fh_reffacet=kies_tent&fh_refpath=facet_272&preview_seo=false">
+							<li class="question gold">
+								Non, l'auvent n'est pas nécessaire
+							</li><span class="icon-arrow"></span>
+						</span>
+					</a>
+				</ul>
+			</div>
+		</div> <!-- END_SOL_2 -->
+
+
+		<!-- ////////////////////////-->
+		<!-- WIZARD SOLUTION 3 - familie campinig -->
+
+		<div class="wizardSolution" id="wizardSolutionThree" style="display:none">
+			<div class="span3">
+				<div class="wizardQuestionFlow oldQuestion">
+					<p><span class="wizardQuestionNumber"><span>1</span></span>Où partez-vous à l'aventure?</p>
+				</div>
+
+				<div class="wizardQuestionFlow">
+					<p><span class="wizardQuestionNumber"><span>2</span></span>Combien de personnes dormiront dans la tente?</p>
+				</div>
+
+				<!-- Previous Page - wizardContentQuestions -->				
+				<a href="#" onclick="javascript:(document.getElementById('wizardContentQuestions').style.display='block'), (document.getElementById('wizardSolutionThree').style.display='none');" class="wizardPrevious">
+					<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3738%7D&fh_reffacet=kies_tent&fh_refpath=facet_272&fh_refview=lister&fh_mode=selectlocation_complex&preview_seo=false"> retour</span>
+				</a>
+			</div>
+
+			<div class="wizardSeperator"></div>
+
+			<div class="span5">
+
+				<div class="people-container">
+
+					<a href="#" onclick="javascript:(document.getElementById('wizardSolutionThreeSectionTwoPartOne').style.display='block'), (document.getElementById('wizardSolutionThree').style.display='none');">
+						<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3738%7D%2Fkies_tent%3E%7Bcomfort_camping_plus%7D&fh_mode=selectlocation_complex&fh_refview=lister&fh_reffacet=kies_tent&fh_refpath=facet_272&preview_seo=false">	
+							<img class="product-wizard-people-icon-large" src="https://static.asadventure.com/includes/visuals/product-wizard/img/tenten/person-3.png"></span>
+						</a> 
+
+						ou
+
+						<a href="#" onclick="javascript:(document.getElementById('wizardSolutionThreeSectionTwoPartTwo').style.display='block'), (document.getElementById('wizardSolutionThree').style.display='none');">
+							<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3738%7D%2Fkies_tent%3E%7Bcomfort_camping_plus_plus%7D&fh_mode=selectlocation_complex&fh_refview=lister&fh_reffacet=kies_tent&fh_refpath=facet_272&preview_seo=false">
+								<img class="product-wizard-people-icon-large" src="https://static.asadventure.com/includes/visuals/product-wizard/img/tenten/person-4-b.png">	
+							</span>
+						</a>	
+				</div>
+			</div>
+		</div> <!-- END_SOL_3 -->
+
+		<!-- ////////////////////////-->
+		<!-- WIZARD SOLUTION 4 - Fun Camping -->
+
+		<div class="wizardSolution" id="wizardSolutionFour" style="display:none">
+			<div class="span4">
+				<div class="wizardQuestionFlow oldQuestion">
+					<p><span class="wizardQuestionNumber"><span>1</span></span>Où partez-vous à l'aventure?</p>
+				</div>
+
+				<div class="wizardQuestionFlow">
+					<p><span class="wizardQuestionNumber"><span>2</span></span>L'espace et la robustesse priment-ils sur le poids?</p>
+				</div>
+
+				<!-- Previous Page - wizardContentQuestions -->				
+				<a href="#" onclick="javascript:(document.getElementById('wizardContentQuestions').style.display='block'), (document.getElementById('wizardSolutionFour').style.display='none');" class="wizardPrevious">
+					<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3738%7D&fh_reffacet=kies_tent&fh_refpath=facet_272&fh_refview=lister&fh_mode=selectlocation_complex&preview_seo=false"> retour</span>
+				</a>
+			</div>
+
+			<div class="wizardSeperator"></div>
+
+			<div class="span4">
+				<ul>
+					<a href="#" onclick="javascript:(document.getElementById('wizardSolutionFourSectionTwoPartOne').style.display='block'), (document.getElementById('wizardSolutionFour').style.display='none');">
+						<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3738%7D%2Fkies_tent%3E%7Bfun_camping_a_plus%3Bfun_camping_a_plus_plus%7D&fh_mode=selectlocation_complex&fh_refview=lister&fh_reffacet=kies_tent&fh_refpath=facet_272&preview_seo=false">	
+							<li class="question gold">
+								Oui, je veux un auvent
+							</li><span class="icon-arrow"></span>
+						</span>
+					</a>
+
+
+					<a href="#" onclick="javascript:(document.getElementById('wizardSolutionFourSectionTwoPartTwo').style.display='block'), (document.getElementById('wizardSolutionFour').style.display='none');">
+						<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3738%7D%2Fkies_tent%3E%7Bfun_camping_b_plus%7D&fh_mode=selectlocation_complex&fh_refview=lister&fh_reffacet=kies_tent&fh_refpath=facet_272&preview_seo=false">	
+							<li class="question gold">
+								Non, l'auvent n'est pas nécessaire
+							</li><span class="icon-arrow"></span>
+						</span>
+					</a>
+				</ul>
+			</div>
+		</div> <!-- END_SOL_4 -->
+
+
+<!-- ////////// \\\\\\\\\\\ -->
+<!--  START SUB SOLUTIONS -->
+<!-- ////////// \\\\\\\\\\\ -->
+
+		<!-- ////////////////////////-->
+		<!-- SUB SOLUTION _ ULTRA LIGHT/GEBERGTE -->
+
+		<!-- ultra light/gebergte (1) -->
+
+		<div class="wizardSolution" id="wizardSolutionOneSectionTwoPartOne" style="display:none">
+			<div class="span4">
+
+				<div class="wizardQuestionFlow oldQuestion">
+					<p><span class="wizardQuestionNumber"><span>1</span></span>Où partez-vous à l'aventure?</p>
+				</div>
+
+				<div class="wizardQuestionFlow oldQuestion">
+					<p><span class="wizardQuestionNumber"><span>2</span></span>Combien de personnes dormiront dans la tente?</p>
+				</div>	
+
+				<a href="#" onclick="javascript:(document.getElementById('wizardSolutionOne').style.display='block'), (document.getElementById('wizardSolutionOneSectionTwoPartOne').style.display='none');" class="wizardPrevious">
+					<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3738%7D%2Fkies_tent%3E%7Bperformance_plus%3Bperformance_plus_plus%7D&fh_mode=selectlocation_complex&fh_refview=lister&fh_reffacet=kies_tent&fh_refpath=facet_272&preview_seo=false"> retour <span> 
+				</a>
+
+			</div>
+
+				<div class="wizardSeperator"></div>
+
+			<div class="span4">
+				<center>
+					<span class="marker gold">Tentes</span><br><span class="marker gold"> Performance +</span>
+						<img class="product-wizard-people-icon" src="https://static.asadventure.com/includes/visuals/product-wizard/img/tenten/person-1.png">
+					<div class="confirmText">Voir votre sélection ci-dessous</div>
+				</center>
+			</div>
+		</div>
+
+		<!-- ultra light/gebergte (2) -->
+
+		<div class="wizardSolution" id="wizardSolutionOneSectionTwoPartTwo" style="display:none">
+			<div class="span4">
+
+				<div class="wizardQuestionFlow oldQuestion">
+					<p><span class="wizardQuestionNumber"><span>1</span></span>Où partez-vous à l'aventure?</p>
+				</div>
+
+				<div class="wizardQuestionFlow oldQuestion">
+					<p><span class="wizardQuestionNumber"><span>2</span></span>Combien de personnes dormiront dans la tente?</p>
+				</div>	
+
+				<a href="#" onclick="javascript:(document.getElementById('wizardSolutionOne').style.display='block'), (document.getElementById('wizardSolutionOneSectionTwoPartTwo').style.display='none');" class="wizardPrevious">
+					<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3738%7D%2Fkies_tent%3E%7Bperformance_plus%3Bperformance_plus_plus%7D&fh_mode=selectlocation_complex&fh_refview=lister&fh_reffacet=kies_tent&fh_refpath=facet_272&preview_seo=false"> retour <span> 
+				</a>
+
+			</div>
+
+				<div class="wizardSeperator"></div>
+
+			<div class="span4">
+				<center>
+					<span class="marker gold">Tentes</span><br><span class="marker gold">Performance ++</span>
+						<img class="product-wizard-people-icon" src="https://static.asadventure.com/includes/visuals/product-wizard/img/tenten/person-3.png">
+					<div class="confirmText">Voir votre sélection ci-dessous</div>
+				</center>
+			</div>
+		</div> <!-- END_ ULTRA LIGHT / GEBERGTE -->
+
+
+		<!-- ////////////////////////-->
+		<!-- SUB SOLUTION _ RUGZAKTREKKING -->
+
+			<!-- RUGZAKTREKKING -->
+
+			<!-- rugzaktrekking - voortent (1) -->
+
+				<div class="wizardSolution" id="wizardSolutionTwoSectionTwoPartOne" style="display:none">
+					<div class="span4">
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>1</span></span>Où partez-vous à l'aventure?</p>
+						</div>
+
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>2</span></span>L'espace et la robustesse priment-ils sur le poids?</p>
+						</div>	
+
+						<div class="wizardQuestionFlow">
+							<p><span class="wizardQuestionNumber"><span>3</span></span>Combien de personnes dormiront dans la tente?</p>
+						</div>	
+
+						<a href="#" onclick="javascript:(document.getElementById('wizardSolutionTwo').style.display='block'), (document.getElementById('wizardSolutionTwoSectionTwoPartOne').style.display='none');" class="wizardPrevious">
+							<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3738%7D%2Fkies_tent%3E%7Bexplorer_a_plus%3Bexplorer_a_plus_plus%3Bexplorer_b_plus%3Bexplorer_b_plus_plus%7D&fh_mode=selectlocation_complex&fh_refview=lister&fh_reffacet=kies_tent&fh_refpath=facet_272&preview_seo=false"> retour <span> 
+						</a>
+					</div>
+
+						<div class="wizardSeperator"></div>
+
+					<div class="span4">	
+						<a href="#" onclick="javascript:(document.getElementById('wizardSolutionTwoSectionThreePartOne').style.display='block'), (document.getElementById('wizardSolutionTwoSectionTwoPartOne').style.display='none');">
+							<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3738%7D%2Fkies_tent%3E%7Bexplorer_a_plus%7D&fh_mode=selectlocation_complex&fh_refview=lister&fh_reffacet=kies_tent&fh_refpath=facet_272&preview_seo=false">
+								<img src="https://static.asadventure.com/includes/visuals/product-wizard/img/tenten/person-1.png">
+							</span>
+						</a>
+
+						ou
+
+						<a href="#" onclick="javascript:(document.getElementById('wizardSolutionTwoSectionThreePartTwo').style.display='block'), (document.getElementById('wizardSolutionTwoSectionTwoPartOne').style.display='none');">
+							<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3738%7D%2Fkies_tent%3E%7Bexplorer_a_plus_plus%7D&fh_mode=selectlocation_complex&fh_refview=lister&fh_reffacet=kies_tent&fh_refpath=facet_272&preview_seo=false">
+								<img src="https://static.asadventure.com/includes/visuals/product-wizard/img/tenten/person-3.png">
+							</span>
+						</a>
+					</div>
+				</div>
+
+			<!-- rugzaktrekking - voortent (2) -->
+
+				<div class="wizardSolution" id="wizardSolutionTwoSectionTwoPartTwo" style="display:none">
+					<div class="span4">
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>1</span></span>Où partez-vous à l'aventure?</p>
+						</div>
+
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>2</span></span>L'espace et la robustesse priment-ils sur le poids?</p>
+						</div>	
+
+						<div class="wizardQuestionFlow">
+							<p><span class="wizardQuestionNumber"><span>3</span></span>Combien de personnes dormiront dans la tente?</p>
+						</div>
+
+						<a href="#" onclick="javascript:(document.getElementById('wizardSolutionTwo').style.display='block'), (document.getElementById('wizardSolutionTwoSectionTwoPartTwo').style.display='none');" class="wizardPrevious">
+							<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3738%7D%2Fkies_tent%3E%7Bexplorer_a_plus%3Bexplorer_a_plus_plus%3Bexplorer_b_plus%3Bexplorer_b_plus_plus%7D&fh_mode=selectlocation_complex&fh_refview=lister&fh_reffacet=kies_tent&fh_refpath=facet_272&preview_seo=false"> retour <span> 
+						</a>
+					</div>
+
+						<div class="wizardSeperator"></div>
+
+					<div class="span4">
+						<a href="#" onclick="javascript:(document.getElementById('wizardSolutionTwoSectionThreePartThree').style.display='block'), (document.getElementById('wizardSolutionTwoSectionTwoPartTwo').style.display='none');">
+							<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3738%7D%2Fkies_tent%3E%7Bexplorer_b_plus%7D&fh_mode=selectlocation_complex&fh_refview=lister&fh_reffacet=kies_tent&fh_refpath=facet_272&preview_seo=false">
+								<img src="https://static.asadventure.com/includes/visuals/product-wizard/img/tenten/person-1.png">
+							</span>
+						</a>
+
+						ou
+
+						<a href="#" onclick="javascript:(document.getElementById('wizardSolutionTwoSectionThreePartFour').style.display='block'), (document.getElementById('wizardSolutionTwoSectionTwoPartTwo').style.display='none');">
+							<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3738%7D%2Fkies_tent%3E%7Bexplorer_b_plus_plus%7D&fh_mode=selectlocation_complex&fh_refview=lister&fh_reffacet=kies_tent&fh_refpath=facet_272&preview_seo=false">
+								<img src="https://static.asadventure.com/includes/visuals/product-wizard/img/tenten/person-3.png">
+							</span>
+						</a>
+					</div>
+				</div>	
+
+			<!-- rugzaktrekking - voortent/ja - aantal personen 1 -->
+
+				<div class="wizardSolution" id="wizardSolutionTwoSectionThreePartOne" style="display:none">
+					<div class="span4">
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>1</span></span>Où partez-vous à l'aventure?</p>
+						</div>
+
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>2</span></span>L'espace et la robustesse priment-ils sur le poids?</p>
+						</div>	
+
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>3</span></span>Combien de personnes dormiront dans la tente?</p>
+						</div>	
+
+						<a href="#" onclick="javascript:(document.getElementById('wizardSolutionTwoSectionTwoPartOne').style.display='block'), (document.getElementById('wizardSolutionTwoSectionThreePartOne').style.display='none');" class="wizardPrevious">
+							<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3738%7D%2Fkies_tent%3E%7Bexplorer_a_plus%3Bexplorer_a_plus_plus%7D&fh_mode=selectlocation_complex&fh_refview=lister&fh_reffacet=kies_tent&fh_refpath=facet_272&preview_seo=false"> retour <span> 
+							</a>
+					</div>
+
+						<div class="wizardSeperator"></div>
+
+					<div class="span4">
+						<center>
+							<span class="marker gold">Tentes explorer</span><br><span class="marker gold"> TYPE A+</span>
+								<img class="product-wizard-people-icon" src="https://static.asadventure.com/includes/visuals/product-wizard/img/tenten/person-1.png">
+							<div class="confirmText">Voir votre sélection ci-dessous</div>
+						</center>
+					</div>
+				</div> 
+
+			<!-- rugzaktrekking - voortent/ja - aantal personen 3 -->
+				
+				<div class="wizardSolution" id="wizardSolutionTwoSectionThreePartTwo" style="display:none">
+					<div class="span4">
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>1</span></span>Où partez-vous à l'aventure?</p>
+						</div>
+
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>2</span></span>L'espace et la robustesse priment-ils sur le poids?</p>
+						</div>	
+
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>3</span></span>Combien de personnes dormiront dans la tente?</p>
+						</div>	
+
+
+						<a href="#" onclick="javascript:(document.getElementById('wizardSolutionTwoSectionTwoPartOne').style.display='block'), (document.getElementById('wizardSolutionTwoSectionThreePartTwo').style.display='none');" class="wizardPrevious">
+							<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3738%7D%2Fkies_tent%3E%7Bexplorer_a_plus%3Bexplorer_a_plus_plus%7D&fh_mode=selectlocation_complex&fh_refview=lister&fh_reffacet=kies_tent&fh_refpath=facet_272&preview_seo=false"> retour <span> 
+						</a>
+					</div>
+
+						<div class="wizardSeperator"></div>
+
+					<div class="span4">
+						<center>
+							<span class="marker gold">Tentes explorer</span><br><span class="marker gold"> TYPE A++</span>
+								<img class="product-wizard-people-icon" src="https://static.asadventure.com/includes/visuals/product-wizard/img/tenten/person-3.png">
+							<div class="confirmText">Voir votre sélection ci-dessous</div>
+						</center>
+					</div>
+				</div> 
+
+			<!-- rugzaktrekking - voortent/nee - aantal personen 1 -->
+
+				<div class="wizardSolution" id="wizardSolutionTwoSectionThreePartThree" style="display:none">
+					<div class="span4">
+
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>1</span></span>Où partez-vous à l'aventure?</p>
+						</div>
+
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>2</span></span>L'espace et la robustesse priment-ils sur le poids?</p>
+						</div>	
+
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>3</span></span>Combien de personnes dormiront dans la tente?</p>
+						</div>	
+
+						<a href="#" onclick="javascript:(document.getElementById('wizardSolutionTwoSectionTwoPartTwo').style.display='block'), (document.getElementById('wizardSolutionTwoSectionThreePartThree').style.display='none');" class="wizardPrevious">
+							<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3738%7D%2Fkies_tent%3E%7Bexplorer_b_plus%3Bexplorer_b_plus_plus%7D&fh_mode=selectlocation_complex&fh_refview=lister&fh_reffacet=kies_tent&fh_refpath=facet_272&preview_seo=false"> retour <span> 
+							</a>
+					</div>
+
+						<div class="wizardSeperator"></div>
+
+					<div class="span4">
+							<center>
+							<span class="marker gold">Tentes explorer</span><br><span class="marker gold"> TYPE B+</span>
+								<img class="product-wizard-people-icon" src="https://static.asadventure.com/includes/visuals/product-wizard/img/tenten/person-1.png">
+							<div class="confirmText">Voir votre sélection ci-dessous</div>
+						</center>
+					</div>
+				</div> 
+
+			<!-- rugzaktrekking - voortent/nee - aantal personen 3 -->
+
+				<div class="wizardSolution" id="wizardSolutionTwoSectionThreePartFour" style="display:none">
+					<div class="span4">
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>1</span></span>Où partez-vous à l'aventure?</p>
+						</div>
+
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>2</span></span>L'espace et la robustesse priment-ils sur le poids?</p>
+						</div>	
+
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>3</span></span>Combien de personnes dormiront dans la tente?</p>
+						</div>	
+
+						<a href="#" onclick="javascript:(document.getElementById('wizardSolutionTwoSectionTwoPartTwo').style.display='block'), (document.getElementById('wizardSolutionTwoSectionThreePartFour').style.display='none');" class="wizardPrevious">
+							<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3738%7D%2Fkies_tent%3E%7Bexplorer_b_plus%3Bexplorer_b_plus_plus%7D&fh_mode=selectlocation_complex&fh_refview=lister&fh_reffacet=kies_tent&fh_refpath=facet_272&preview_seo=false"> retour <span> 
+						</a>
+					</div>
+
+						<div class="wizardSeperator"></div>
+
+					<div class="span4">
+						<center>
+							<span class="marker gold">Tentes explorer</span><br><span class="marker gold"> TYPE B++</span>
+								<img class="product-wizard-people-icon" src="https://static.asadventure.com/includes/visuals/product-wizard/img/tenten/person-3.png">
+							<div class="confirmText">Voir votre sélection ci-dessous</div>
+						</center>
+					</div>
+				</div> <!-- END_RUGZAKTREKKING -->
+
+
+		<!-- ////////////////////////-->
+		<!-- SUB SOLUTION _ FAMILIE CAMPING -->
+
+			<!-- FAMILIE CAMPING -->
+
+			<!-- familie Camping - aantal personen 3 -->
+
+				<div class="wizardSolution" id="wizardSolutionThreeSectionTwoPartOne" style="display:none">
+					<div class="span4">
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>1</span></span>Où partez-vous à l'aventure?</p>
+						</div>
+
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>2</span></span>Combien de personnes dormiront dans la tente?</p>
+						</div>
+
+						<a href="#" onclick="javascript:(document.getElementById('wizardSolutionThree').style.display='block'), (document.getElementById('wizardSolutionThreeSectionTwoPartOne').style.display='none');" class="wizardPrevious">
+							<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3738%7D%2Fkies_tent%3E%7Bcomfort_camping_plus%3Bcomfort_camping_plus_plus%7D&fh_mode=selectlocation_complex&fh_refview=lister&fh_reffacet=kies_tent&fh_refpath=facet_272&preview_seo=false"> retour <span> 
+						</a>
+					</div>
+
+						<div class="wizardSeperator"></div>
+
+					<div class="span4">
+						<center>
+							<span class="marker gold">Tentes comfort</span><br><span class="marker gold"> camping+</span>
+								<img class="product-wizard-people-icon" src="https://static.asadventure.com/includes/visuals/product-wizard/img/tenten/person-3.png">
+							<div class="confirmText">Voir votre sélection ci-dessous</div>
+						</center>
+					</div>
+				</div> 
+
+			<!-- familie Camping - aantal personen 4 -->
+
+				<div class="wizardSolution" id="wizardSolutionThreeSectionTwoPartTwo" style="display:none">
+					<div class="span4">
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>1</span></span>Où partez-vous à l'aventure?</p>
+						</div>
+
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>2</span></span>Combien de personnes dormiront dans la tente?</p>
+						</div>
+
+						<a href="#" onclick="javascript:(document.getElementById('wizardSolutionThree').style.display='block'), (document.getElementById('wizardSolutionThreeSectionTwoPartTwo').style.display='none');" class="wizardPrevious">
+							<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3738%7D%2Fkies_tent%3E%7Bcomfort_camping_plus%3Bcomfort_camping_plus_plus%7D&fh_mode=selectlocation_complex&fh_refview=lister&fh_reffacet=kies_tent&fh_refpath=facet_272&preview_seo=false"> retour <span> 
+						</a>
+					</div>
+
+						<div class="wizardSeperator"></div>
+
+							<div class="span4">
+								<center>
+									<span class="marker gold">Tentes Comfort </span><br><span class="marker gold"> camping++</span>
+										<img class="product-wizard-people-icon" src="https://static.asadventure.com/includes/visuals/product-wizard/img/tenten/person-4-b.png">
+									<div class="confirmText">Voir votre sélection ci-dessous</div>
+								</center>
+							</div>
+				</div> <!-- END_ Familie camping -->
+
+		<!-- ////////////////////////-->
+		<!-- SUB SOLUTION _ FUN CAMPING -->
+
+			<!-- FUN CAMPING -->
+
+			<!-- fun Camping - voortent/ja -->
+
+				<div class="wizardSolution" id="wizardSolutionFourSectionTwoPartOne" style="display:none">
+					<div class="span4">
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>1</span></span>Où partez-vous à l'aventure?</p>
+						</div>
+
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>2</span></span>L'espace et la robustesse priment-ils sur le poids?</p>
+						</div>	
+
+						<div class="wizardQuestionFlow">
+							<p><span class="wizardQuestionNumber"><span>3</span></span>Combien de personnes dormiront dans la tente?</p>
+						</div>
+
+						<a href="#" onclick="javascript:(document.getElementById('wizardSolutionFour').style.display='block'), (document.getElementById('wizardSolutionFourSectionTwoPartOne').style.display='none');" class="wizardPrevious">
+						<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3738%7D%2Fkies_tent%3E%7Bfun_camping_a_plus%3Bfun_camping_a_plus_plus%3Bfun_camping_b_plus%7D&fh_mode=selectlocation_complex&fh_refview=lister&fh_reffacet=kies_tent&fh_refpath=facet_272&preview_seo=false"> retour <span> 
+						</a>
+					</div>
+
+						<div class="wizardSeperator"></div>
+
+					<div class="span4">
+
+						<a href="#" onclick="javascript:(document.getElementById('wizardSolutionFourSectionThreePartOne').style.display='block'), (document.getElementById('wizardSolutionFourSectionTwoPartOne').style.display='none');">
+							<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3738%7D%2Fkies_tent%3E%7Bfun_camping_a_plus%7D&fh_mode=selectlocation_complex&fh_refview=lister&fh_reffacet=kies_tent&fh_refpath=facet_272&preview_seo=false">
+								<img src="https://static.asadventure.com/includes/visuals/product-wizard/img/tenten/person-1.png">
+							</span>
+						</a>
+
+						ou	
+
+						<a href="#" onclick="javascript:(document.getElementById('wizardSolutionFourSectionThreePartTwo').style.display='block'), (document.getElementById('wizardSolutionFourSectionTwoPartOne').style.display='none');">
+							<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3738%7D%2Fkies_tent%3E%7Bfun_camping_a_plus_plus%7D&fh_mode=selectlocation_complex&fh_refview=lister&fh_reffacet=kies_tent&fh_refpath=facet_272&preview_seo=false">
+								<img src="https://static.asadventure.com/includes/visuals/product-wizard/img/tenten/person-3.png">
+							</span>
+						</a>
+
+					</div>
+				</div>
+
+			<!-- fun Camping - voortent/ja - aantal personen 1 -->
+
+				<div class="wizardSolution" id="wizardSolutionFourSectionThreePartOne" style="display:none">
+					<div class="span4">
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>1</span></span>Où partez-vous à l'aventure?</p>
+						</div>
+
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>2</span></span>L'espace et la robustesse priment-ils sur le poids?</p>
+						</div>
+
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>3</span></span>Combien de personnes dormiront dans la tente?</p>
+						</div>
+
+						<a href="#" onclick="javascript:(document.getElementById('wizardSolutionFourSectionTwoPartOne').style.display='block'), (document.getElementById('wizardSolutionFourSectionThreePartOne').style.display='none');" class="wizardPrevious">
+						<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3738%7D%2Fkies_tent%3E%7Bfun_camping_a_plus%3Bfun_camping_a_plus_plus%3Bfun_camping_b_plus%7D&fh_mode=selectlocation_complex&fh_refview=lister&fh_reffacet=kies_tent&fh_refpath=facet_272&preview_seo=false"> retour <span> 
+						</a>
+					</div>
+
+						<div class="wizardSeperator"></div>
+
+					<div class="span4">
+						<center>
+							<span class="marker gold">Tentes fun camping</span><br><span class="marker gold"> TYPE A+</span>
+								<img class="product-wizard-people-icon" src="https://static.asadventure.com/includes/visuals/product-wizard/img/tenten/person-1.png">
+							<div class="confirmText">Voir votre sélection ci-dessous</div>
+						</center>
+					</div>
+				</div> 
+
+			<!-- fun Camping - voortent/ja - aantal personen 3 -->
+
+				<div class="wizardSolution" id="wizardSolutionFourSectionThreePartTwo" style="display:none">
+					<div class="span4">
+
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>1</span></span>Où partez-vous à l'aventure?</p>
+						</div>
+
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>2</span></span>L'espace et la robustesse priment-ils sur le poids?</p>
+						</div>
+
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>3</span></span>Combien de personnes dormiront dans la tente?</p>
+						</div>
+
+						<a href="#" onclick="javascript:(document.getElementById('wizardSolutionFourSectionTwoPartOne').style.display='block'), (document.getElementById('wizardSolutionFourSectionThreePartTwo').style.display='none');" class="wizardPrevious">
+							<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3738%7D%2Fkies_tent%3E%7Bfun_camping_a_plus%3Bfun_camping_a_plus_plus%3Bfun_camping_b_plus%7D&fh_mode=selectlocation_complex&fh_refview=lister&fh_reffacet=kies_tent&fh_refpath=facet_272&preview_seo=false"> retour <span> 
+						</a>		
+
+					</div>
+
+						<div class="wizardSeperator"></div>
+
+					<div class="span4">
+						<center>
+							<span class="marker gold">Tentes fun camping</span><br><span class="marker gold"> TYPE A++</span>
+								<img class="product-wizard-people-icon" src="https://static.asadventure.com/includes/visuals/product-wizard/img/tenten/person-3.png">
+							<div class="confirmText">Voir votre sélection ci-dessous</div>
+						</center>
+					</div>
+				</div> 
+
+			<!-- fun Camping - voortent/nee - aantal personen 1 -->
+
+				<div class="wizardSolution" id="wizardSolutionFourSectionTwoPartTwo" style="display:none">
+					<div class="span4">
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>1</span></span>Où partez-vous à l'aventure?</p>
+						</div>
+
+						<div class="wizardQuestionFlow oldQuestion">
+							<p><span class="wizardQuestionNumber"><span>2</span></span>Combien de personnes dormiront dans la tente?</p>
+						</div>
+
+						<a href="#" onclick="javascript:(document.getElementById('wizardSolutionFour').style.display='block'), (document.getElementById('wizardSolutionFourSectionTwoPartTwo').style.display='none');" class="wizardPrevious">
+							<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3738%7D%2Fkies_tent%3E%7Bfun_camping_a_plus%3Bfun_camping_a_plus_plus%3Bfun_camping_b_plus%7D&fh_mode=selectlocation_complex&fh_refview=lister&fh_reffacet=kies_tent&fh_refpath=facet_272&preview_seo=false"> retour <span> 
+						</a>	
+					</div>
+
+						<div class="wizardSeperator"></div>
+
+					<div class="span4">
+						<center>
+							<span class="marker gold">Tentes fun camping</span><br><span class="marker gold"> TYPE B+</span>
+								<img class="product-wizard-people-icon" src="https://static.asadventure.com/includes/visuals/product-wizard/img/tenten/person-1.png">
+							<div class="confirmText">Voir votre sélection ci-dessous</div>
+						</center>
+					</div>
+				</div> 
+<!-- end content -->
+	</div> 
+</body>
+</html> 

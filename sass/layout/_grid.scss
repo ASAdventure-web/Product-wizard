@@ -1,0 +1,47 @@
+/* [ _grid.scss ] */
+
+/*************************
+
+// Instructions //
+
+@ papa-bear: tablet portrait
+@ mama-bear: tablet landscape
+@ baby-bear: mobile
+
+**************************/
+
+@mixin breakpoint($point) {
+  @if $point == papa-bear {
+    @media only screen and (min-width: 768px) and (max-width: 1200px) and (orientation: landscape) { @content; }
+  }
+  @else if $point == mama-bear {
+    @media only screen and (min-width: 768px) and (max-width: 980px) and (orientation: portrait) { @content; }
+  }
+  @else if $point == baby-bear {
+    @media only screen and (max-width: 767px) { @content; }
+  }
+}
+
+/*------------------------------------*\
+    $GRID
+\*------------------------------------*/
+
+#wizardContent {
+	max-width: 870px;
+	margin-bottom: 	30px;
+	.wizardSolution{
+		.span4,
+		.span5{
+			h3{
+				line-height: 25px;
+				margin-bottom: 10px;
+				font-weight: 600;
+			}
+			p{
+				// text-align: center;
+				font-size: 14px;
+				line-height: 20px;
+			}
+		}
+	}
+}
