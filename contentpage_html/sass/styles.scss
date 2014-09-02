@@ -12,15 +12,23 @@
 /**
 
 	Fixes 02/09:
-	- Remove padding from .content_detail_campaign (15px 0)
 	- Remove cursor:pointer
+	- Remove padding from .content_detail_campaign (15px 0)
+	- remove margin-left .cotnent_detail_campaign .row
 
 **/
 
-#content_header .home_block_b .product_wizard .content_detail_campaign {
+*.product_wizard {
+	cursor: default !important;
+}
+
+*.content_detail_campaign {
 	padding: 0 15px;
 }
 
+.content_detail_campaign .row {
+	margin-left: 0;
+}
 
 /*=============================================
 =            CONTAINER				            =
@@ -43,6 +51,7 @@
     }
     height:auto;
     border:1px solid #d7dbdd;
+    background: #fff;
 }
 #product-wijzer-container .container-wrapper .title-container {
     width: auto;
@@ -58,7 +67,7 @@
     }
 }
 
-/*-----  End of Section comment block  ------*/
+/*-----  End of #container  ------*/
 
 /*=============================================
 =            	SECTION CTA  			       =
@@ -76,15 +85,23 @@
     -moz-osx-font-smoothing: grayscale;
     font-size: 13px;
     font-weight: 600;
-    width: 64%;
+    width: 80%;
     height: 35px;
     color: #ffffff;
     border: 2px solid #ffffff;
-    // background:red;
     padding-left: 13px;
     margin: 14px auto;
     	@include breakpoint (mama-bear) {
     		margin: 6px auto;
+    	}
+    	@include breakpoint (stiff-mama-bear) {
+    		width: 90%;
+    		margin: 10px auto;
+    	}
+    	@include breakpoint (baby-bear) {
+			line-height: 26px;
+			margin: 10px auto;
+			height: 27px;
     	}
     .rugzak {
         background: red;
@@ -94,9 +111,12 @@
         /* box */
         width: 40px;
         height: 35px;
+        @include breakpoint (baby-bear) {
+        	height: 25px;
+        }
         float: right;
         /* background */
-        background: url('../images/arrow-white.png') no-repeat center center;
+        background: url('https://static.asadventure.com/includes/visuals/product-wizard/contentpage_html/images/arrow-white.png') no-repeat center center;
     }
     &:hover {}
 }
@@ -116,11 +136,10 @@
         text-align: left;
         width: auto;
         height: 25px;
-        // height: auto;
-        // padding: 1.5% 0 0 2%;
-        @include breakpoint (papa-bear) {
-            padding: 0.5% 0 0 1%;
-        }
+        	@include breakpoint (baby-bear) {
+        		height: 15px;
+        	}
+        padding: 5px;
     }
     a {
         text-decoration: none;
@@ -128,13 +147,12 @@
     .cta {
         text-align: center;
         padding-left: 0;
-        // margin-top: 45px;
         font-size: 12px;
         text-decoration: none;
     }
 }
 
-/*-----  End of Section comment block  ------*/
+/*-----  End of Section CTA  ------*/
 
 /*======================================
 =            Color Swatches            =
@@ -153,4 +171,4 @@
     background: #6ea492;
 }
 
-/*-----  End of Section comment block  ------*/
+/*-----  End of color swatches  ------*/
