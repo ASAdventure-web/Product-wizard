@@ -9,6 +9,19 @@
 
 @import "breakpoints";
 
+/**
+
+	Fixes 02/09:
+	- Remove padding from .content_detail_campaign (15px 0)
+	- Remove cursor:pointer
+
+**/
+
+#content_header .home_block_b .product_wizard .content_detail_campaign {
+	padding: 0 15px;
+}
+
+
 /*=============================================
 =            CONTAINER				            =
 =============================================*/
@@ -70,6 +83,9 @@
     // background:red;
     padding-left: 13px;
     margin: 14px auto;
+    	@include breakpoint (mama-bear) {
+    		margin: 6px auto;
+    	}
     .rugzak {
         background: red;
     }
@@ -90,10 +106,6 @@
     display: inline-block;
     .section {
         width: 100%;
-        @include breakpoint (mama-bear) {
-            width: 50%;
-            float: left;
-        }
         @include breakpoint (stiff-mama-bear) {
             width: 50%;
             float: left;
@@ -105,7 +117,7 @@
         width: auto;
         height: 25px;
         // height: auto;
-        padding: 1.5% 0 0 2%;
+        // padding: 1.5% 0 0 2%;
         @include breakpoint (papa-bear) {
             padding: 0.5% 0 0 1%;
         }
