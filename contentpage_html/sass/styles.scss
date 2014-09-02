@@ -1,0 +1,121 @@
+@import "breakpoints";
+ #product-wijzer-container {
+    margin: 0;
+    padding: 0;
+}
+#product-wijzer-container .container-wrapper {
+    max-width: 100%;
+    margin: 0;
+    @include breakpoint (baby-bear) {
+        max-width: 100%;
+        margin: 0;
+    }
+    @include breakpoint (mama-bear) {
+        max-width: 100%;
+        margin: 0;
+    }
+    height:auto;
+    background:#e0e0e0;
+    border:1px solid #505050;
+}
+#product-wijzer-container .container-wrapper .title-container {
+    width: auto;
+    height: 100%;
+    padding-top: 5px;
+    h1 {
+        font-size: 15px;
+        line-height: 25px;
+        margin: 5px 0 0 10px;
+    }
+    &:after {
+        display: none;
+    }
+}
+#product-wijzer-container .container-wrapper .sections-container .cta {
+    position: relative;
+    display: -moz-inline-box;
+    -moz-box-orient: vertical;
+    display: block;
+    vertical-align: middle;
+    line-height: 36px;
+    font-family: 'proxima_nova_rgbold', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 13px;
+    font-weight: 600;
+    width: 64%;
+    height: 35px;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    padding-left: 13px;
+    margin: 14px auto;
+    &:after {
+        content: "";
+        /* box */
+        width: 40px;
+        height: 35px;
+        float: right;
+        /* background */
+        background: url('../images/arrow-white.png') no-repeat center center;
+    }
+    &:hover {}
+}
+#product-wijzer-container .container-wrapper .sections-container {
+    width: 100%;
+	display: inline-block;
+
+    .section {
+        width: 100%;
+	    @include breakpoint (mama-bear) {
+	    	width: 50%;
+	    	float: left;
+		}     
+	    @include breakpoint (stiff-mama-bear) {
+	    	width: 50%;
+	    	float: left;
+		} 		   
+    }
+	img {
+		float: left;
+		text-align: left;
+		width: auto;
+		height: 25px;
+		// height: auto;
+		padding: 1.5% 0 0 2%;
+		@include breakpoint (papa-bear) {
+			padding: 0.5% 0 0 1%;
+		}
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+    .cta {
+        text-align: center;
+        padding-left: 0;
+        // margin-top: 45px;
+        font-size: 12px;
+        text-decoration: none;
+    }
+}
+#product-wijzer-container .container-wrapper .sections-container .section  {
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

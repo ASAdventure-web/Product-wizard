@@ -1,0 +1,633 @@
+
+/* *********************************************************************************************************** */
+/* **                                                PRODUCT WIJZER                                         ** */
+/* *********************************************************************************************************** */
+
+/*******************************************     
+  STYLES                                              
+  *******************************************/
+ #xx_wrapper #xx_header .xx_slider ul li.product_wijzer .title-container h1,
+ #xx_wrapper #xx_header .xx_slider ul li.product_wijzer .title-container p,
+ #xx_wrapper #xx_header_mobile .xx_item1 .xx_mobile_product_wijzer h1,
+ #xx_wrapper #xx_header_mobile .xx_item1 .xx_mobile_product_wijzer p { 
+ 	-webkit-font-smoothing: antialiased;
+    -moz-device-pixel-ratiooz-osx-font-smoothing: grayscale;
+    font-weight: normal;
+ }
+
+
+  #xx_wrapper #xx_header .xx_slider ul li.product_wijzer,
+  #xx_wrapper #xx_header_mobile .xx_item1 .xx_mobile_product_wijzer {
+	 
+
+  	.title-container {
+  		-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+  		float: left;
+  		width: 442px;;
+  		height: 100%;
+  		color: #ffffff;
+  		text-align: center;
+  		background: #5f765e;
+  		padding-top: 121px;
+
+  		h1 {	
+  			font-family: 'proxima_nova_extra_condensXBd', sans-serif;
+  			font-size: 69px;
+  			line-height: 60px;
+  			color: inherit;
+  			text-transform: uppercase;
+  		}
+
+  		p {
+  			font-family: 'proxima_nova_rgbold', sans-serif;
+  			font-size: 16px;
+  			color: inherit;
+  			padding: 0 74px;
+			margin-top: 10px;
+			text-align: justify;
+  		}
+
+  		&:after {
+  			content: "";
+			display: block;
+			top: 40%;
+			left: 34.45%;
+			position: absolute;
+			width: 76px;
+			height: 76px;
+			background: url("../images/section-arrow.png") no-repeat;
+			z-index: 10;
+  		}
+  	}
+
+  	.sections-container {
+  		float: left;
+  		width: 728px;
+  		text-align: center;
+
+  		.section {
+  			position: relative;
+  			float: left;
+  			width: 364px;
+  			height: 193px;
+  			opacity: 1;
+
+  			-webkit-transition: background-color 0.25s ease-in-out;
+			-moz-transition: background-color 0.25s ease-in-out;
+			-o-transition: background-color 0.25s ease-in-out;
+			transition: background-color 0.25s ease-in-out;
+
+  			img {
+  				margin-top: 30px;
+  				position: relative;
+  				z-index: 10;
+  			}
+
+  		}
+
+  	}
+
+  }
+
+  //FR_FIX 
+  #xx_wrapper #xx_header .xx_slider ul li.product_wijzer.fr_fix {
+
+  	.title-container {
+  		padding-top: 96px;
+
+  		h1 {	
+  			font-size: 71px;
+  		}
+
+  		p {
+  			padding: 0 106px;
+  		}
+  	}
+  }
+
+  // EN FIX 
+  #xx_wrapper #xx_header .xx_slider ul li.product_wijzer.en_fix {
+
+  	.title-container {
+  		padding-top: 124px;
+
+  		h1 {	
+  			font-size: 52px;
+  			line-height: 53px;
+  		}
+  	}
+  }
+
+  #xx_wrapper #xx_header .xx_slider ul li.product_wijzer .sections-container,
+  #xx_wrapper #xx_header_mobile .xx_item1 .xx_mobile_product_wijzer .sections-container { 
+  	.section.rugzak {
+  		background: rgba(207,120,87,0) url('../images/section-rugzak.jpg');
+
+  		&:before {
+  			position: absolute;
+			top: 0; right: 0; bottom: 0; left: 0;
+			background-color: inherit;
+			content: ' ';
+  		}
+
+  		&:hover, :active {
+  			background-color: rgba(207,120,87,1);
+  		}
+  	}
+  	.section.tent {
+  		background: rgba(129, 117, 102, 0) url('../images/section-tent.jpg');
+
+  		&:before {
+  			position: absolute;
+			top: 0; right: 0; bottom: 0; left: 0;
+			background-color: inherit;
+			content: ' ';
+  		}
+
+  		&:hover, :active {
+  			background-color: rgba(129, 117, 102,1);
+  		}
+  	}
+  	.section.slaapzak {
+  		background: rgba(84, 141, 167, 0) url('../images/section-slaapzak.jpg');
+
+  		&:before {
+  			position: absolute;
+			top: 0; right: 0; bottom: 0; left: 0;
+			background-color: inherit;
+			content: ' ';
+  		}
+
+  		&:hover, :active {
+  			background-color: rgba(84, 141, 167,1);
+  		}
+  	}
+  	.section.schoenen {
+  		background: rgba(108, 165, 148, 0) url('../images/section-schoenen.jpg');
+
+  		&:before {
+  			position: absolute;
+			top: 0; right: 0; bottom: 0; left: 0;
+			background-color: inherit;
+			content: ' ';
+  		}
+
+  		&:hover, :active {
+  			background-color: rgba(108, 165, 148, 1);
+  		}
+  	}
+  }
+
+
+  #xx_wrapper #xx_header .xx_slider ul li.product_wijzer .sections-container .cta,
+  #xx_wrapper #xx_header_mobile .xx_item1 .xx_mobile_product_wijzer .sections-container .cta {
+  	position: relative;
+  	display: -moz-inline-box;
+  	-moz-box-orient: vertical;
+  	display: block;
+  	vertical-align: middle;
+  	line-height: 36px;
+  	font-family: 'proxima_nova_rgbold', sans-serif;
+  	-webkit-font-smoothing: antialiased;
+  	-moz-osx-font-smoothing: grayscale;
+  	font-size: 13px;
+  	font-weight: 600;
+  	width: 64%;
+  	height: 35px;
+  	color: #ffffff;
+  	border: 2px solid #ffffff;
+  	padding-left: 13px;
+  	margin: 14px auto;
+
+  	&:after {
+  		content: "";
+  		/* box */
+  		width: 40px;
+  		height: 35px;
+  		float: right;
+  		/* background */
+  		background: url('../images/arrow-white.png') no-repeat center center;
+  	}
+
+  	&:hover {
+  	
+  	}
+  }
+
+   #xx_wrapper #xx_header .xx_slider ul li.product_wijzer .sections-container { 
+  	.section.rugzak .cta {
+  		width: 44%;
+  	}
+  	.section.tent .cta {
+  		width: 39%;
+  	}
+  	.section.slaapzak .cta {
+  		width: 50%;
+  	}
+  	.section.schoenen .cta {
+  		width: 64%;
+  	}
+  }
+
+  //FR FIX
+  #xx_wrapper #xx_header .xx_slider ul li.product_wijzer.fr_fix .sections-container { 
+  	.section.rugzak .cta {
+  		width: 56%;
+  	}
+  	.section.tent .cta {
+  		width: 49%;
+  	}
+  	.section.slaapzak .cta {
+  		width: 69%;
+  	}
+  	.section.schoenen .cta {
+  		width: 57%;
+  	}
+  }
+
+  //EN FIX
+  #xx_wrapper #xx_header .xx_slider ul li.product_wijzer.en_fix .sections-container { 
+  	.section.rugzak .cta {
+  		width: 49%;
+  	}
+  	.section.tent .cta {
+  		width: 39%;
+  	}
+  	.section.slaapzak .cta {
+  		width: 55%;
+  	}
+  	.section.schoenen .cta {
+  		width: 55%;
+  	}
+  }
+
+  /* *********************************************************************************************************** */
+  /* **                                              DESKTOP                                                  ** */
+  /* *********************************************************************************************************** */
+  @media (max-width: 1199px) {
+  	#xx_wrapper #xx_header .xx_slider ul li.product_wijzer {
+	 
+
+	  	.title-container {
+	  		width: 362px;;
+	  		height: 100%;
+	  		padding-top: 73px;
+
+	  		h1 {	
+	  			font-size: 51px;
+	  			line-height: 49px;
+	  		}
+
+	  		p {
+	  			font-size: 16px;
+	  			padding: 0 74px;
+				margin-top: 10px;
+	  		}
+
+	  		&:after {
+				top: 42%;
+				left: 35.45%;;
+				background-size: 80% auto;
+	  		}
+	  	}
+
+	  	.sections-container {
+	  		width: 578px;
+
+	  		.section {
+	  			width: 289px;
+	  			height: 156px;
+
+	  			img {
+	  				margin-top: 24px;
+					width: 50px;
+	  			}
+
+	  		}
+
+	  	}
+
+	  }
+
+	  //FR_FIX 
+	  #xx_wrapper #xx_header .xx_slider ul li.product_wijzer.fr_fix {
+
+	  	.title-container {
+	  		padding-top: 63px;
+
+	  		h1 {	
+	  			font-size: 62px;
+	  		}
+
+	  		p {
+	  			padding: 0 80px;
+	  		}
+	  	}
+	  }
+
+	  //EN FIX
+	  #xx_wrapper #xx_header .xx_slider ul li.product_wijzer.en_fix {
+
+	  	.title-container {
+	  		padding-top: 93px;
+
+	  		h1 {	
+	  			font-size: 40px;
+	  			line-height: 34px;
+	  		}
+
+	  		p {
+	  			padding: 0 64px;
+	  		}
+	  	}
+	  }
+
+	#xx_wrapper #xx_header .xx_slider ul li.product_wijzer .sections-container { 
+	  	.section.rugzak .cta {
+	  		width: 58%;
+	  	}
+	  	.section.tent .cta {
+	  		width: 50%;
+	  	}
+	  	.section.slaapzak .cta {
+	  		width: 61%;
+	  	}
+	  	.section.schoenen .cta {
+	  		width: 79%;
+	  	}
+	 }
+
+	 //FR FIX
+	  #xx_wrapper #xx_header .xx_slider ul li.product_wijzer.fr_fix .sections-container { 
+	  	.section.rugzak .cta {
+	  		width: 70%;
+	  	}
+	  	.section.tent .cta {
+	  		width: 60%;
+	  	}
+	  	.section.slaapzak .cta {
+	  		width: 87%;
+	  	}
+	  	.section.schoenen .cta {
+	  		width: 71%;
+	  	}
+	  }
+
+	  //EN FIX
+	  #xx_wrapper #xx_header .xx_slider ul li.product_wijzer.en_fix .sections-container { 
+	  	.section.rugzak .cta {
+	  		width: 61%;
+	  	}
+	  	.section.tent .cta {
+	  		width: 49%;
+	  	}
+	  	.section.slaapzak .cta {
+	  		width: 69%;
+	  	}
+	  	.section.schoenen .cta {
+	  		width: 67%;
+	  	}
+	  }
+
+
+  }
+  /* *********************************************************************************************************** */
+  /* **                                               TABLET                                                  ** */
+  /* *********************************************************************************************************** */
+  @media (min-width: 768px) and (max-width: 979px) {
+
+  	#xx_wrapper #xx_header .xx_slider ul li.product_wijzer {
+	 
+
+	  	.title-container {
+	  		width: 280px;
+	  		padding-top: 56px;
+
+	  		h1 {	
+	  			font-size: 35px;
+	  			line-height: 33px;
+	  		}
+
+	  		p {
+	  			font-size: 13px;
+				padding: 0 64px;
+				margin-top: 7px;
+				line-height: 120%;
+	  		}
+
+	  		&:after {
+				top: 41%;
+				left: 35.45%;
+				background-size: 60% auto;
+	  		}
+	  	}
+
+	  	.sections-container {
+	  		width: 444px;
+
+	  		.section {
+	  			width: 222px;
+				height: 120px;
+
+	  			img {
+	  				display: none
+	  			}
+
+	  			.cta {
+
+	  				text-align: center;
+	  				padding-left: 0;
+	  				margin-top: 45px;
+	  				font-size: 11px;
+
+	  				&:after {
+	  					display: none;
+	  				}
+	  			}
+	  		}
+
+	  	}
+
+	  }
+
+	  //FR_FIX 
+	  #xx_wrapper #xx_header .xx_slider ul li.product_wijzer.fr_fix {
+
+	  	.title-container {
+	  		padding-top: 44px;
+
+	  		h1 {	
+	  			font-size: 49px;
+	  			line-height: 42px;
+	  		}
+
+	  		p {
+	  			padding: 0 59px;
+	  		}
+	  	}
+	  }
+
+	  //EN FIX
+	  #xx_wrapper #xx_header .xx_slider ul li.product_wijzer.en_fix {
+
+	  	.title-container {
+	  		padding-top: 72px;
+
+	  		h1 {	
+	  			font-size: 31px;
+	  			line-height: 25px;
+	  		}
+
+	  		p {
+	  			padding: 0 47px;
+	  		}
+	  	}
+	  }
+
+	#xx_wrapper #xx_header .xx_slider ul li.product_wijzer .sections-container { 
+	  	.section.rugzak .cta {
+	  		width: 58%;
+	  	}
+	  	.section.tent .cta {
+	  		width: 50%;
+	  	}
+	  	.section.slaapzak .cta {
+	  		width: 61%;
+	  	}
+	  	.section.schoenen .cta {
+	  		width: 79%;
+	  	}
+	 }
+
+  }
+  /* *********************************************************************************************************** */
+  /* **                                               MOBILE                                                  ** */
+  /* *********************************************************************************************************** */
+  @media (max-width: 767px) {
+
+  	#xx_header_mobile .xx_item1 .xx_mobile_product_wijzer {
+	    position: relative;
+	    width: 302px;
+	    //height: 324px;
+	    margin-top: 20px;
+	    margin-bottom: 20px;
+	    // @include box-shadow( 0px 0px 8px 0px rgba(0, 0, 0, 0.2));
+	}
+
+	#xx_wrapper #xx_header_mobile .xx_item1 .xx_mobile_product_wijzer {
+		
+
+		.title-container {
+
+	  		width: 302px;;
+	  		height: 100%;
+	  		padding-top: 23px;
+
+	  		h1 {	
+	  			font-size: 37px;
+				line-height: 25px;
+				margin-top: 10px;
+	  		}
+
+	  		p {
+	  			font-size: 12px;
+	  			padding: 0 72px;
+				margin-top: 10px;
+				text-align: justify;
+				line-height: 120%;
+	  		}
+
+	  		&:after {
+	  			display: none;
+	  		}
+
+	  	}
+
+	  	.sections-container {
+	  		width: 100%;
+
+	  		.section {
+	  			width: 100%;
+	  		}
+
+	  	}
+
+
+	}
+
+	//FR FIX
+	#xx_wrapper #xx_header_mobile .xx_item1 .xx_mobile_product_wijzer.fr_fix .title-container p {
+		padding: 0 22px;
+	}
+
+	//EN FIX
+	#xx_wrapper #xx_header_mobile .xx_item1 .xx_mobile_product_wijzer.en_fix .title-container p {
+		padding: 0 41px;
+	}
+
+	#xx_wrapper #xx_header_mobile .xx_item1 .xx_mobile_product_wijzer .sections-container { 
+	  	.section.rugzak .cta {
+	  		width: 55%;
+	  	}
+	  	.section.tent .cta {
+	  		width: 49%;
+	  	}
+	  	.section.slaapzak .cta {
+	  		width: 59%;
+	  	}
+	  	.section.schoenen .cta {
+	  		width: 77%;
+	  	}
+	}
+
+	//FR_FIX
+	#xx_wrapper #xx_header_mobile .xx_item1 .xx_mobile_product_wijzer.fr_fix .sections-container { 
+	  	.section.rugzak .cta {
+	  		width: 67%;
+	  	}
+	  	.section.tent .cta {
+	  		width: 58%;
+	  	}
+	  	.section.slaapzak .cta {
+	  		width: 83%;
+	  	}
+	  	.section.schoenen .cta {
+	  		width: 68%;
+	  	}
+	}
+
+	//EN_FIX
+	#xx_wrapper #xx_header_mobile .xx_item1 .xx_mobile_product_wijzer.en_fix .sections-container { 
+	  	.section.rugzak .cta {
+	  		width: 58%;
+	  	}
+	  	.section.tent .cta {
+	  		width: 46%;
+	  	}
+	  	.section.slaapzak .cta {
+	  		width: 66%;
+	  	}
+	  	.section.schoenen .cta {
+	  		width: 65%;
+	  	}
+	}
+
+
+  }
+
+  @media
+  only screen and (                     max-width: 1200px),
+  only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (   min--moz-device-pixel-ratio: 2),
+  only screen and (     -o-min-device-pixel-ratio: 2/1),
+  only screen and (        min-device-pixel-ratio: 2),
+  only screen and (                min-resolution: 192dpi),
+  only screen and (                min-resolution: 2dppx) { 
+
+  	#xx_wrapper #xx_header .xx_slider ul li.product_wijzer .sections-container .cta:after,
+  	#xx_wrapper #xx_header_mobile .xx_item1 .xx_mobile_product_wijzer .xx_txt .xx_cta:after {
+  		background: url('../images/arrow-white@2x.png') no-repeat center center;
+  		background-size: 11px 11px;
+  	}
+  }
+
