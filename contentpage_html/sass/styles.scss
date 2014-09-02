@@ -1,4 +1,18 @@
+/**
+
+	Product wizard - 02/09/2014
+	A.S.Adventure
+
+**/
+
+/* import breakpoiints */
+
 @import "breakpoints";
+
+/*=============================================
+=            CONTAINER				            =
+=============================================*/
+
  #product-wijzer-container {
     margin: 0;
     padding: 0;
@@ -31,6 +45,13 @@
         display: none;
     }
 }
+
+/*-----  End of Section comment block  ------*/
+
+/*=============================================
+=            	SECTION CTA  			       =
+=============================================*/
+
 #product-wijzer-container .container-wrapper .sections-container .cta {
     position: relative;
     display: -moz-inline-box;
@@ -47,8 +68,12 @@
     height: 35px;
     color: #ffffff;
     border: 2px solid #ffffff;
+    // background:red;
     padding-left: 13px;
     margin: 14px auto;
+    .rugzak {
+        background: red;
+    }
     &:after {
         content: "";
         /* box */
@@ -60,37 +85,35 @@
     }
     &:hover {}
 }
+
 #product-wijzer-container .container-wrapper .sections-container {
     width: 100%;
-	display: inline-block;
-
+    display: inline-block;
     .section {
         width: 100%;
-	    @include breakpoint (mama-bear) {
-	    	width: 50%;
-	    	float: left;
-		}     
-	    @include breakpoint (stiff-mama-bear) {
-	    	width: 50%;
-	    	float: left;
-		} 		   
+        @include breakpoint (mama-bear) {
+            width: 50%;
+            float: left;
+        }
+        @include breakpoint (stiff-mama-bear) {
+            width: 50%;
+            float: left;
+        }
     }
-	img {
-		float: left;
-		text-align: left;
-		width: auto;
-		height: 25px;
-		// height: auto;
-		padding: 1.5% 0 0 2%;
-		@include breakpoint (papa-bear) {
-			padding: 0.5% 0 0 1%;
-		}
-	}
-
-	a {
-		text-decoration: none;
-	}
-
+    img {
+        float: left;
+        text-align: left;
+        width: auto;
+        height: 25px;
+        // height: auto;
+        padding: 1.5% 0 0 2%;
+        @include breakpoint (papa-bear) {
+            padding: 0.5% 0 0 1%;
+        }
+    }
+    a {
+        text-decoration: none;
+    }
     .cta {
         text-align: center;
         padding-left: 0;
@@ -99,23 +122,24 @@
         text-decoration: none;
     }
 }
-#product-wijzer-container .container-wrapper .sections-container .section  {
-	
+
+/*-----  End of Section comment block  ------*/
+
+/*======================================
+=            Color Swatches            =
+======================================*/
+
+#product-wijzer-container .container-wrapper .sections-container .tent .cta {
+    background: #9c8d7b;
+}
+#product-wijzer-container .container-wrapper .sections-container .rugzak .cta {
+    background: #ca7659;
+}
+#product-wijzer-container .container-wrapper .sections-container .slaapzak .cta {
+    background: #568ca4;
+}
+#product-wijzer-container .container-wrapper .sections-container .schoenen .cta {
+    background: #6ea492;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*-----  End of Section comment block  ------*/

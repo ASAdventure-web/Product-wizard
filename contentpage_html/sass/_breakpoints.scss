@@ -1,3 +1,6 @@
+/*=============================================
+=            BREAKPOINTS - A.S.Adventure       =
+=============================================*/
 
 @mixin breakpoint($point) {
 	// Desktop
@@ -18,48 +21,4 @@
   }
 }
 
-// @include breakpoint(papa-bear) {
-//   .papa-bear {
-//     text-align: center;
-//     color: #ee7900;
-//     background:#e0e0e0;
-//     width: 100%
-//   }
-//   .mama-bear, .stiff-mama-bear, .baby-bear { display: none; }
-// }
-
-// @include breakpoint(mama-bear) {
-//   .mama-bear {
-//     text-align: center;
-//     color: #ee7900;
-//     background:#e0e0e0;
-//     width: 100%
-//   }
-//   .papa-bear, .baby-bear, .stiff-mama-bear {
-//     display: none;
-//   }
-// }
-
-// @include breakpoint(stiff-mama-bear) {
-//   .stiff-mama-bear {
-//     text-align: center;
-//     color: #ee7900;
-//     background:#e0e0e0;
-//     width: 100%
-//   }
-//   .papa-bear, .mama-bear, .baby-bear {
-//     display: none;
-//   }
-// }
-
-// @include breakpoint(baby-bear) {
-//   .baby-bear {
-//     text-align: center;
-//     color: #ee7900;
-//     background:#e0e0e0;
-//     width: 100%
-//   }
-//   .papa-bear, .mama-bear, .stiff-mama-bear {
-//     display: none;
-//   }
-// }
+/*-----  End of Section comment block  ------*/
