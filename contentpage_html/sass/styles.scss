@@ -18,16 +18,29 @@
 
 **/
 
-*.product_wizard {
+.product_wizard.product_wizard {
 	cursor: default !important;
 }
 
-*.content_detail_campaign {
+.content_detail_campaign.content_detail_campaign {
 	padding: 0 15px;
 }
 
-.content_detail_campaign .row {
+.content_detail_campaign.content_detail_campaign .row {
 	margin-left: 0;
+}
+
+// product detail
+
+#content_block_pdt .pdt_block_product_wizard.pdt_block_product_wizard {
+    @include breakpoint(mama-bear) {
+        width: 280px;
+        padding-left: 30px;
+    }
+    @include breakpoint (stiff-mama-bear) {
+        width: 200px;
+        padding-left: 30px;
+    }
 }
 
 /*=============================================
@@ -122,23 +135,14 @@
 }
 
 #product-wijzer-container .container-wrapper .sections-container {
-    width: 100%;
-    display: inline-block;
-    .section {
-        width: 100%;
-        @include breakpoint (stiff-mama-bear) {
-            width: 50%;
-            float: left;
-        }
-    }
-    img {
+        img {
         float: left;
         text-align: left;
         width: auto;
         height: 25px;
-        	@include breakpoint (baby-bear) {
-        		height: 15px;
-        	}
+            @include breakpoint (baby-bear) {
+                height: 15px;
+            }
         padding: 5px;
     }
     a {
@@ -152,6 +156,30 @@
     }
 }
 
+.product_wizard_724 #product-wijzer-container .container-wrapper .sections-container {
+    width: 100%;
+    display: inline-block;
+    .section {
+        width: 100%;
+        @include breakpoint (stiff-mama-bear) {
+            width: 50%;
+            float: left;
+        }
+    }
+}
+
+.pdt_block_product_wizard #product-wijzer-container .container-wrapper .sections-container {
+    width: 100%;
+    display: inline-block;
+    .section {
+        width: 100%;
+        @include breakpoint (stiff-mama-bear) {
+            width: auto;
+            float: none;
+        }
+    }
+}
+
 /*-----  End of Section CTA  ------*/
 
 /*======================================
@@ -160,15 +188,27 @@
 
 #product-wijzer-container .container-wrapper .sections-container .tent .cta {
     background: #9c8d7b;
+    &:hover {
+        background: #7f6950;
+    }
 }
 #product-wijzer-container .container-wrapper .sections-container .rugzak .cta {
     background: #ca7659;
+    &:hover {
+        background: #a56752;
+    }
 }
 #product-wijzer-container .container-wrapper .sections-container .slaapzak .cta {
     background: #568ca4;
+    &:hover {
+        background: #3b6b7f;
+    }
 }
 #product-wijzer-container .container-wrapper .sections-container .schoenen .cta {
     background: #6ea492;
+    &:hover {
+        background: #4c7768;
+    }
 }
 
 /*-----  End of color swatches  ------*/
