@@ -63,13 +63,21 @@
 			<div class="span4">
 				<a href="#" onclick="javascript:(document.getElementById('wizardContentQuestions').style.display='block'), (document.getElementById('wizardContentMain').style.display='none');">
 					<div class="wizardContentStart"> 
-						<span class="ajaxTrigger" ajaxQuerry="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3737%7D%2Fkies_rugzak%3E%7Bbabydragers%3Bbackpack_dames_a_plus%3Bbackpack_dames_b_plus%3Bbackpack_dames_c_plus%3Bbackpack_heren_a_plus%3Bbackpack_heren_b_plus%3Bbackpack_heren_c_plus%3Bbackpack_junior%3Bdaypack_junior%3Bdaypack_met_airframe_dames%3Bdaypack_met_airframe_heren%3Bdaypack_zonder_airframe_dames%3Bdaypack_zonder_airframe_heren%3Btourpack_heren_a_plus%3Btourpack_heren_a_plusplus%7D&fh_refpath=facet_276&fh_mode=selectlocation_complex&fh_reffacet=kies_rugzak&fh_refview=lister&preview_seo=false"> 
+						<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3737%7D%2Fkies_rugzak%3E%7Bbabydragers%3Bbackpack_dames_a_plus%3Bbackpack_dames_b_plus%3Bbackpack_dames_c_plus%3Bbackpack_heren_a_plus%3Bbackpack_heren_b_plus%3Bbackpack_heren_c_plus%3Bbackpack_junior%3Bdaypack_junior%3Bdaypack_met_airframe_dames%3Bdaypack_met_airframe_heren%3Bdaypack_zonder_airframe_dames%3Bdaypack_zonder_airframe_heren%3Btourpack_heren_a_plus%3Btourpack_heren_a_plusplus%7D&fh_refpath=facet_276&fh_mode=selectlocation_complex&fh_reffacet=kies_rugzak&fh_refview=lister&preview_seo=false"> 
 							<img src="https://static.asadventure.com/includes/visuals/product-wizard/img/rugzakken/icon-start-rugzakken.png" alt="start" />
 						</span>
 					</div>
 				</a>
 			</div>	
 		</div> 
+		<script>
+		window.onload
+ 		= function(){
+ 		$(el('main')).on('click', '.ajaxTrigger', function(e) {
+        e.preventDefault;
+        e.stopPropagation;
+        console.log($(this).attr('ajaxQuery'));})
+    };</script>
 
 <!-- ///////////////////////////////////// -->
 <!-- step 2 - QUESTIONS -->
@@ -93,7 +101,7 @@
 				<ul>
 			<!-- Q:Korte dagtochten -->
 					<a href="#" onclick="javascript:(document.getElementById('wizardSolutionOne').style.display='block'), (document.getElementById('wizardContentQuestions').style.display='none');">
-						<span class="ajaxTrigger" ajaxQuery="fh_location=//catalog01/nl_NL/categories<{catalog01_c3736}/categories<{catalog01_c3736_c7621}/type_bag>{dagrugzakken}&fh_reffacet=type_bag&fh_refpath=facet_115&fh_refview=lister&preview_seo=false">
+						<span class="ajaxTrigger" ajaxQuery="fh_location=%2F%2Fcatalog01%2Fnl_NL%2Fcategories%3C%7Bcatalog01_c3736%7D%2Fcategories%3C%7Bcatalog01_c3736_c3737%7D%2Fkies_rugzak%3E%7Bbabydragers%3Bdaypack_met_airframe_dames%3Bdaypack_met_airframe_heren%3Bdaypack_zonder_airframe_dames%3Bdaypack_zonder_airframe_heren%7D&fh_refpath=facet_276&fh_mode=selectlocation_complex&fh_reffacet=kies_rugzak&fh_refview=lister&preview_seo=false">
 							<li class="question red"> Korte dagtochten</li>
 								<span class="icon-arrow"></span>
 							
